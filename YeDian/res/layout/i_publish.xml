@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 顶部标题 -->
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+
+            <LinearLayout
+                android:id="@+id/nameLL"
+                android:layout_width="277dip"
+                android:layout_height="100.5dip"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical|center"
+                android:background="@drawable/textarea"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/contentEt"
+                    android:layout_width="274dip"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                     android:background="@null"
+                    android:gravity="left|top"
+                    android:selectAllOnFocus="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:hint="这一刻的想法"
+                    android:inputType="textMultiLine"
+                    android:textSize="15dip"
+                    android:minLines="6" />
+            </LinearLayout>
+            
+            
+
+            <LinearLayout
+                android:id="@+id/btnLL"
+                android:layout_width="277dip"
+                android:layout_height="80.5dip"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@id/nameLL"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/btnA"
+                    android:layout_width="0dip"
+                    android:layout_height="80.5dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="1"
+                    
+                    android:orientation="vertical" >
+                    
+                    <TextView android:id="@+id/tupian"
+					android:layout_width="50dip" android:layout_height="50dip"
+					android:background="@drawable/tupian"
+					android:clickable="true"  android:gravity="center_vertical|center"
+					android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" 
+					/>
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnB"
+                    android:layout_width="0dip"
+                    android:layout_height="80.5dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+                     <TextView android:id="@+id/biaoqing"
+					android:layout_width="50dip" android:layout_height="50dip"
+					android:background="@drawable/biaoqing"
+					android:clickable="true"  android:gravity="center_vertical|center"
+					android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" android:textSize="20sp"
+					/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnC"
+                    android:layout_width="0dip"
+                    android:layout_height="80.5dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+                      <TextView android:id="@+id/weizhi"
+					android:layout_width="50dip" android:layout_height="50dip"
+					android:background="@drawable/weizhi"
+					android:clickable="true"  android:gravity="center_vertical|center"
+					android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" android:textSize="20sp"
+					/>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/btnNameLL"
+                android:layout_width="277dip"
+                android:layout_height="25dip"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@id/btnLL"
+                android:layout_marginTop="0dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/btnA"
+                    android:layout_width="0dip"
+                    android:layout_height="25dip"
+                    android:layout_marginTop="0dip"
+                    android:layout_weight="1"
+                    
+                    android:orientation="vertical" >
+                    
+                    <TextView android:id="@+id/tupianTxt"
+					android:layout_width="50dip" android:layout_height="25dip"
+					android:hint="图片"
+					android:clickable="true"  android:gravity="center_vertical|center"
+					android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" android:textSize="20sp"
+					/>
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnTxtB"
+                    android:layout_width="0dip"
+                    android:layout_height="25dip"
+                    android:layout_marginTop="0dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+                     <TextView android:id="@+id/biaoqing"
+					android:layout_width="50dip" android:layout_height="25dip"
+					android:hint="表情"
+					android:clickable="true"  android:gravity="center_vertical|center"
+					android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" android:textSize="20sp"
+					/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnTxtC"
+                    android:layout_width="0dip"
+                    android:layout_height="25dip"
+                    android:layout_marginTop="0dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+                      <TextView android:id="@+id/weizhiTxt"
+					android:layout_width="50dip" android:layout_height="25dip"
+					android:hint="位置"
+					android:clickable="true"  android:gravity="center_vertical|center"
+					android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" android:textSize="20sp"
+					/>
+                </LinearLayout>
+            </LinearLayout>
+            
+            
+            
+            
+            
+            
+            
+            
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

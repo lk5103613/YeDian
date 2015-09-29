@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+     
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dip"
+        android:adjustViewBounds="true"
+       android:background="@drawable/nearby_u2"
+        android:scaleType="fitXY" >
+    </ImageView>
+    <TextView
+        android:id="@+id/addTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/logoImg"
+        android:layout_toRightOf="@+id/logoImg"
+        android:textColor="#000000"
+        android:scrollHorizontally="true"
+        android:maxLines="1" 
+        android:text="5-10 10:00"
+        android:layout_marginLeft="5dip"
+        android:textSize="14dip" >
+    </TextView>
+    
+    
+    
+     <ImageView
+        android:id="@+id/zanTv"
+        android:layout_width="29dip"
+        android:layout_height="16dip"
+        
+        android:layout_marginTop="12dip"
+        android:layout_marginLeft="250dip"
+        android:adjustViewBounds="true"
+       android:background="@drawable/zan"
+        android:scaleType="fitXY" >
+    </ImageView>
+    
+     <TextView
+        android:id="@+id/zanCntTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/zanTv"
+        android:layout_toRightOf="@+id/zanTv"
+        android:textColor="#000000"
+        android:scrollHorizontally="true"
+        android:maxLines="1" 
+        android:text=""
+        android:layout_marginLeft="5dip"
+        android:textSize="14dip" >
+    </TextView>
+    
+     <ImageView
+        android:id="@+id/msgTv"
+        android:layout_width="15dip"
+        android:layout_height="14dip"
+        android:layout_toRightOf="@+id/zanCntTv"
+        
+        android:layout_alignTop="@+id/zanCntTv"
+         
+        android:layout_marginLeft="19dip"
+        android:adjustViewBounds="true"
+       android:background="@drawable/nearby_sms"
+        android:scaleType="fitXY" >
+    </ImageView>
+    <TextView
+        android:id="@+id/msgCntTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/msgTv"
+        android:layout_toRightOf="@+id/msgTv"
+        android:textColor="@color/black"
+     
+      android:layout_marginRight="5dip"
+        android:text="0"
+       
+        android:textSize="14dip" >
+    </TextView>
+    
+     
+    
+     
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoImg"
+       
+        android:gravity="left"
+        android:textColor="@color/gray"
+        android:layout_marginTop="2dip"
+       android:layout_marginLeft="5dip" 
+        android:text=""
+        android:textSize="12dip" >
+    </TextView>
+    
+    
+    
+
+
+</RelativeLayout>

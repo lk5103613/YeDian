@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+     <string name="header_hint_refresh_normal">Pull to refresh</string>
+    <string name="header_hint_refresh_ready">Release to refresh</string>
+    <string name="header_hint_refresh_loading">Refreshing&#8230;</string>
+    <string name="header_hint_refresh_time">Time：</string>
+    <string name="footer_hint_load_normal">Load more</string>
+    <string name="footer_hint_load_ready">松开手,加载更多数据</string>
+    
+     <string name="text_ack_msg">已读</string>
+    <string name="back">返回</string>
+    <string name="save">保存</string>
+    <string name="button_pushtotalk">按住说话</string>
+    <string name="button_send">发送</string>
+    <string name="attach_smile">表情</string>
+    <string name="attach_picture">图片</string>
+    <string name="attach_take_pic">拍照</string>
+    <string name="attach_location">位置</string>
+    <string name="user_card">名片</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="send_fail">发送消息失败,</string>
+    <string name="delete_message">删除消息</string>
+    <string name="copy_message">复制消息</string>
+    <string name="delete_voice">删除语音</string>
+    <string name="delete_video">删除视频</string>
+
+    <string name="resend">重发</string>
+    <string name="confirm_resend">确认重发该信息？</string>
+    <string name="connect_failuer_toast">连接不到服务器，请稍后重试</string>
+    <string name="network_unavailable">网络连接不可用，请检查网络</string>
+    <string name="copy">复制</string>
+    <string name="forward">转发</string>
+    <string name="button_logout">退出登录</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="prompt">提示</string>
+    <string name="clear_records">清空记录</string>
+    <string name="clear_all_records">是否清空所有聊天记录？</string>
+    <string name="location_recv">[%1$s的位置]</string>
+    <string name="location_message">位置信息</string>
+       <string name="location_prefix">[我的位置]</string>
+    <string name="voice">[语音]</string>
+    <string name="picture">[图片]</string>
+    <string name="video">[视频]</string>
+    
+      <string name="button_cancel">取消</string>
+    <string name="button_save">保存</string>
+    <string name="button_search">查找</string>
+    <string name="button_add">添加</string>
+    <string name="search_header">S</string>
+    
+    <string name="network_isnot_available">网络不可用</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+    <string name="select_contacts">选择联系人</string>
+    <string name="confirm_forward_to">确定转发到：%1$s ?</string>
+      <string name="logout">退出登录</string>
+    <string name="logout_hint">退出后不会删除任何历史数据，下次登录依然可以使用本账号</string>
+ <string name="exit_group_hint">退出后，将不再接收此群聊信息</string>
+    <string name="dissolution_group_hint">退出后，此群将被解散</string>
+      <string name="exit_group">退出</string>
+      <string name="connect_conflict">同一帐号已在其他设备登录</string>
+    
+     <string name="drop_down_list_header_default_text">Click to refresh&#8230;</string>
+    <string name="drop_down_list_header_pull_text">Drop Down to refresh&#8230;</string>
+    <string name="drop_down_list_header_release_text">松开手刷新界面&#8230;</string>
+    <string name="drop_down_list_header_loading_text">Loading&#8230;</string>
+    <string name="drop_down_list_footer_default_text">More</string>
+    <string name="drop_down_list_footer_loading_text">Loading&#8230;</string>
+    <string name="drop_down_list_footer_no_more_text">No More</string>
+    
+    <string name="image_content">Image</string>
+ 
+     <string name="border_top">Border Top</string>
+    <string name="border_bottom">Border Bottom</string>
+    <string name="image_url">Image Url</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="weibosdk_attention">注意</string>
+    <string name="weibosdk_delete_all">是否要删除这条微博？</string>
+    <string name="weibosdk_ok">是</string>
+    <string name="weibosdk_cancel">否</string>
+    <string name="weibosdk_app_name">com_weibo_android</string>
+    <string name="weibosdk_send">发送</string>
+    <string name="weibosdk_photo">拍照</string>
+    <string name="weibosdk_close">关闭</string>
+    <string name="weibosdk_share_dialog_title">新浪微博</string>
+    <string name="weibosdk_please_login">请登录！</string>
+    <string name="weibosdk_send_sucess">分享成功！</string>
+    <string name="weibosdk_send_failed">分享失败！</string>
+    <string name="weibosdk_del_pic">是否删除图片？</string>
+    <string name="weibosdk_comment">评论</string>
+    <string name="weibosdk_forward">转发</string>
+    <string name="weibosdk_fav">收藏</string>
+    <string name="testcontent"></string>
+    <string name="post_weibo">发送微博</string>
+    <string name="nearbypeople">周边的人</string>
+    <string name="nearbyweibo">周边的微博</string>
+    <string name="userinfo">个人资料</string>
+    <string name="pageinfo">位置(page)介绍面</string>
+    <string name="pageproductlist">图书(page)产品列表</string>
+    <string name="pageuserlist">位置用户列表</string>
+    <string name="pageweibolist">位置微博列表</string>
+    <string name="pagephotolist">位置图片列表</string>
+    <string name="pagedetailinfo">位置详细资料页</string>
+    <string name="usertrends">话题列表</string>
+    <string name="weibobrowser">内置浏览器打开</string>
+    <string name="weibomap">地图页面</string>
+    <string name="nearphotolist">xy周边热图</string>
+    <string name="poiphotolist">poi周边热图</string>
+    <string name="poipage">POI页面</string>
+    <string name="mblogdetail">查看微博正文</string>
+    <string name="qrcode">扫描二维码界面</string>
+	<string name="auth">OAUTH2.0获取Token</string>
+	<string name="code">OAUTH2.0获取Code</string>
+	<string name="sso">单点登录sso</string>
+	<string name="apiCancel">注销用户</string>
+	<string name="checkinternet">无法联系网络，请检查网络配置</string>
+	 <string name="hello_world">微博SDK入口</string>
+	 
+    <string name="about_us" formatted="false"> 
+&#160;&#160;&#160;&#160;在创意大爆炸的今天，能够改变代驾使用模式和最大限度压缩费用和时间的代驾服务变得更加难能可贵，北京亿心宜行汽车技术开发服务有限公司致力于提供“人或资产有价值的空闲时段搜索”，即“时间碎片服务”，将更加人性化的碎片时间进行整合，形成经济实用的“夜店中国”运营体系。
+
+这个世界是一个比拼创意的世界，胆大心细比不上一个好的创意。创意产业已经成为推动经济发展的重要产业，而且也将成为未来的主流产业。对于一个新兴的代驾服务行业来说，创意服务更是灵魂。夜店中国通过移动互联网技术改善传统代驾服务行业，在大大降低代驾等候时间和代驾服务费用的同时，更将安全和便捷带给大众。夜店中国突破传统代驾公司必须通过呼叫中心才能提供代驾服务的瓶颈，直接显示离用户最近的5名代驾司机，最大限度的压缩客户等待时间，并以绝无仅有的35元（含10公里内）的超低代驾起步费用，节约客户使用成本，从而获得良好的市场反应和用户口碑。
+
+代驾是一种托付更是一种社会责任，为每一位顾客提供更加优质、全面的代驾服务是夜店中国员工持之以恒的工作方向和动力，随着代驾业务的不断发展和壮大，目前，夜店中国已经在北京、上海、广州、深圳、重庆、杭州分别开设服务分支机构，未来夜店中国将在全国各省、市建立完善的服务网络，让所有需要代驾服务的用户，在全国各地都能享受夜店中国的便捷和安全。
+
+深信一个成功的企业，必定是富有社会责任感的企业。我们希望成为这样的企业，因此我们要求每一位夜店中国员工在专注于服务的同时，始终将社会道德和商业道德作为衡量员工工作价值的重要因素，便成为我们一贯的职业原则。我们习惯于这样的工作，也愿意延续这种方式，为成就一个安全和谐的健康型社会而付出不懈努力。
+
+\n&#160;&#160;&#160;&#160;夜店中国宗旨：
+\n&#160;&#160;&#160;&#160;安全服务 安心代驾
+\n&#160;&#160;&#160;&#160;贴近大众 贴心服务
+\n&#160;&#160;&#160;&#160;夜店中国服务：
+\n&#160;&#160;&#160;&#160;谦虚谨慎的服务态度
+\n&#160;&#160;&#160;&#160;务实创新的服务精神
+\n&#160;&#160;&#160;&#160;专业优质的服务团队
+\n&#160;&#160;&#160;&#160;洞悉敏锐的服务意识
+
+
+\n&#160;&#160;&#160;&#160;夜店中国目标：
+\n&#160;&#160;&#160;&#160;让代驾成为生活中的一部分
+</string>
+    
+<string name="service_aggrement" formatted="false">
+
+</string>
+    
+       <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+    
+    <string name="ptr_pull_to_refresh">Pull to refresh</string>
+    <string name="ptr_release_to_refresh">松开手刷新</string>
+    <string name="ptr_refreshing">加载中...</string>
+    <string name="ptr_last_updated">Updated: %1$s</string>
+     
+   
+    <string name="edit">Edit</string> 
+    <string name="delete">Delete</string>
+
+    <string name="bill_save">保存</string>
+    <string name="searchgoodsbar_hint">请输入夜店名称</string>
+    <string name="app_name">夜店中国</string>
+    <string name="index">夜店中国首页</string>
+    <string name="book">预约司机</string>
+    <string name="more">价格表</string>
+    <string name="record">充值</string>
+    <string name="advice">更多功能</string>
+    <string name="exit">夜店中国退出</string>
+    <string name="ok_bill">确定</string>
+    <string name="commit_btn">提交</string>
+    <string name="commit_order">提交订单</string>
+    <string name="select_addr">&#160;&#160;&#160;&#160;请选择收货地址</string>
+    <string name="select_payment">&#160;&#160;&#160;&#160;请选择支付方式</string>
+    <string name="moreshoes">更多分类</string>
+    <!-- 底部 -->
+    <!-- 底部公共菜单模块 -->
+    <string name="menu_home">首页</string>
+    <string name="menu_brand">分类</string>
+    <string name="menu_shopping_cart">购物车</string>
+    <string name="menu_my_letao">个人中心</string>
+    <string name="menu_more">更多</string>
+    <!-- 底部菜单模块<更多> -->
+    <string name="servce">夜店中国服务承诺</string>
+    <string name="about">关于夜店中国</string>
+    <string name="history">夜店中国浏览记录</string>
+    <string name="hotline">夜店中国服务热线</string>
+    <string name="suggest">建议夜店中国</string>
+    <string name="microblog">夜店中国博客</string>
+    <!-- 底部菜单模块<会员中心> -->
+    <string name="myletao">会员中心</string>
+    <string name="myaddress">我的地址本</string>
+    <string name="mypassword">修改密码</string>
+    <string name="mycollect">我的收藏</string>
+    <string name="myindent">我的订单</string>
+    <string name="myfavorable">我的优惠卷</string>
+    <string name="fristlogin">登陆</string>
+    <string name="login_name">帐号：</string>
+    <string name="login_name_text">请输入手机号</string>
+    <string name="login_username_hint_str">*暂不支持QQ、支付宝、网易、人人网等帐号登录</string>
+    <string name="login_password_text">请输入您的密码</string>
+    <string name="login_return_btn">忘记密码</string>
+    <string name="login_register_btn">用户注册</string>
+    <string name="login_password">密码：</string>
+    <string name="user_login">用户登陆</string>
+    <string name="return_password_submit">找回密码</string>
+    <string name="register_name">帐号:</string>
+    <string name="register_password_presentation">密码3-25位,区分大小写</string>
+    <string name="register_make_sure_password">确认密码:</string>
+    <string name="register_submit">注册</string>
+    <!-- 修改密码 -->
+    <string name="changepassword_originalpassword_str">旧密码:</string>
+    <string name="changepassword_newpassword_str">新密码:</string>
+    <string name="change_password_old_psw">请输入旧密码</string>
+    <string name="change_password_new_psw">请输入新密码</string>
+    <string name="change_password_again">再次输入新密码</string>
+    <string name="change_password_confirm">确定修改</string>
+    <string name="myletao_modifypassword_str">修改密码</string>
+    <!-- 我的地址本 -->
+    <string name="title_my_delivery_address">我的地址本</string>
+    <string name="my_delivery_address_submit">添加收货地址</string>
+     <string name="add_bill_txt">添加发票</string>
+    <string name="title_add_address">新增地址</string>
+    <string name="address_name">收货人:</string>
+    <string name="address_phone">手机号码:</string>
+    <string name="address_province">省份:</string>
+    <string name="address_city">城市:</string>
+    <string name="address_area">地区:</string>
+    <string name="address_detail">详细地址:</string>
+    <string name="address_email">电子邮箱:</string>
+    <string name="address_choose">请选择</string>
+    <string name="address_save">保存</string>
+    <string name="address_cancel">取消</string>
+    <!-- 我的优惠券 -->
+    <string name="title_my_coupon">我的优惠券</string>
+    <string name="addcoupan1">添加优惠券</string>
+    <string name="shopping_cartcoupon_nocoupon_str">暂无优惠券</string>
+    <string name="about_attention">关注手机夜店中国微博，获得最新优惠信息</string>
+    <string name="shopping_cartcoupon_letaoinphone_str">夜店中国:</string>
+    <string name="add_new_addr">预约司机</string>
+    <string name="add_coupon_add">添加</string>
+    <string name="add_coupon_cancel">放弃</string>
+    <!-- 我的收藏 -->
+    <string name="title_my_favorite">我的收藏</string>
+    <!-- 我的订单 -->
+    <string name="title_my_order">我的订单</string>
+    <!-- 我的分类 -->
+    <string name="title_myletao_type">分类</string>
+ 
+    <!-- 虚拟数据 -->
+    <string name="login">用户名:</string>
+    <string name="time">上次登陆时间:</string>
+    <string name="username"></string>
+    <string name="usertime"></string>
+    <!-- 底部TextView -->
+    <string name="suggest_textview">欢迎您提出宝贵的意见和建议，我们将为您提供更好的服务体验。</string>
+    <!-- 底部 -->
+    <string name="commoditysort_new_str">新品</string>
+    <string name="commoditysort_hot_str">热销</string>
+    <string name="commoditysort_price_str">价格</string>
+    <string name="previous_page">上一页</string>
+    <string name="next_page">下一页</string>
+    <string name="new_xie">新品</string>
+    <string name="commodity_detail_size">规格:</string>
+    <string name="commodity_detail_input_cart">加入购物车</string>
+    <string name="commodity_detail_favorite">收藏</string>
+    <string name="commodity_detail_message">商品信息</string>
+    <string name="commodity_detail_listing_date">有 效 期:</string>
+    <string name="commodity_detail_style">商品编号:</string>
+    <string name="commodity_detail_textures">赠品:</string>
+    <string name="commodity_detail_model">重量:</string>
+    <string name="commodity_detail_man_woman">积分:</string>
+    <string name="commodity_detail_colors">颜色种类:</string>
+    <string name="spikeare_detail_tobuy">立即购买</string>
+    <string name="commodity_detail_counter_price">品牌产地:</string>
+    <string name="commodity_detail_letao_price">配送范围、时间:</string>
+    <!-- 购物车模块 -->
+    <string name="title_letao_shopping_car">我的购物车</string>
+    <string name="go_shopping_text">去逛逛</string>
+    <string name="select_bill">&#160;&#160;&#160;&#160;请选择发票</string>
+    <string name="menu_settings">Settings</string>
+    <string name="bill">发票</string>
+    <string name="title_activity_index">IndexActivity</string>
+    <string name="title_activity_product_by_cat_list">ProductByCatList</string>
+    
+    <string name="app_back">返回</string>
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_continue">继续</string>
+    <string name="app_tip">提示</string>
+    <string name="app_send">发送</string>
+    <string name="app_set">设置</string>
+    <string name="app_save">保存</string>
+    <string name="app_delete">删除</string>
+    <string name="app_nextstep">下一步</string>
+    <string name="app_prevstep">上一步</string>
+    <string name="app_finish">完成</string>
+    <string name="app_find">查找</string>
+    <string name="app_edit">编辑</string>
+
+    <!-- applet -->
+    <string name="applet_secimg_title">填写验证码</string>
+    <string name="applet_secimg_change">换一张图片</string>
+    <string name="applet_seccode_tip">验证码不能为空</string>
+    <string name="applet_seccode_fail_tip">验证码错误，请重新输入</string>
+
+    <!-- verify -->
+    <string name="verify_password_null_tip">密码不能为空，请输入密码</string>
+
+    <!-- format -->
+    <string name="fmt_date">M月d日</string>
+    <string name="fmt_longdate">yyyy年M月d日</string>
+    <string name="fmt_datetime" formatted="false">M月d日 %skk:mm</string>
+    <string name="fmt_patime">kk:mm</string>
+    <string name="fmt_longtime" formatted="false">yyyy年M月d日 %skk:mm</string>
+    <string name="fmt_in60min" formatted="false">%d分钟前</string>
+    <string name="fmt_justnow">1分钟内</string>
+    <string name="fmt_dawn">凌晨</string>
+    <string name="fmt_morning">早上</string>
+    <string name="fmt_noon">中午</string>
+    <string name="fmt_afternoon">下午</string>
+    <string name="fmt_evening">晚上</string>
+    <string name="fmt_pre_yesterday">昨天</string>
+    <string name="fmt_iap_err" formatted="false">网络连接不可用，请稍候重试</string>
+    
+    
+   
+	<string name="app_share">分享</string>
+    
+    <string name="enter">这是SDK_Sample的入口界面</string>
+    <string name="reg">将该app注册到微信</string>
+    <string name="goto_send">跳转到发消息界面</string>
+    <string name="launch_wx">启动微信</string>
+    <string name="check_timeline_supported">检查是否支持发送到朋友圈</string>
+    
+    <string name="send_to_wx_title">发送到微信</string>
+	<string name="get_from_wx_title">从微信接收</string>
+	<string name="show_from_wx_title">显示微信请求的消息</string>
+
+	<string name="errcode_success">发送成功</string>
+	<string name="errcode_cancel">发送取消</string>
+	<string name="errcode_deny">发送被拒绝</string>
+	<string name="errcode_unknown">发送返回</string>
+	
+    <!-- WXMediaMessage -->
+	<string name="send">发送到微信</string>
+	<string name="receive">从微信接收</string>
+	
+	<string name="is_timeline">是否分享到朋友圈</string>
+	<string name="send_text">发送文本</string>
+	<string name="send_text_default">夜店中国-中国领先的代驾服务商</string>
+	
+	<string name="send_img">发送图片</string>
+	<string-array name="send_img_item">
+        <item>发送图片的二进制数据</item>
+        <item>发送图片的本地路径</item>
+        <item>发送图片的URL</item>
+    </string-array>
+	<string name="send_img_file_not_exist">文件不存在</string>
+	
+	<string name="send_pic">发送照片</string>
+	
+	<string name="send_music">发送音乐</string>
+	<string-array name="send_music_item">
+	    <item>发送音乐url</item>
+	    <item>发送低带宽音乐url</item>
+	</string-array>
+
+	<string name="send_video">发送视频</string>
+	<string-array name="send_video_item">
+	    <item>发送视频url</item>
+	    <item>发送低带宽视频url</item>
+	</string-array>
+	
+	<string name="send_webpage">发送网页</string>
+	<string-array name="send_webpage_item">
+	    <item>发送网页url</item>
+	</string-array>
+
+	<string name="send_appdata">发送app消息</string>
+	<string-array name="send_appdata_item">
+	    <item>发送app文件本地路径</item>
+	    <item>发送app二进制数据</item>
+	    <item>发送无附件的app</item>
+	</string-array>
+	
+	<string name="send_emoji">发送表情消息</string>
+	<string-array name="send_emoji_item">
+	    <item>发送表情本地路径</item>
+	    <item>发送表情二进制数据</item>
+	</string-array>
+	
+	<string-array name="send_emoji_item_format">
+	    <item>发送GIF图片</item>
+	    <item>发送非GIF图片</item>
+	</string-array>
+	
+    <string name="share_text_to_weixin">回应文本到微信</string>
+    <string name="share_text_default">这段文字回应自微信SDK示例程序</string>
+    <string name="share_url_to_weixin">回应URL到微信</string>
+    <string name="share_pic_to_weixin">回应图片到微信</string>
+    <string name="share_music_to_weixin">回应音乐到微信</string>
+    <string name="share_video_to_weixin">回应视频到微信</string>
+    <string name="share_appdata_to_weixin">回应app消息到微信</string>
+    
+    <string name="register_as_weixin_app_sender">注册微信事件发送器</string>
+    <string name="get_token_from_weixin">获取微信访问Token</string>
+    <string name="unregister_from_weixin">从微信反注册</string>
+    
+    <string name="show_from_wx_tip">这个界面用于显示微信向第三方app请求显示的信息</string>
+    
+   
+    <string name="register_tip">提示 :以上均为必选项!</string>
+    <string name="net_error_tip">当前网络不可用，请检查你的网络设置</string>
+    <string name="left_title_name">好友列表</string>
+    <string name="center_title_name">最近会话</string>
+    <string name="right_title_name">设置</string>
+    <string name="no_chat">暂时没有新消息</string>
+     <string name="versionnum">V1.2.3</string>
+    <!-- 上拉下拉 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">释放立即刷新</string>
+    <string name="xlistview_header_hint_loading">正在刷新...</string>
+    <string name="xlistview_header_last_time">上次更新：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="searchdialog_find_contact_new">搜索</string>
+    <string name="first_start_title">初始化设置</string>
+    <string name="first_start_tips">昵称不能为空哦</string>
+    <string name="first_start_scuess">连接服务器成功</string>
+    <string name="first_start_dialog_text">连接服务器...</string>
+    <string name="isSingle">单身</string>
+    <string name="info_info">个人资料</string>
+    <string name="face_jazz_effects">表情翻页效果</string>
+    <string name="set_push">消息通知</string>
+    <string name="sound_and_vibrate">声音</string>
+    <string name="new_msg_notify">新消息提醒</string>
+    <string name="setting_display">界面</string>
+    <string name="logout_account">注销登录</string>
+    <string name="security_and_privacy">安全和隐私</string>
+    <string name="logout_exit_account">退出当前帐号</string>
+    <string name="pref_assistant">辅助功能</string>
+    <string name="delete_friend_confirm">确定删除%1$s吗？</string>
+    <string name="menu_about">关于</string>
+    <string name="set_message_notify">通知栏挂机图标</string>
+    <string name="set_pullrefresh_sound">刷新提示音</string>
+    <string name="set_message_sound">新消息声音提醒</string>
+    <string name="set_show_head">聊天显示自己头像</string>
+    <string name="set_acount_info">个人资料</string>
+    <string name="set_face_jazz">表情滑动效果</string>
+    <string name="press_again_backrun">再按一次后台运行</string>
+    <string name="press_again_exit">再按一次退出应用</string>
+    <string name="app_is_run_background">夜店中国正在后台运行</string>
+    <string name="user_agreement">way</string>
+    <string name="official_website">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="feedback_suggest">帮助与反馈</string>
+    <string name="qq_impression">手机QQ印象</string>
+    <string name="version_upgrade">版本更新</string>
+    <string name="feature_info">功能介绍</string>
+    <string name="QQS_weibo">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="all_rights_reserved">Copyright © 2012-2013 Way. All Rights Reserved.</string>
+    <string name="my_blog_url">http://blog.csdn.net/weidi1989</string>
+    <string name="my_email">way.ping.li@gmail.com</string>
+    <string name="app_information">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;本应用是基于百度云推送的一款轻量级聊天工具，包含多个开源项目库，同时本代码也已经开源，欢迎访问我的博客主页：%1$s，由于时间仓促，错误与疏忽之处在所难免，希望各位朋友们以邮件的形式反馈问题给我，再次表示感谢！</string>
+    <string name="app_error">应用程序错误</string>
+    <string name="app_error_message">很抱歉，应用程序出现错误，即将退出。\n请选择邮件的方式将此错误报告提交给我，我会尽快修复这个问题，谢谢！</string>
+    <string name="submit_report">提交报告</string>
+    <string name="rename">备注名</string>
+    <string name="move">移动到</string>
+   
+    <string name="open">打开</string>
+    <string name="exit_confirm_toast">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;确定退出吗？退出后不会删除任何历史数据，只是不再给您推送消息，下次需要重新登录</string>
+  
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+    
+
+</resources>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+   
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="0dip"
+         android:scrollbars="none"
+        android:layout_below="@id/title" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+     
+      >
+
+        
+
+        <LinearLayout
+            android:id="@+id/password_box"
+            android:layout_width="310dip"
+            android:layout_height="80dip"
+            
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            
+            android:orientation="horizontal" >
+            
+           <ImageView
+                android:background="@drawable/nearby_u2"
+                android:id="@+id/avatarTv"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+               
+               
+              
+                android:paddingLeft="10dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+            
+            
+
+            <TextView
+                
+                android:id="@+id/groupNameTv"
+                android:layout_width="170dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+               android:text="上海音乐舞会"
+               android:textColor="@color/black" 
+              
+                android:paddingLeft="10dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/henxian1"
+            android:layout_width="fill_parent"
+            android:layout_height="3.5dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/aoxian"
+            android:layout_below="@+id/password_box"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/qunzhuLL"
+            android:layout_width="310dip"
+            android:layout_height="20.5dip"
+            android:layout_below="@id/henxian1"
+            android:layout_marginTop="10dip"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="60dip"
+                android:layout_height="20.5dip"
+                android:text="群主"
+                android:textColor="@color/black" />
+            
+            <TextView
+               
+                android:id="@+id/groupMasterTv"
+                android:layout_width="70dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center_vertical"
+               android:textColor="@color/black" 
+               
+              
+                android:paddingLeft="10dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+         <LinearLayout
+            android:id="@+id/henxian1918"
+             android:layout_below="@id/qunzhuLL"
+            android:layout_width="fill_parent"
+            android:layout_height="3.5dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/aoxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+         
+        <LinearLayout
+            android:id="@+id/addTimeLL"
+            android:layout_width="310dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/henxian1918"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+           
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="69dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="创建时间"
+                android:textColor="@color/black" />
+            
+            
+           
+
+            <TextView
+                android:id="@+id/createTimeTv"
+                android:layout_width="85dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="0dip"
+                android:text="2014-06-10"
+                android:textColor="@color/black" />
+
+          
+        </LinearLayout>
+        
+         <LinearLayout
+            android:id="@+id/henxian111"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/addTimeLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+        
+        
+        
+        
+         <LinearLayout
+            android:id="@+id/smsId"
+            android:layout_width="310dip"
+            android:layout_height="80.5dip"
+            android:layout_below="@id/henxian111"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+           
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="60dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="群的简介:"
+                android:textColor="@color/black" />
+            
+            
+
+            <TextView
+              
+                android:id="@+id/descTv"
+                 android:layout_width="0dip"
+                android:layout_height="80.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+               android:textColor="@color/black"
+               
+              
+              
+                android:paddingLeft="1dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp"
+                android:inputType="textMultiLine"
+   android:gravity="left|top"
+   android:minLines="6" />
+
+        </LinearLayout>
+        
+           <LinearLayout
+            android:id="@+id/henxian12"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/smsId"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+       <TextView
+            android:id="@+id/login"
+            android:layout_width="277dip"
+            android:layout_height="35dip"
+            android:layout_below="@id/henxian12"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/btn0607"
+            android:text="申请加入"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+       
+       <TextView
+            android:id="@+id/loginSpace"
+            android:layout_width="277dip"
+            android:layout_height="35dip"
+            android:layout_below="@id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+         
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+         
+        
+        
+        
+        
+         
+        
+        
+
+       
+       
+
+        
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

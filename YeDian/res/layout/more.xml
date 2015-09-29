@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/book_title" />
+
+    
+
+        <LinearLayout
+            android:id="@+id/llA"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_below="@id/title"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/a1LL"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:id="@+id/more_feedback"
+                    android:background="@drawable/more_feedback"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/a2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+               android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                  android:id="@+id/more_score"
+                    android:background="@drawable/more_score"
+                   android:gravity="center"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/llTxtA"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_below="@id/llA"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/a232LL"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="102.2dip"
+                   android:layout_height="30dip"
+                 
+                    android:text="意见反馈"
+                    android:gravity="center"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/a2212"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+               android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="146dip"
+                    android:layout_height="30dip"
+                  
+                    android:text="给我们打分"
+                   android:gravity="center"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/llB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_below="@id/llTxtA"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/a2LL"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                      android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:id="@+id/more_update"
+                    android:background="@drawable/more_update"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/a22"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+               android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                     android:layout_width="120dip"
+                    android:layout_height="120dip"
+                  
+                    android:background="@drawable/more_aboutus"
+                   android:gravity="center"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llTxtB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_below="@id/llB"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/a23LL"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+ 
+                <TextView
+                    android:layout_width="146dip"
+                   android:layout_height="30dip"
+                   android:id="@+id/checkVersionTv"
+                    android:text="检测更新"
+                    android:gravity="center"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/a22"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+               android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="146dip"
+                    android:layout_height="30dip"
+                  
+                    android:text="关于我们"
+                   android:gravity="center"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </LinearLayout>
+    
+
+    <include
+        android:id="@+id/bottommenu"
+        layout="@layout/menu5" />
+
+</RelativeLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 顶部标题 -->
+
+   
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title" >
+
+        
+
+     
+        
+        <LinearLayout
+            android:id="@+id/password_box"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/login_hint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/account"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/mpTv"
+                android:layout_width="0dip"
+                android:layout_height="30.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入您的常用邮箱"
+                android:textColor="@color/black"
+                
+                android:paddingLeft="63dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/henxian2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="65dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/pwdLL1"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/henxian2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/password"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/pwdTv"
+                android:layout_width="0dip"
+                android:layout_height="30.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/login_password_text"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+               android:paddingLeft="63dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/henxian3"
+            android:layout_below="@id/pwdLL1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/pwdLL2"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/henxian3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/pwd2"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/pwd2Tv"
+                android:layout_width="0dip"
+                android:layout_height="30.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="    请再次输入密码"
+                android:inputType="textPassword"
+                android:paddingLeft="73dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/henxian4"
+            android:layout_below="@id/pwdLL2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+           
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/isMerchantOrPersonalLL"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/henxian4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/reg_ll"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="35dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/personalTxt"
+                android:layout_width="29dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="0dip"
+                android:text="个人"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/personalImg"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dip"
+                android:background="@drawable/red_dot" />
+
+            <TextView
+                android:layout_width="25dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="90dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/merchantTxt"
+                android:layout_width="29dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="商家"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/merchantImg"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dip"
+                android:background="@drawable/gray_dot" />
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:id="@+id/sexyLL"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/isMerchantOrPersonalLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/reg_ll"
+            android:orientation="horizontal" >
+            
+            <TextView
+                android:layout_width="19dip"
+                android:layout_height="15dip"
+                android:layout_gravity="center_vertical"
+                
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="16dip"
+                android:layout_height="15dip"
+                android:layout_gravity="center_vertical"
+                 android:background="@drawable/man" 
+                android:textColor="@color/black" />
+
+            <TextView
+                 android:id="@+id/manTxt"
+                android:layout_width="29dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="0dip"
+                android:text="男"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/manImg"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dip"
+                android:background="@drawable/red_dot" />
+
+            <TextView
+                android:layout_width="25dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="90dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black" />
+            
+            
+            <TextView
+                android:layout_width="13dip"
+                android:layout_height="21dip"
+                android:layout_gravity="center_vertical"
+                 android:background="@drawable/girl" 
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/girlTxt"
+                android:layout_width="29dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="女"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/girlImg"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="17dip"
+                android:background="@drawable/gray_dot" />
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/reg_commit"
+            android:layout_width="277dip"
+            android:layout_height="31dip"
+            android:layout_below="@id/sexyLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dip"
+            android:background="@drawable/commit"
+            android:gravity="center"
+            android:textColor="@color/white" />
+        
+        
+        
+
+        
+        
+    </RelativeLayout>
+
+</RelativeLayout>

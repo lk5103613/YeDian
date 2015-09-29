@@ -1,0 +1,55 @@
+1.附近模块首页 点击进去的用户详情：
+
+URL=  HOST+   index.php/AppUser/loadUserInfo
+参数:
+     uid:用户ID
+     
+用户表字段:
+uid 	//用户主键
+nickname 	//昵称
+email 
+pwd 	密码
+status 	
+last_login_ip 	
+mp_bind 	 
+add_time 注册时间	 
+ 
+mp 	//手机号
+idcard 	 
+province_id 	 
+city_id 	 
+order_cnt 	 
+city_name 	 
+avatar 	 //头像
+wb 	 
+gender  ／／性别    1:男     2:女
+qm 	／／签名	
+addr 	／／所在地址
+tel 	 
+last_login 	 ／／最后的登录时间
+lanti 	／／最后登录等经纬度
+longi 	 
+age 	年龄
+astro 	星座
+birthday 	出生日期
+height 	身高
+weight 	体重
+
+
+
+2.动态：需要分页
+  HOST+index.php/AppUser/findUserDynamicPage
+  参数uid:用户ID
+  
+ 动态表：
+    dynamic_id ／／主键
+content 	／／动态内容
+add_time 	／／动态发布时间
+zan_cnt 	／／赞的次数
+msg_cnt 	／／消息数量
+uid 	／／动态发布主人的ID
+longi 	//动态发布时所在的经纬度
+lanti
+  
+  
+  

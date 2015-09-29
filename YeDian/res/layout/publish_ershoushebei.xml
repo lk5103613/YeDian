@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title" >
+
+       
+        
+        <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottommenu"
+       >
+            
+            <LinearLayout
+            android:id="@+id/mainLL"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            
+            
+            android:orientation="vertical" >
+        
+
+        <LinearLayout
+            android:id="@+id/titleLL"
+            android:layout_width="fill_parent"
+            android:layout_height="30.5dip"
+          
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="0dip"
+                android:layout_height="30.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="15dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:hint="请输入二手设备名称"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+       
+
+        <LinearLayout
+            android:id="@+id/henxian1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/accountLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/imgLL"
+            android:layout_width="fill_parent"
+            android:layout_height="86dip"
+            android:layout_below="@id/henxian1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal" >
+        
+       
+				<ImageView
+                android:id="@+id/photo0"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/photo1"
+                android:layout_width="83.80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/photo2"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+
+            <ImageView
+                android:id="@+id/photo3"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+			
+			
+		 
+	
+	</LinearLayout>
+
+       
+
+       
+        
+
+       
+        
+        
+        <LinearLayout
+            android:id="@+id/jobDescPreLL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tqPre"
+                android:layout_width="0dip"
+                android:layout_height="35.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="15dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="简介:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tq001Tv"
+                android:layout_width="0dip"
+                android:layout_height="25.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@null"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/jobDescLL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jobDescPreLL"
+            android:layout_margin="2dip"
+            android:orientation="vertical" >
+
+           
+            
+            
+            <EditText  android:id="@+id/descEt"
+   android:layout_width="280dip"
+   android:layout_gravity="center"
+   android:layout_height="wrap_content"
+   android:hint="请输入二手设备的介绍"
+   android:inputType="textMultiLine"
+   android:gravity="left|top"
+   android:minLines="4" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/henxian21"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/jobDescLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:id="@+id/priceLL"
+            android:layout_width="277dip"
+            android:layout_height="20dip"
+            android:layout_below="@id/henxian21"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pTv"
+                android:layout_width="50dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+               
+                android:background="@null"
+                android:paddingLeft="15dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="价格"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            
+            <EditText
+                android:id="@+id/priceEt"
+                android:layout_width="80dip"
+                 android:layout_height="20dip"
+                android:layout_gravity="center_vertical|left"
+                
+                android:background="@null"
+                android:paddingLeft="0dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:hint="请输入价格"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:id="@+id/henxian22"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/priceLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+        
+        
+        
+        
+        <LinearLayout
+            android:id="@+id/linkPreLL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/henxian22"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/linkPre"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="15dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="联系方式"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/link001Tv"
+                android:layout_width="0dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@null"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/henxian2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/linkPreLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:id="@+id/linkmanLL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/henxian2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/linkmanPre"
+                android:layout_width="0dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="15dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="联系人"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/linkmanEt"
+                android:layout_width="0dip"
+                android:layout_height="20.5dip"
+                android:layout_marginTop="0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@null"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:hint="请输入联系人"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/linkmpLL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linkmanLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/linkmpPre"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="15dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="电话:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/linkMpEt"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@null"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:hint="请输入联系电话"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/emailLL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linkmpLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/emailPre"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="15dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="Email:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/emailEt"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@null"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:hint="请输入Email"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:id="@+id/addressLinkLL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/addressLinkPre"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@null"
+                android:paddingLeft="15dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="联系地址:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/addrEt"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="5"
+                android:background="@null"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:hint="请输入联系地址"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/allLL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressLinkLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/allPre"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                 
+                android:background="@null"
+                android:paddingLeft="15dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text="联系我时，请说明是从夜店中国看到的"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+             
+        </LinearLayout>
+        </LinearLayout>
+        </ScrollView>
+        
+        
+        
+
+        
+        
+        
+    </RelativeLayout>
+
+</RelativeLayout>

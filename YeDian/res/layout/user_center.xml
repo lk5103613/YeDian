@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res/com.example.customview05imageview.view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/nearby_user_dynamic_title" />
+
+    <include
+        android:id="@+id/bottommenu"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dip"
+        layout="@layout/menu4" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottommenu"
+        android:layout_below="@id/title"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/typeLL"
+                android:layout_width="fill_parent"
+                android:layout_height="114dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0.5dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/userAvatar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="114dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="0dip"
+                    android:layout_marginTop="0dip"
+                    android:background="@drawable/neaby_dynamic_head"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sexLL"
+                android:layout_width="fill_parent"
+                android:layout_height="164dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/sexIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19.2dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="22dip"
+                    android:layout_marginTop="20dip"
+                    android:gravity="center_horizontal|right"
+                    android:text="这里是我的个人签名"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/avatarLL"
+                android:layout_width="fill_parent"
+                android:layout_height="64dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dip"
+                android:orientation="vertical" >
+                
+              
+                
+              
+ 
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sexLL"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@id/typeLL"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/line"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menuNewLL"
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:layout_below="@id/typeLL"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/menuNew0LL"
+                    android:layout_width="0dip"
+                    android:layout_height="100dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/scoreImg"
+                        android:layout_width="70dip"
+                        android:layout_height="70dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="0dip"
+                        android:background="@drawable/i_score"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuNew0LL"
+                    android:layout_width="0dip"
+                    android:layout_height="100dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/scoreImg2"
+                        android:layout_width="70dip"
+                        android:layout_height="70dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="0dip"
+                        android:background="@drawable/i_gift"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuNew0LL"
+                    android:layout_width="0dip"
+                    android:layout_height="100dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/scoreImg3"
+                        android:layout_width="70dip"
+                        android:layout_height="70dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="0dip"
+                        android:background="@drawable/i_set"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menuNewTxtLL"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below="@id/menuNewLL"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/menuNewALL"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/scoreTxt"
+                        android:layout_width="70dip"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="0dip"
+                        android:gravity="center_horizontal"
+                        android:text="我的积分"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuNewBLL"
+                    android:layout_width="0dip"
+                    android:layout_height="100dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/giftTxt"
+                        android:layout_width="70dip"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="0dip"
+                        android:gravity="center_horizontal"
+                        android:text="我的礼物"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuNewCLL"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/setTxt"
+                        android:layout_width="70dip"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="0dip"
+                        android:gravity="center_horizontal"
+                        android:text="个人设置"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

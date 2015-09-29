@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_navigate"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:background="@drawable/topbg"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/setting_title_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/backBtn"
+            style="@style/title_right_button"
+            android:layout_width="87dip"
+            android:layout_height="50dip"
+            android:src="@drawable/newback" />
+        
+        
+        
+        
+        
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/NavigateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:text="用户名片"
+        android:textColor="@color/white"
+        android:textSize="18.0sp" />
+
+    <LinearLayout
+        android:id="@+id/loginBtnLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+       
+        
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/NavigateTitle"
+        android:layout_alignBottom="@+id/NavigateTitle"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="23.5sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

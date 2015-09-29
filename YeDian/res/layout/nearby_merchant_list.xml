@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" 
+    android:orientation="vertical" >
+
+   <include
+        android:id="@+id/title"
+        layout="@layout/nearby_search_title" />
+   
+   <LinearLayout android:id="@+id/tool_bar"
+		android:layout_width="fill_parent" android:layout_height="35dip"
+		android:layout_below="@id/title" android:padding="0dip"   android:orientation="horizontal"
+		>
+		
+	    
+		
+	
+		
+		<TextView android:layout_width="0dip"  android:layout_weight="1"
+			android:layout_height="fill_parent" android:gravity="center"
+			android:textColor="@color/white"  android:text="距 离"
+			
+			android:layout_centerVertical="true" android:id="@+id/distanceBtn"
+			android:layout_alignParentRight="true" android:clickable="true" />
+		
+		<TextView android:layout_width="0dip"  android:layout_weight="1"
+			android:layout_height="fill_parent" android:gravity="center"
+			android:textColor="#ff404040"  android:text="星 级"
+			  
+			android:layout_centerVertical="true" android:id="@+id/starBtn"
+			android:layout_alignParentRight="true" android:clickable="true" />
+		
+		
+		
+		
+	</LinearLayout>
+
+   
+   
+   
+
+    <com.yedianchina.control.XListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tool_bar"
+        android:background="#FFFFFF" >
+    </com.yedianchina.control.XListView>
+    
+    <!--
+    <include android:id="@+id/bottommenu" layout="@layout/recruit_menu" />
+      -->
+    
+    
+
+</RelativeLayout>

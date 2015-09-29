@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	
+	android:layout_height="fill_parent">
+	 
+	
+
+	<RelativeLayout android:id="@+id/search_layout"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@id/title"  android:layout_marginTop="5dip" 
+		android:layout_marginLeft="25dip"
+		android:layout_marginRight="25dip"
+		>
+		<TextView android:layout_width="200dip" android:id="@+id/search_tv"
+			android:singleLine="true" android:layout_height="45dip"
+			android:gravity="center_vertical|left"
+			android:background="@drawable/search_input3"
+			android:textSize="14sp"
+			android:hint="@string/searchgoodsbar_hint" 
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:paddingLeft="5dip" />
+		
+		<TextView android:layout_width="33dip"  
+		    
+		    android:layout_marginRight="2dip"
+			android:layout_height="34dip" android:background="@drawable/search_bar3"
+			android:layout_centerVertical="true" android:id="@+id/search_btn"
+			android:layout_alignRight="@+id/search_tv" android:clickable="true" />
+	</RelativeLayout>
+	
+	 
+</RelativeLayout>

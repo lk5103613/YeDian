@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title" >
+   
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+       
+
+       
+      
+
+      
+
+        <LinearLayout
+            android:id="@+id/photoLLA"
+            android:layout_width="fill_parent"
+            android:layout_height="88.5dip"
+           
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/imgBtn"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/photo1"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/photo2"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/photo3"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+          
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/henxian5"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/photoLLA"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            
+            android:orientation="horizontal" >
+        </LinearLayout>
+         <LinearLayout
+            android:id="@+id/photoLLB"
+            android:layout_width="fill_parent"
+            android:layout_height="88.5dip"
+            android:layout_below="@id/henxian5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/photo4"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/photo5"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/photo6"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/photo7"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:textColor="@color/black" />
+
+          
+        </LinearLayout>
+
+       
+     
+      
+        
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

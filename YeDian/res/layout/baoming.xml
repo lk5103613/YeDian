@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 顶部标题 -->
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+    
+  
+
+    <RelativeLayout
+         android:id="@+id/mainRL"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        android:layout_below="@id/title" >
+
+       
+      
+        
+
+       
+
+        <LinearLayout
+            android:id="@+id/userCntLL"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+        
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="人数"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/userCntEt"
+                android:layout_width="0dip"
+                android:layout_height="30.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:numeric="integer"    
+                android:background="@null"
+                android:hint=" 请输入参加活动的人数"
+                android:paddingLeft="5dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        
+        <LinearLayout
+            android:id="@+id/henxian1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/userCntLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nameLL"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/henxian1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="姓名"
+                android:textColor="@color/black" />
+            
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="0dip"
+                android:layout_height="30.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入联系人姓名"
+                android:paddingLeft="5dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/henxian10"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/nameLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linkmanMPPPLL"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/henxian10"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="电话"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/linkMpEt"
+                android:layout_width="0dip"
+                android:layout_height="30.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:numeric="integer"    
+                android:background="@null"
+                android:hint="请输入联系电话"
+                android:paddingLeft="5dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linkMp33LL"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/linkmanMPPPLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/hengxian"
+            android:orientation="horizontal" >
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linkEmailLL"
+            android:layout_width="277dip"
+            android:layout_height="80.5dip"
+            android:layout_below="@id/linkMp33LL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="备注"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/memoEt"
+                android:layout_width="0dip"
+                android:layout_height="80.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="left|top"
+                android:hint="如果还有其他问题请在这里加备注...."
+                android:inputType="textMultiLine"
+                android:minLines="6"
+                android:paddingLeft="1dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/commitBtn"
+            android:layout_width="277dip"
+            android:layout_height="35dip"
+            android:layout_below="@id/linkEmailLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/baoming_commit"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

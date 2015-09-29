@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        layout="@layout/home_title" />
+    
+   
+    
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+       
+        android:layout_below="@id/title" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.drocode.swithcer.GuideGallery
+                android:id="@+id/image_wall_gallery"
+                android:layout_width="fill_parent"
+                android:layout_height="120dip"
+                android:fadingEdge="none"
+                android:spacing="0dip"
+                android:unselectedAlpha="1" >
+            </com.drocode.swithcer.GuideGallery>
+
+            <LinearLayout
+                android:id="@+id/gallery_point_linear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+            
+            
+            
+            
+
+            <LinearLayout
+                android:id="@+id/mainLL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+               
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="112.2dip"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                   
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/recruitID"
+                            android:layout_width="93.5dip"
+                           android:layout_height="112.2dip"
+                            android:layout_gravity="center_horizontal"
+                            
+                            android:background="@drawable/recruit"
+                            
+                            android:clickable="true"
+                            android:gravity="center" />
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0"
+                        android:orientation="vertical" >
+
+                        
+                    </LinearLayout>
+                    
+                  
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/jobsTv"
+                        android:layout_width="93.5dip"
+                           android:layout_height="112.2dip"
+                            android:layout_gravity="center_horizontal"
+                             android:background="@drawable/jobs"
+                            android:clickable="true"
+                            android:gravity="center" />
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0"
+                        android:orientation="vertical" >
+
+                        
+                    </LinearLayout>
+                    
+                 
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/merchantRankTv"
+                      android:layout_width="93.5dip"
+                           android:layout_height="112.2dip"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/merchantrank"
+                            android:clickable="true"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                 
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/paiduiLL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+            </LinearLayout>
+            
+            
+            
+
+            <LinearLayout
+                android:id="@+id/mainLL2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                       android:layout_height="132dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/nearByActivityTv"
+                          android:layout_width="93.5dip"
+                           android:layout_height="112.2dip"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/nearbyactivity"
+                            android:clickable="true"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/nearByMerchantTv"
+                           android:layout_width="93.5dip"
+                           android:layout_height="112.2dip"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/nearby_merchant"
+                            android:clickable="true"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/paiduiTv"
+                            android:layout_width="93.5dip"
+                           android:layout_height="112.2dip"
+                            android:layout_gravity="center_horizontal"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:background="@drawable/paidui"
+                            android:textColor="@color/yellow" />
+                    </LinearLayout>
+
+               
+                    
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/paiduiLL3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal" >
+            </LinearLayout>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <LinearLayout
+                android:id="@+id/tmp"
+                android:layout_width="fill_parent"
+                android:layout_height="90dip"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal" >
+                
+                <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+                    
+                    <TextView
+                       
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                       
+                        android:layout_gravity="center_horizontal"
+                        android:clickable="true"
+                        android:gravity="center" />
+                    
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="10"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/ershoushebei"
+                        android:layout_width="68dip"
+                        android:layout_height="76.5dip"
+                        android:background="@drawable/ershoushebei"
+                        android:layout_gravity="center_horizontal"
+                        android:clickable="true"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="10"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/module2"
+                        android:layout_width="68dip"
+                        android:layout_height="76.5dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/fuzhuang"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="10"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/module3"
+                        android:layout_width="68dip"
+                        android:layout_height="76.5dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/module3"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="10"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/module4"
+                         android:layout_width="68dip"
+                        android:layout_height="76.5dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/module4"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+                
+                <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+                    
+                    <TextView
+                       
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                       
+                        android:layout_gravity="center_horizontal"
+                        android:clickable="true"
+                        android:gravity="center" />
+                    
+                    </LinearLayout>
+            </LinearLayout>
+
+             <LinearLayout
+                android:id="@+id/tmp2014"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    
+   
+
+ 
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="2485C7D8A0A8B1A04FD6619A9C105D913AD18A66"
+        android:clickable="true"
+        android:enabled="true" />
+      
+      
+         
+          <include
+        android:id="@+id/bottommenu"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sc"
+        android:layout_marginTop="150dip"
+        layout="@layout/menu1" />
+      
+      
+
+    
+
+</RelativeLayout>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+    
+    <ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_above="@id/bottommenu"
+		android:layout_below="@id/title">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title" >
+
+        <LinearLayout
+            android:id="@+id/thmemeLL"
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="主题"
+                android:textColor="@color/gray" />
+
+            <EditText
+                android:id="@+id/themeEt"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="3"
+                android:background="@null"
+                android:text=""
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hx0"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/thmemeLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/hengxian"
+            android:paddingLeft="20dip"
+            android:textColor="@color/home_list_color"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:id="@+id/timeLL"
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:layout_below="@id/hx0"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="时间"
+                android:textColor="@color/gray" />
+
+            <EditText
+                android:id="@+id/timeEt"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="3"
+                android:background="@null"
+                android:text=""
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hx1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/timeLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/hengxian"
+            android:paddingLeft="20dip"
+            android:textColor="@color/home_list_color"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:id="@+id/addrLL"
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:layout_below="@id/hx1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="地址"
+                android:textColor="@color/gray" />
+
+            <EditText
+                android:id="@+id/addrEt"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="3"
+                android:background="@null"
+                android:text=""
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hx2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/addrLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/hengxian"
+            android:paddingLeft="20dip"
+            android:textColor="@color/home_list_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/h_t"
+            android:layout_width="fill_parent"
+            android:layout_height="160dip"
+            android:layout_below="@id/addrLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/h_t"
+            android:paddingLeft="0dip"
+            android:textColor="@color/home_list_color" />
+
+        <LinearLayout
+            android:id="@+id/info1LL"
+            android:layout_width="wrap_content"
+            android:layout_height="60dip"
+            android:layout_below="@id/h_t"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/info1"
+                android:layout_width="280dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="left|top"
+                android:hint="请输入活动详情1"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mainLL"
+            android:layout_width="wrap_content"
+            android:layout_height="80dip"
+            android:layout_below="@id/info1LL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/photo0"
+                android:layout_width="60dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/pic1space"
+                android:layout_width="15dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/photo1"
+                android:layout_width="60dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/pic2space"
+                android:layout_width="15dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/photo2"
+                android:layout_width="60dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/pic3space"
+                android:layout_width="15dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/photo3"
+                android:layout_width="60dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+        
+         <LinearLayout
+            android:id="@+id/info2LL"
+            android:layout_width="wrap_content"
+            android:layout_height="60dip"
+            android:layout_below="@id/mainLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/info2"
+                android:layout_width="280dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="left|top"
+                android:hint="请输入活动详情2"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:textSize="12sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/main2LL"
+            android:layout_width="wrap_content"
+            android:layout_height="80dip"
+            android:layout_below="@id/info2LL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/photo4"
+                android:layout_width="60dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/pic1space"
+                android:layout_width="15dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/photo5"
+                android:layout_width="60dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/pic2space"
+                android:layout_width="15dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/photo6"
+                android:layout_width="60dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/pic3space"
+                android:layout_width="15dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/photo7"
+                android:layout_width="60dip"
+                android:layout_height="60.5dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/add_pic"
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+        
+        
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

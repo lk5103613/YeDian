@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:orientation="vertical" >
+
+   <include
+        android:id="@+id/title"
+        layout="@layout/nearby_module_title" />
+   
+   
+   <include
+        android:id="@+id/bottommenu"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pull_down_view"
+       
+        layout="@layout/menu2" />
+    
+
+   
+   
+   
+
+    <com.yedianchina.control.XListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title"
+        android:layout_above="@+id/bottommenu"
+       android:divider="@null"
+       android:listSelector="#000000" 
+        android:background="#FFFFFF" >
+    </com.yedianchina.control.XListView>
+    
+    
+
+</RelativeLayout>

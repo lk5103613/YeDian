@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:orientation="vertical" >
+
+   <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+   
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:id="@+id/menuLL"
+    android:layout_below="@id/title"
+    android:background="#FFFFFF" >
+    
+     
+<LinearLayout 
+    android:layout_width="65dip"
+    android:layout_height="fill_parent"
+  
+    >
+    
+        <TextView
+            android:id="@+id/backBtn"
+            android:layout_width="65dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="0dip"
+             android:textColor="@color/white" 
+            android:clickable="true"
+        
+            android:gravity="center_horizontal|center_vertical"
+            
+            
+           
+           
+             />
+        </LinearLayout>
+        
+
+<LinearLayout 
+    android:layout_width="0dip"
+    android:layout_marginTop="5dip"
+    android:layout_marginBottom="5dip"
+    android:layout_height="fill_parent"
+   android:background="#FFFFFF"
+    android:layout_weight="1" >
+    
+        <TextView
+            android:id="@+id/attentionMerchantBtn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+           android:layout_weight="1"
+            android:background="@drawable/ktv_focus"
+             android:textColor="@color/white" 
+            android:clickable="true"
+            android:text="我关注的夜店"
+            android:gravity="center_vertical|center"
+           
+             />
+        
+       
+        
+        <TextView
+            android:id="@+id/attentionPersonBtn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+         android:background="@drawable/ktv"
+             android:textColor="@color/grey" 
+            android:clickable="true"
+            android:text="我关注的人"
+            android:layout_weight="1"
+          android:gravity="center_vertical|center"
+             />
+        
+        
+        
+        
+        
+        </LinearLayout>
+        
+       
+        
+<LinearLayout 
+    android:layout_width="65dip"
+    android:layout_height="fill_parent"
+  >
+    
+        <TextView
+            android:id="@+id/publishJobBtn"
+            android:layout_width="65dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="0dip"
+             android:textColor="@color/white" 
+            android:clickable="true"
+            android:text="筛选"
+           
+            android:gravity="center_horizontal|center_vertical"
+           
+           
+             />
+        </LinearLayout>
+        
+         
+        
+       
+        
+        
+     
+    
+            
+   
+</LinearLayout>
+   
+   
+   
+
+   
+   
+   
+
+     <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menuLL"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+    
+    
+
+</RelativeLayout>

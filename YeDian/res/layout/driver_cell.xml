@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/lv_bg">
+     
+    <ImageView
+        android:id="@+id/companyImgView"
+        android:layout_width="52dip"
+        android:layout_height="70dip"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dip"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" >
+    </ImageView>
+    <TextView
+        android:id="@+id/driverNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/companyImgView"
+        android:layout_toRightOf="@+id/companyImgView"
+        android:textColor="#000000"
+        android:layout_marginLeft="5dip"
+        android:textSize="14dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/statusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/driverNameTv"
+        android:layout_toRightOf="@+id/driverNameTv"
+        android:layout_marginLeft="5dip"         
+        android:textSize="14dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/nativePlacePre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/driverNameTv"
+        android:layout_toRightOf="@+id/statusTv"
+       android:textColor="@color/lightgrey"
+        android:text="籍贯:"
+        android:layout_marginLeft="5dip"                   
+        android:textSize="14dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/nativePlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/nativePlacePre"
+        android:layout_toRightOf="@+id/nativePlacePre"
+        android:textColor="@color/lightgrey"
+        
+        android:layout_marginLeft="4dip"                   
+        android:textSize="14dip" >
+    </TextView>
+    
+    
+    <TextView
+        android:id="@+id/workYearPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/driverNameTv"
+        android:layout_toRightOf="@+id/companyImgView"
+         android:textColor="@color/lightgrey"
+         android:text="驾龄:"
+         android:layout_marginLeft="5dip"
+                 
+        android:textSize="14dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nativePlacePre"
+        android:layout_toRightOf="@+id/workYearPre"
+        android:textColor="@color/lightgrey"
+        android:textSize="14dip" >
+    </TextView>
+    
+    
+    <TextView
+        android:id="@+id/drivingLicencePre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nativePlacePre"
+        android:layout_toRightOf="@+id/big"
+         android:textColor="@color/lightgrey"
+         android:text="代驾:"
+         android:layout_marginLeft="5dip"
+      
+        android:textSize="14dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/driveCntTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nativePlacePre"
+        android:layout_toRightOf="@+id/drivingLicencePre"
+        android:gravity="center_vertical|left"
+        android:layout_marginLeft="5dip"
+        android:textColor="@color/lightgrey"
+        android:textSize="14dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/starTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drivingLicencePre"
+        android:layout_toRightOf="@+id/companyImgView"
+      
+    >
+    </TextView>
+    
+    
+    
+    
+    
+    <TextView
+        android:id="@+id/juliTvPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/driveCntTv"
+        android:layout_toRightOf="@+id/starTv"
+       android:textColor="@color/lightgrey"
+         android:text="距离:"
+        android:textSize="14dip" >
+    </TextView>
+    <TextView
+        android:id="@+id/juliValTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/driveCntTv"
+        android:layout_toRightOf="@+id/juliTvPre"
+        android:textColor="@color/lightgrey"
+        
+        android:textSize="14dip" >
+    </TextView>
+    
+    
+    
+    
+    
+    
+
+
+</RelativeLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    
+    
+     <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+      
+         android:scrollbars="none"
+     >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         >
+
+      
+
+       
+
+        
+
+        <LinearLayout
+            android:id="@+id/menuList2LL"
+            android:layout_width="fill_parent"
+            android:layout_height="3.5dip"
+            android:layout_below="@id/menuLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/hx"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menuListLL"
+            android:layout_width="fill_parent"
+            android:layout_height="47.5dip"
+            android:layout_below="@id/menuList2LL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="20dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="65dip"
+                android:layout_height="46dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="0dip"
+                android:background="@drawable/nearbyattentionmall"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="99dip"
+                android:layout_height="46dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="21dip"
+                android:gravity="center_horizontal"
+                android:text="关注的夜店"
+                 android:textColor="@color/black"
+                android:textSize="18dip" />
+
+            <TextView
+                android:layout_width="9dip"
+                android:layout_height="19dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="99dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/to_right"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/menuList3LL"
+            
+            android:layout_below="@id/menuListLL" 
+            android:layout_width="fill_parent"
+            android:background="@drawable/hx"
+            android:layout_height="3.5dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="5dip"
+            android:orientation="horizontal" >
+           
+            </LinearLayout>
+            
+        <LinearLayout
+            android:id="@+id/menuList4LL"
+            android:layout_width="fill_parent"
+            android:layout_height="47.5dip"
+            android:layout_below="@id/menuList3LL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="20dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="46dip"
+                android:layout_height="44dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="26dip"
+                android:layout_marginTop="0dip"
+                android:background="@drawable/fs"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="69dip"
+                android:layout_height="46dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="21dip"
+                android:gravity="center_horizontal"
+                android:text="粉丝"
+                  android:textColor="@color/black"
+                android:textSize="18dip" />
+
+            <TextView
+                android:layout_width="9dip"
+                android:layout_height="19dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="132dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/to_right"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:id="@+id/menuList5LL"
+            
+            android:layout_below="@id/menuList4LL" 
+            android:layout_width="fill_parent"
+            android:background="@drawable/hx"
+            android:layout_height="3.5dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="5dip"
+            android:orientation="horizontal" >
+           
+            </LinearLayout>
+            
+        <LinearLayout
+            android:id="@+id/menuList6LL"
+            android:layout_width="fill_parent"
+            android:layout_height="47.5dip"
+            android:layout_below="@id/menuList5LL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="20dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="46dip"
+                android:layout_height="44dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="26dip"
+                android:layout_marginTop="0dip"
+                android:background="@drawable/nearby_receive"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="99dip"
+                android:layout_height="46dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="21dip"
+                android:gravity="center_horizontal"
+                android:text="收到的礼物"
+                  android:textColor="@color/black"
+                android:textSize="18dip" />
+
+            <TextView
+                android:layout_width="9dip"
+                android:layout_height="19dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="103dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/to_right"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        
+        
+        
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

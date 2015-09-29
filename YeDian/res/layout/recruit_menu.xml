@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true" android:gravity="center">
+	
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="50dip"
+		android:background="@drawable/bottom_menu_bg" android:paddingTop="0dip">
+		
+		<LinearLayout android:orientation="vertical" android:id="@+id/menu_home"
+			android:layout_width="0dip" android:layout_weight="1"
+			android:layout_height="wrap_content" android:clickable="true"
+			android:background="@drawable/menu">
+			
+			<ImageView android:layout_width="160dip" android:id="@+id/nearbyID"
+				android:layout_gravity="center_horizontal" android:layout_height="50dip"
+				android:layout_centerVertical="true" android:src="@drawable/recruit_nearby_focus" />
+				
+		
+				
+		</LinearLayout>
+		
+		<LinearLayout android:orientation="vertical" android:id="@+id/menu_brand"
+			android:background="@drawable/menu" android:layout_width="0dip"
+			android:layout_weight="1" android:layout_height="wrap_content"
+			android:clickable="true">
+			
+			<ImageView android:layout_width="160dip" android:id="@+id/cityID"
+				android:layout_gravity="center_horizontal" android:layout_height="50dip"
+				android:layout_centerVertical="true" android:src="@drawable/recruit_city" />
+		
+				
+		</LinearLayout>
+		
+		
+	
+		
+		
+		
+	</LinearLayout>
+	
+	
+		
+</RelativeLayout>

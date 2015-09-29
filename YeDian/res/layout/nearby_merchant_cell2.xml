@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+     
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="92dip"
+        android:layout_height="68dip"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dip"
+        android:adjustViewBounds="true"
+      
+        android:scaleType="fitXY" >
+    </ImageView>
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="160dip"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/logoImg"
+        android:layout_toRightOf="@+id/logoImg"
+        android:textColor="#000000"
+        android:scrollHorizontally="true"
+        android:maxLines="1" 
+         android:text="标题"
+        android:layout_marginLeft="5dip"
+        android:textSize="14dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/title0Tv"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+       
+        android:layout_toRightOf="@+id/logoImg"
+        android:layout_below="@+id/titleTv"
+        android:textColor="#000000"
+        android:scrollHorizontally="true"
+        android:maxLines="1" 
+         android:text="       "
+         android:layout_marginTop="1dip"
+        android:layout_marginLeft="5dip"
+        android:textSize="14dip" >
+    </TextView>
+    
+    
+   
+    
+    
+    
+    <TextView
+        android:id="@+id/areaTv"
+        android:layout_width="63dip"
+        android:layout_height="20dip"
+        android:layout_below="@+id/title0Tv"
+        android:layout_toRightOf="@+id/logoImg"
+        android:gravity="left"
+       
+        android:layout_marginTop="10dip"
+        android:textColor="#000000"
+        android:text="黄浦区"
+        android:layout_marginLeft="5dip"         
+        android:textSize="12dip" >
+    </TextView>
+    
+    
+     <TextView
+        android:id="@+id/starTv"
+        android:layout_width="63dip"
+        android:layout_height="12dip"
+        android:layout_below="@+id/titleTv"
+        android:layout_alignParentRight="true"
+      
+        android:background="@drawable/star4"
+        android:layout_marginTop="8dip"
+       android:layout_margin="3dip"
+        android:layout_marginLeft="5dip"         
+        android:textSize="12dip" >
+    </TextView>
+    
+    
+    
+    
+    
+    
+    <TextView
+        android:id="@+id/distanceTv"
+        android:layout_width="63dip"
+        android:layout_height="20dip"
+        android:layout_below="@+id/starTv"
+        android:layout_toRightOf="@+id/areaTv"
+        android:gravity="center"
+        android:layout_alignLeft="@+id/starTv"
+       android:layout_alignTop="@+id/areaTv"
+        android:layout_alignParentRight="true"
+        android:textColor="#000000"
+        android:text="1.5Km"
+        android:layout_margin="2dip"
+        android:layout_marginTop="10dip"      
+        android:textSize="12dip" >
+    </TextView>
+    
+    
+    
+    
+  
+    
+    
+    
+
+
+</RelativeLayout>

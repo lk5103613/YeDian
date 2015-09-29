@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+   
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title" >
+
+        <LinearLayout
+            android:id="@+id/cell_phone_box"
+            android:layout_width="277dip"
+            android:layout_height="33.5dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"
+            android:background="@drawable/old_pwd"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/oldPwd"
+                android:layout_width="277dip"
+                android:layout_height="33.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="2dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入原始密码"
+                android:paddingLeft="89dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColorHint="@color/lightgrey"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login_hint"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/cell_phone_box"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dip"     
+            android:paddingLeft="20dip"
+            android:background="@drawable/hengxian"
+            android:textColor="@color/home_list_color"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:id="@+id/password_box"
+            android:layout_width="277dip"
+            android:layout_height="33.5dip"
+            android:layout_below="@id/login_hint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/new_pwd"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/newPwd"
+                android:layout_width="0dip"
+                android:layout_height="33.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入新密码"
+                android:inputType="textPassword"
+                android:paddingLeft="89dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColorHint="@color/lightgrey"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        
+        
+        
+         <TextView
+            android:id="@+id/login_hint2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/password_box"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dip"     
+            android:paddingLeft="20dip"
+            android:background="@drawable/hengxian"
+            android:textColor="@color/home_list_color"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:id="@+id/pwd2LL"
+            android:layout_width="277dip"
+            android:layout_height="33.5dip"
+            android:layout_below="@id/login_hint2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/new_pwd2"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/newPwd2"
+                android:layout_width="0dip"
+                android:layout_height="33.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入确认新密码"
+                android:inputType="textPassword"
+                android:paddingLeft="89dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColorHint="@color/lightgrey"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        
+        
+        
+        
+        
+       
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="277dip"
+            android:layout_height="35dip"
+            android:layout_below="@id/pwd2LL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/ok"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+   
+    
+
+</RelativeLayout>

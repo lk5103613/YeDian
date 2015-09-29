@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#ffffff">
+	<!-- 顶部标题 -->
+	<include android:id="@+id/title" layout="@layout/title" />
+	 
+	
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_above="@id/bottommenu"
+		android:layout_below="@id/title">
+		
+	 
+		
+			 
+		
+		<LinearLayout android:orientation="horizontal"
+			android:id="@+id/password_box" android:layout_width="300dip"
+			android:layout_height="106dip" 
+		
+			android:layout_marginTop="15dip" 
+			android:layout_centerHorizontal="true">
+			
+			<EditText android:layout_width="fill_parent"
+				android:singleLine="false" 
+				android:id="@+id/contentEt"
+		
+				android:textSize="15sp"
+				android:selectAllOnFocus="true" 
+				android:background="@drawable/textarea"
+				
+				android:hint="   请在这里输入您的宝贵建议"
+                android:inputType="textMultiLine"
+                android:minLines="6"
+				android:gravity="left|top"  
+				android:paddingLeft="2dip"
+				android:paddingTop="5dip"
+				android:layout_height="wrap_content"/>
+		</LinearLayout>
+
+
+		<TextView
+            android:id="@+id/saveBtn"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/password_box"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/ok"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+		
+		
+	</RelativeLayout>
+	
+	
+	
+	
+</RelativeLayout>

@@ -1,0 +1,122 @@
+07-25 21:54:01.490: D/dalvikvm(28366): Trying to load lib /data/app-lib/com.yedianchina.ui-1/libvi_voslib.so 0x42c67f68
+07-25 21:54:01.500: D/dalvikvm(28366): Added shared lib /data/app-lib/com.yedianchina.ui-1/libvi_voslib.so 0x42c67f68
+07-25 21:54:01.500: D/dalvikvm(28366): No JNI_OnLoad found in /data/app-lib/com.yedianchina.ui-1/libvi_voslib.so 0x42c67f68, skipping init
+07-25 21:54:01.500: D/dalvikvm(28366): Trying to load lib /data/app-lib/com.yedianchina.ui-1/libapp_BaiduMapApplib_v2_1_1.so 0x42c67f68
+07-25 21:54:01.500: D/dalvikvm(28366): Added shared lib /data/app-lib/com.yedianchina.ui-1/libapp_BaiduMapApplib_v2_1_1.so 0x42c67f68
+07-25 21:54:01.590: D/dalvikvm(28366): Trying to load lib /data/app-lib/com.yedianchina.ui-1/libvi_voslib.so 0x42c67f68
+07-25 21:54:01.590: D/dalvikvm(28366): Shared lib '/data/app-lib/com.yedianchina.ui-1/libvi_voslib.so' already loaded in same CL 0x42c67f68
+07-25 21:54:01.650: D/weibosdk(28366): Weibo  check pass
+07-25 21:54:01.650: D/weibosdk(28366): WeiboApiImpl  registerApp() packageName : com.sina.weibo
+07-25 21:54:01.650: D/weibosdk(28366): ReceiverHandler  send message, intent=com.sina.weibo.sdk.Intent.ACTION_WEIBO_REGISTER, appPackage=com.yedianchina.ui
+07-25 21:54:01.660: D/ImageLoader(28366): Initialize ImageLoader with configuration
+07-25 21:54:01.670: D/EMChat Demo(28366): initialize EMChat SDK
+07-25 21:54:01.670: I/conf(28366): EASEMOB_APPKEY is set to:okj2014#yedian
+07-25 21:54:01.750: D/ana(28366): no last location info to use
+07-25 21:54:01.850: D/dalvikvm(28366): GC_FOR_ALLOC freed 636K, 33% free 17488K/25968K, paused 24ms, total 24ms
+07-25 21:54:01.900: I/dalvikvm-heap(28366): Grow heap (frag case) to 43.415MB for 22118416-byte allocation
+07-25 21:54:01.920: I/System.out(28366): 返回码：400
+07-25 21:54:01.960: D/dalvikvm(28366): GC_FOR_ALLOC freed 2423K, 23% free 36909K/47572K, paused 17ms, total 17ms
+07-25 21:54:01.990: D/AbsListView(28366): Get MotionRecognitionManager
+07-25 21:54:01.990: E/SplashUI.isConnect(28366): true
+07-25 21:54:02.000: D/AbsListView(28366): onVisibilityChanged() is called, visibility : 4
+07-25 21:54:02.000: D/AbsListView(28366): unregisterIRListener() is called 
+07-25 21:54:02.010: D/AbsListView(28366): onVisibilityChanged() is called, visibility : 0
+07-25 21:54:02.010: D/AbsListView(28366): unregisterIRListener() is called 
+07-25 21:54:02.040: D/AbsListView(28366): unregisterIRListener() is called 
+07-25 21:54:02.050: D/AbsListView(28366): unregisterIRListener() is called 
+07-25 21:54:02.070: D/AbsListView(28366): unregisterIRListener() is called 
+07-25 21:54:02.190: D/dalvikvm(28366): GC_FOR_ALLOC freed 88K, 16% free 40170K/47572K, paused 14ms, total 14ms
+07-25 21:54:02.200: I/dalvikvm-heap(28366): Grow heap (frag case) to 48.229MB for 5512336-byte allocation
+07-25 21:54:02.231: D/dalvikvm(28366): GC_FOR_ALLOC freed 600K, 15% free 45176K/52956K, paused 16ms, total 16ms
+07-25 21:54:02.291: D/Test(28366): /storage/emulated/0/BaiduMapSDK
+07-25 21:54:02.521: D/dalvikvm(28366): GC_FOR_ALLOC freed 947K, 9% free 51466K/56144K, paused 18ms, total 18ms
+07-25 21:54:02.561: D/dalvikvm(28366): GC_FOR_ALLOC freed 605K, 8% free 56871K/61760K, paused 17ms, total 17ms
+07-25 21:54:02.611: D/dalvikvm(28366): GC_FOR_ALLOC freed 408K, 8% free 60752K/65800K, paused 18ms, total 18ms
+07-25 21:54:02.651: D/dalvikvm(28366): GC_FOR_ALLOC freed 635K, 8% free 66216K/71496K, paused 17ms, total 17ms
+07-25 21:54:02.781: I/dalvikvm(28464): Turning on JNI app bug workarounds for target SDK version 8...
+07-25 21:54:02.801: D/dalvikvm(28464): Trying to load lib /data/app-lib/com.yedianchina.ui-1/libvi_voslib.so 0x42c606e8
+07-25 21:54:02.811: D/dalvikvm(28464): Added shared lib /data/app-lib/com.yedianchina.ui-1/libvi_voslib.so 0x42c606e8
+07-25 21:54:02.811: D/dalvikvm(28464): No JNI_OnLoad found in /data/app-lib/com.yedianchina.ui-1/libvi_voslib.so 0x42c606e8, skipping init
+07-25 21:54:02.811: D/dalvikvm(28464): Trying to load lib /data/app-lib/com.yedianchina.ui-1/libapp_BaiduMapApplib_v2_1_1.so 0x42c606e8
+07-25 21:54:02.811: D/dalvikvm(28464): Added shared lib /data/app-lib/com.yedianchina.ui-1/libapp_BaiduMapApplib_v2_1_1.so 0x42c606e8
+07-25 21:54:02.841: D/dalvikvm(28464): Trying to load lib /data/app-lib/com.yedianchina.ui-1/libvi_voslib.so 0x42c606e8
+07-25 21:54:02.841: D/dalvikvm(28464): Shared lib '/data/app-lib/com.yedianchina.ui-1/libvi_voslib.so' already loaded in same CL 0x42c606e8
+07-25 21:54:02.911: D/libEGL(28366): loaded /vendor/lib/egl/libEGL_adreno.so
+07-25 21:54:02.911: D/libEGL(28366): loaded /vendor/lib/egl/libGLESv1_CM_adreno.so
+07-25 21:54:02.911: D/weibosdk(28464): Weibo  check pass
+07-25 21:54:02.911: D/libEGL(28366): loaded /vendor/lib/egl/libGLESv2_adreno.so
+07-25 21:54:02.921: I/Adreno-EGL(28366): <qeglDrvAPI_eglInitialize:316>: EGL 1.4 QUALCOMM build:  (CL4169980)
+07-25 21:54:02.921: I/Adreno-EGL(28366): OpenGL ES Shader Compiler Version: 17.01.10.SPL
+07-25 21:54:02.921: I/Adreno-EGL(28366): Build Date: 09/26/13 Thu
+07-25 21:54:02.921: I/Adreno-EGL(28366): Local Branch: 
+07-25 21:54:02.921: I/Adreno-EGL(28366): Remote Branch: 
+07-25 21:54:02.921: I/Adreno-EGL(28366): Local Patches: 
+07-25 21:54:02.921: I/Adreno-EGL(28366): Reconstruct Branch: 
+07-25 21:54:02.921: D/weibosdk(28464): WeiboApiImpl  registerApp() packageName : com.sina.weibo
+07-25 21:54:02.921: D/weibosdk(28464): ReceiverHandler  send message, intent=com.sina.weibo.sdk.Intent.ACTION_WEIBO_REGISTER, appPackage=com.yedianchina.ui
+07-25 21:54:02.941: D/ImageLoader(28464): Initialize ImageLoader with configuration
+07-25 21:54:02.971: W/System.err(28464): java.lang.NoSuchMethodException: startScan [boolean]
+07-25 21:54:02.981: W/System.err(28464): 	at java.lang.Class.getConstructorOrMethod(Class.java:423)
+07-25 21:54:02.981: W/System.err(28464): 	at java.lang.Class.getDeclaredMethod(Class.java:589)
+07-25 21:54:02.981: W/System.err(28464): 	at com.baidu.location.e.try(Unknown Source)
+07-25 21:54:02.981: W/System.err(28464): 	at com.baidu.location.f.onCreate(Unknown Source)
+07-25 21:54:02.981: W/System.err(28464): 	at android.app.ActivityThread.handleCreateService(ActivityThread.java:2687)
+07-25 21:54:02.981: W/System.err(28464): 	at android.app.ActivityThread.access$1700(ActivityThread.java:159)
+07-25 21:54:02.981: W/System.err(28464): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1404)
+07-25 21:54:02.981: W/System.err(28464): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+07-25 21:54:02.981: W/System.err(28464): 	at android.os.Looper.loop(Looper.java:137)
+07-25 21:54:02.981: W/System.err(28464): 	at android.app.ActivityThread.main(ActivityThread.java:5419)
+07-25 21:54:02.981: W/System.err(28464): 	at java.lang.reflect.Method.invokeNative(Native Method)
+07-25 21:54:02.981: W/System.err(28464): 	at java.lang.reflect.Method.invoke(Method.java:525)
+07-25 21:54:02.981: W/System.err(28464): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1187)
+07-25 21:54:02.981: W/System.err(28464): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+07-25 21:54:02.981: W/System.err(28464): 	at dalvik.system.NativeStart.main(Native Method)
+07-25 21:54:02.981: D/dalvikvm(28464): Trying to load lib /data/app-lib/com.yedianchina.ui-1/liblocSDK3.so 0x42c606e8
+07-25 21:54:02.991: D/dalvikvm(28464): Added shared lib /data/app-lib/com.yedianchina.ui-1/liblocSDK3.so 0x42c606e8
+07-25 21:54:02.991: D/dalvikvm(28464): No JNI_OnLoad found in /data/app-lib/com.yedianchina.ui-1/liblocSDK3.so 0x42c606e8, skipping init
+07-25 21:54:02.991: E/Adreno-ES11(28366): <qglDrvAPI_glFrustumf:510>: GL_INVALID_VALUE
+07-25 21:54:02.991: W/Adreno-ES20(28366): <core_glTexParameteriv:523>: GL_INVALID_ENUM
+07-25 21:54:02.991: W/Adreno-ES20(28366): <core_glTexParameteriv:523>: GL_INVALID_ENUM
+07-25 21:54:03.001: E/SQLiteLog(28464): (1) table bdcltb09 already exists
+07-25 21:54:03.001: D/baidu_location_service(28464): baidu location service start1 ...28464
+07-25 21:54:03.061: W/Adreno-ES20(28366): <core_glTexParameteriv:523>: GL_INVALID_ENUM
+07-25 21:54:03.071: W/Adreno-ES20(28366): <core_glTexParameteriv:523>: GL_INVALID_ENUM
+07-25 21:54:03.091: D/baidu_location_client(28366): baidu location connected ...
+07-25 21:54:03.111: E/libEGL(28366): call to OpenGL ES API with no current context (logged once per thread)
+07-25 21:54:03.121: D/ImageLoader(28366): Start display image task [http://115.28.107.87/abc500.jpg_1080x510]
+07-25 21:54:03.121: D/ImageLoader(28366): Load image from network [http://115.28.107.87/abc500.jpg_1080x510]
+07-25 21:54:03.151: W/Adreno-ES20(28366): <core_glTexParameteriv:523>: GL_INVALID_ENUM
+07-25 21:54:03.292: D/ImageLoader(28366): Display image in ImageAware (loaded from NETWORK) [http://115.28.107.87/abc500.jpg_1080x510]
+07-25 21:54:03.312: D/ImageLoader(28366): Start display image task [http://115.28.107.87/abc500.jpg_1080x510]
+07-25 21:54:03.312: D/ImageLoader(28366): Load image from network [http://115.28.107.87/abc500.jpg_1080x510]
+07-25 21:54:03.422: E/latitude(28366): latitude=============31.279697
+07-25 21:54:03.422: E/longitude(28366): longitude=============121.430067
+07-25 21:54:03.442: D/ImageLoader(28366): Display image in ImageAware (loaded from NETWORK) [http://115.28.107.87/abc500.jpg_1080x510]
+07-25 21:54:03.452: D/AbsListView(28366): onDetachedFromWindow
+07-25 21:54:03.452: D/AbsListView(28366): unregisterIRListener() is called 
+07-25 21:54:04.863: D/skia(28366): new locale 
+07-25 21:54:05.023: D/dalvikvm(28366): GC_FOR_ALLOC freed 1582K, 7% free 72562K/77672K, paused 41ms, total 41ms
+07-25 21:54:07.616: E/ImageViewMyLetao(28366): 聊天---
+07-25 21:54:08.066: E/loadUserInfo-------------------(28366): http://115.28.107.87/index.php/AppUser/loadUserInfo?uid=54
+07-25 21:54:08.196: I/System.out(28366): nickname=
+07-25 21:54:08.196: W/System.err(28366): org.json.JSONException: Value �� at chat of type java.lang.String cannot be converted to int
+07-25 21:54:08.196: W/System.err(28366): 	at org.json.JSON.typeMismatch(JSON.java:100)
+07-25 21:54:08.196: W/System.err(28366): 	at org.json.JSONObject.getInt(JSONObject.java:446)
+07-25 21:54:08.196: W/System.err(28366): 	at com.yedianchina.dao.UserDao.loadUserInfo(UserDao.java:278)
+07-25 21:54:08.196: W/System.err(28366): 	at com.yedianchina.ui.i.IMingpianUI.updateCurrendData(IMingpianUI.java:603)
+07-25 21:54:08.196: W/System.err(28366): 	at com.yedianchina.ui.i.IMingpianUI$10.run(IMingpianUI.java:392)
+07-25 21:54:08.326: D/AndroidRuntime(28366): Shutting down VM
+07-25 21:54:08.326: W/dalvikvm(28366): threadid=1: thread exiting with uncaught exception (group=0x41b0b898)
+07-25 21:54:08.326: E/AndroidRuntime(28366): FATAL EXCEPTION: main
+07-25 21:54:08.326: E/AndroidRuntime(28366): java.lang.NullPointerException
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at com.yedianchina.ui.i.IMingpianUI.setNearbyMingpianData(IMingpianUI.java:620)
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at com.yedianchina.ui.i.IMingpianUI$2.handleMessage(IMingpianUI.java:612)
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at android.os.Looper.loop(Looper.java:137)
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at android.app.ActivityThread.main(ActivityThread.java:5419)
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at java.lang.reflect.Method.invokeNative(Native Method)
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at java.lang.reflect.Method.invoke(Method.java:525)
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1187)
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+07-25 21:54:08.326: E/AndroidRuntime(28366): 	at dalvik.system.NativeStart.main(Native Method)
+07-25 21:54:28.967: D/baidu_location_service(28464): baidu location service stop ...

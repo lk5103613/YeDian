@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<!-- 顶部标题 -->
+	<include android:id="@+id/title" layout="@layout/title" />
+	
+	 
+	
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_above="@id/bottommenu"
+		android:layout_below="@id/title">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_marginTop="5dip">
+				 
+				
+				<EditText  android:id="@+id/editSms"
+   android:layout_width="280dip"
+   android:layout_gravity="center"
+   android:layout_height="wrap_content"
+   android:hint="请输入您的建议，谢谢!"
+   android:inputType="textMultiLine"
+   android:gravity="left|top"
+   android:minLines="6" />
+			</LinearLayout>
+			
+			<LinearLayout
+			     android:layout_marginTop="35dip"
+			   android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="40dip">
+				
+			    
+				<TextView android:id="@+id/sendCodeBtn"
+					android:layout_width="280dip" android:layout_height="wrap_content"
+					android:text="提交" android:background="@drawable/btn0607"
+					android:clickable="true"  android:gravity="center_vertical|center"
+					android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" android:textSize="20sp"
+					/>
+				
+				 
+				
+				
+			</LinearLayout>
+			
+			
+			
+			
+			
+			
+			
+		</LinearLayout>
+	</ScrollView>
+	</RelativeLayout>

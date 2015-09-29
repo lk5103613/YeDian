@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/bg2013">
+	<!-- 顶部标题 -->
+	<include android:id="@+id/title" layout="@layout/sms_validate_title" />
+	
+	<!-- 底部菜单 -->
+	<include android:id="@+id/bottommenu" layout="@layout/menu2" />
+	<include layout="@layout/common_listview" />
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_above="@id/bottommenu"
+		android:layout_below="@id/title">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_marginTop="5dip">
+				<!-- 请输入手机号 -->
+				<TextView android:layout_width="70dip"
+					android:layout_height="wrap_content" android:gravity="right"
+					android:layout_gravity="center_vertical" android:text="手机号码"
+					android:textColor="@color/black" />
+				<EditText android:id="@+id/mpTx"  android:paddingLeft="13dip"
+				    android:hint="请输入联系手机号码"
+					android:layout_width="230dip" android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical" android:singleLine="true"
+					android:textSize="15sp" android:textColor="@color/black"
+					android:background="@drawable/input_box" android:layout_margin="5dip" />
+			</LinearLayout>
+			
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<TextView android:id="@+id/sendCodeBtn"
+					android:layout_width="280dip" android:layout_height="wrap_content"
+					android:text="发送验证码到手机" android:background="@drawable/new_btn"
+					android:clickable="true" android:gravity="center"  android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" android:textSize="20sp"
+					/>
+			</LinearLayout>
+			
+			
+			
+			
+			
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<EditText android:id="@+id/inputCode"
+					android:layout_width="120dip" android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical" android:singleLine="true"
+					android:textSize="15sp" android:textColor="@color/black"
+					android:background="@drawable/input_box" android:layout_marginLeft="30dip" />
+				
+				<TextView android:id="@+id/showSecBtn"
+					android:layout_width="130dip" android:layout_height="65dip"
+					android:text="60秒后获取" android:background="@drawable/green_btn"
+					android:clickable="true" android:gravity="center"
+					android:textColor="@color/white" android:textSize="20sp"
+					android:layout_margin="10dip" />
+			</LinearLayout>
+			
+			
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<TextView android:id="@+id/validate_button"
+					android:layout_width="280dip" android:layout_height="wrap_content"
+					android:text="验证" android:background="@drawable/new_btn"
+					android:clickable="true" android:gravity="center"  android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" android:textSize="20sp"
+					/>
+			</LinearLayout>
+			
+			
+			
+			
+			
+			
+		</LinearLayout>
+	</ScrollView>
+	</RelativeLayout>

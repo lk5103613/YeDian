@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/lv_bg">
+    <ImageView
+        android:id="@+id/companyImgView"
+        android:layout_width="52dip"
+        android:layout_height="70dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="4dip"      
+        android:layout_marginLeft="4dip"        
+        android:adjustViewBounds="true"
+        android:textColor="@color/black"
+        android:scaleType="fitXY" >
+    </ImageView>
+     
+    <!-- 时间 -->
+    <TextView
+        android:id="@+id/addTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_alignTop="@+id/companyImgView"
+        android:layout_toRightOf="@+id/companyImgView"
+        android:layout_marginLeft="4dip"        
+        android:adjustViewBounds="true"
+        android:textColor="@color/black"
+        android:textSize="13dip"   
+        android:scaleType="fitXY" >
+    </TextView>
+    <!-- 代驾司机姓名 -->
+    <TextView
+        android:id="@+id/driverNamePreTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addTimeTv"
+        android:layout_toRightOf="@+id/addTimeTv"
+        android:textColor="@color/lightgrey"
+        android:layout_marginLeft="3dip"    
+        android:textSize="13dip"     
+         android:text="司机电话:"
+      >
+    </TextView>
+   
+     <TextView
+        android:id="@+id/driverNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/driverNamePreTv"
+        android:layout_toRightOf="@+id/driverNamePreTv"
+       android:textSize="13dip"   
+       android:textColor="@color/black"
+        android:layout_marginLeft="1dip"                   
+    >
+    </TextView>
+    
+    <!-- 目的地 -->
+    <TextView
+        android:id="@+id/endLocationPreTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/companyImgView"
+        android:layout_below="@+id/addTimeTv"
+        android:textColor="@color/lightgrey"
+        android:text="到达时间:"
+        android:textSize="13dip"   
+        android:layout_marginLeft="4dip"                   
+    >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/arriveTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/endLocationPreTv"
+        android:layout_toRightOf="@+id/endLocationPreTv"
+        android:textColor="#000000"
+        android:textSize="13dip"   
+        android:layout_marginLeft="4dip"                   
+    >
+    </TextView>
+    
+    <!-- 出发地址 -->
+    <TextView
+        android:id="@+id/start_addr_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/endLocationPreTv"
+         android:layout_marginLeft="4dip"        
+         android:textColor="@color/lightgrey"
+         android:text="出发地址:"
+         android:textSize="13dip"   
+         android:layout_toRightOf="@+id/companyImgView"
+    >
+    </TextView>
+    <TextView
+        android:id="@+id/startAddrTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/start_addr_pre"
+        android:layout_toRightOf="@+id/start_addr_pre"
+         android:textSize="13dip"   
+         android:textColor="@color/black"
+         
+    >
+    </TextView>
+    
+    <!-- 评论
+    <TextView
+        android:id="@+id/commentBtn"
+        android:layout_width="60dip"
+        android:layout_height="35dip"
+       android:layout_alignParentRight="true"
+        android:layout_marginTop="13dip"   
+        android:layout_marginRight="4dip"           
+        android:adjustViewBounds="true"
+        android:textColor="@color/white"
+        android:text="评价"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+    
+ 
+ 
+ 
+        android:background="@drawable/new_btn"
+        android:scaleType="fitXY" >
+    </TextView>
+    -->
+    
+   
+    
+    
+
+</RelativeLayout>

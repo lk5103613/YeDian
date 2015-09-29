@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#ffffff">
+	<!-- 顶部标题 -->
+	<include android:id="@+id/title" layout="@layout/suggest_title" />
+	 
+	
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_above="@id/bottommenu"
+		android:layout_below="@id/title">
+		
+	    <LinearLayout android:orientation="horizontal"
+			android:id="@+id/star" android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		
+			android:layout_marginTop="20dip" 
+			android:layout_centerHorizontal="true">
+			
+	        <RatingBar 
+    android:id="@+id/ratingBar" 
+    android:numStars="5"  
+    android:rating="1"  
+      
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"> 
+</RatingBar>
+			
+	    </LinearLayout>
+		
+	 
+		
+			 
+		
+		<LinearLayout android:orientation="horizontal"
+			android:id="@+id/txt" android:layout_width="250dip"
+			android:layout_height="wrap_content"
+		    android:layout_below="@id/star" 
+			android:layout_marginTop="20dip" 
+			android:layout_centerHorizontal="true">
+			
+		    
+			
+			<EditText android:layout_width="fill_parent"
+				android:singleLine="false" 
+				android:id="@+id/contentEt"
+		
+				android:textSize="15sp"
+				android:selectAllOnFocus="true" 
+				 
+				android:hint="请在这里输入您的宝贵建议"
+                android:inputType="textMultiLine"
+                android:minLines="6"
+				 android:gravity="top"
+				
+				android:layout_height="wrap_content"/>
+		</LinearLayout>
+
+
+		<TextView android:id="@+id/login" android:layout_width="250dip"
+			android:layout_below="@id/txt" android:layout_height="wrap_content"
+			
+			android:gravity="center" android:layout_centerHorizontal="true"
+			android:layout_marginTop="5dip" android:textColor="@color/white"
+			android:textSize="20sp" />
+		
+		<TextView android:id="@+id/loginTv"
+			android:layout_width="120dip" android:layout_height="wrap_content"
+			android:text="取消" android:gravity="center"
+			android:layout_marginTop="5dip" android:layout_below="@id/login"
+			android:background="@drawable/new_btn" android:layout_alignLeft="@id/login"
+			android:textColor="@color/white" android:textSize="20sp" />
+		
+		<TextView android:id="@+id/saveComment" android:layout_width="120dip"
+			android:layout_height="wrap_content" android:text="确定"
+			android:gravity="center" android:layout_below="@id/login"
+			android:layout_marginTop="5dip" android:background="@drawable/new_btn"
+			android:layout_alignRight="@id/login" android:textColor="@color/white"
+			android:textSize="20sp" />
+	</RelativeLayout>
+	
+	
+	
+	
+</RelativeLayout>

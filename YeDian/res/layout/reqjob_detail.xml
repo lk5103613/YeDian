@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title" >
+   
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+        
+        <LinearLayout
+                android:id="@+id/tool_bar1"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                
+                android:orientation="horizontal"
+                android:padding="0dip" >
+
+                <TextView
+                    android:id="@+id/jiubaBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="酒吧"
+                    android:textColor="@color/red" />
+
+              
+
+                <TextView
+                    android:id="@+id/ktvBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="KTV"
+                    android:textColor="@color/black" />
+
+            
+
+                <TextView
+                    android:id="@+id/yezonghuiBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="夜总会"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nameLL"
+            android:layout_width="277dip"
+            android:layout_height="40.5dip"
+            android:layout_centerHorizontal="true"
+              android:layout_below="@id/tool_bar1"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/linkmanPreTv"
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="姓名"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/linkmanTv"
+                android:layout_width="0dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+              
+                
+                android:paddingLeft="5dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+
+               
+          
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/henxian2"
+            android:layout_width="fill_parent"
+            android:layout_height="3.5dip"
+            android:layout_below="@id/nameLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/aoxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pwdLL1"
+            android:layout_width="277dip"
+            android:layout_height="40.5dip"
+            android:layout_below="@id/henxian2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/sexPreTv"
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dip"
+                android:text="性别"
+                android:textColor="@color/black" />
+            
+            <TextView
+                android:id="@+id/genderTv"
+                android:layout_width="0dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+              android:layout_marginTop="10dip"
+                
+               
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            
+            
+          
+            
+           
+         
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/henxian3"
+            android:layout_width="fill_parent"
+            android:layout_height="3.5dip"
+            android:layout_below="@id/pwdLL1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/aoxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hhhLL"
+            android:layout_width="277dip"
+            android:layout_height="30.5dip"
+            android:layout_below="@id/henxian3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/agePreTv"
+               android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="年龄"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/ageEt"
+                android:layout_width="0dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                
+                
+                android:paddingLeft="5dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        
+        
+         <LinearLayout
+            android:id="@+id/linkMpLL"
+            android:layout_width="277dip"
+            android:layout_height="39dip"
+            android:layout_below="@id/hhhLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/linkMpPreTv"
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="电话"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/linkMpTv"
+                android:layout_width="0dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.6"
+             
+               
+                 
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            
+             <ImageView
+                
+                android:layout_width="19dip"
+                android:layout_height="19dip"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="1.5"
+              
+               
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:src="@drawable/tel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            
+            <TextView
+                android:id="@+id/space144"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="5dip"
+                android:layout_gravity="center_vertical"
+            
+            
+                android:paddingLeft="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:text=""
+             
+               
+              />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linkEmailLL"
+            android:layout_width="277dip"
+            android:layout_height="39dip"
+            android:layout_below="@id/linkMpLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/linkEmailPreTv"
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="Email"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/linkEmailTv"
+                android:layout_width="0dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                
+                android:layout_weight="1"
+             
+              
+                android:paddingLeft="5dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+        
+        
+        
+        
+
+       
+
+     
+
+       
+        
+        
+
+      
+        <LinearLayout
+            android:id="@+id/zhiweiLL"
+            android:layout_width="277dip"
+            android:layout_height="40.5dip"
+            android:layout_centerHorizontal="true"
+              android:layout_below="@id/linkEmailLL"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/reqJobNamePreTv"
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="应聘职位"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/reqJobNameEt"
+                android:layout_width="0dip"
+                android:layout_height="20.5dip"
+              
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+           
+              
+             
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="15sp">
+            </TextView>
+
+                 
+          
+        </LinearLayout>
+        
+        
+        
+        
+          <LinearLayout
+            android:id="@+id/henxian5"
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_below="@id/zhiweiLL"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/aoxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+      
+
+        <LinearLayout
+            android:id="@+id/descLL"
+            android:layout_width="277dip"
+            android:layout_height="120.5dip"
+            android:layout_below="@id/henxian5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/descPreTv"
+                android:layout_width="65dip"
+                android:layout_height="20.5dip"
+                android:layout_gravity="center_vertical"
+                android:text="自我描述"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/descTv"
+                android:layout_width="0dip"
+                android:layout_height="80.5dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="left|top"
+           
+                android:inputType="textMultiLine"
+                android:minLines="6"
+             android:textColor="@color/black" 
+                 android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
+         <LinearLayout
+            android:id="@+id/photoLLA"
+             android:layout_width="match_parent" 
+            android:layout_height="120dip"
+            android:layout_below="@id/descLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+            
+              <Gallery
+	android:id="@+id/Gallery01" 
+	 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"/>
+
+          
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/henxian9"
+            android:layout_width="fill_parent"
+            android:layout_height="3.5dip"
+            android:layout_below="@id/photoLLA"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/aoxian"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+       
+
+
+      
+ 
+
+      
+        
+        
+            <LinearLayout
+                android:id="@+id/spaceallLL"
+                android:layout_below="@id/henxian9"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal" >
+            </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

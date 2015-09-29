@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<!-- 顶部标题 -->
+	 <include android:id="@+id/title" layout="@layout/book_title" />
+	<!-- 底部菜单 -->
+	<include android:id="@+id/bottommenu" layout="@layout/menu2" />
+	<include layout="@layout/common_listview" />
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_above="@id/bottommenu"
+		android:layout_below="@id/title">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_marginTop="5dip">
+				<!--手机号码 -->
+				<TextView android:layout_width="70dip"
+					android:layout_height="wrap_content" android:gravity="right"
+					android:layout_gravity="center_vertical" android:text="手机号码"
+					android:textColor="@color/black" />
+				<TextView android:id="@+id/mpTv" 
+					android:layout_width="230dip" android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical" android:singleLine="true"
+					android:textSize="15sp" android:textColor="@color/black"
+					android:layout_margin="5dip" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<!-- 出发地址 -->
+				<TextView android:layout_width="70dip"
+					android:layout_height="wrap_content" android:gravity="right"
+					android:layout_gravity="center_vertical" android:text="出发地址"
+					android:textColor="@color/black" />
+				<TextView android:id="@+id/startLocationTv"
+					android:layout_width="230dip" android:layout_height="wrap_content"
+					android:singleLine="true"
+					android:layout_gravity="center_vertical" android:textSize="15sp"
+					android:textColor="@color/black" android:background="@drawable/input_box"
+					android:layout_margin="5dip" />
+			</LinearLayout>
+			
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<!-- 目的地址 -->
+				<TextView android:layout_width="70dip"
+					android:layout_height="wrap_content" android:gravity="right"
+					android:layout_gravity="center_vertical" android:text="目的地址"
+					android:textColor="@color/black" />
+				<TextView android:id="@+id/endAddrTv"
+					android:layout_width="230dip" android:layout_height="wrap_content"
+					android:singleLine="true"
+					android:layout_gravity="center_vertical" android:textSize="15sp"
+					android:textColor="@color/black" android:background="@drawable/input_box"
+					android:layout_margin="5dip" />
+			</LinearLayout>
+			
+			
+			 
+			
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_marginTop="5dip">
+				<!-- 到达时间 -->
+				<TextView android:layout_width="70dip"
+					android:layout_height="wrap_content" android:gravity="right"
+					android:layout_gravity="center_vertical" android:text="到达时间"
+					android:textColor="@color/black" />
+				<TextView android:id="@+id/arriveTimeTv"
+					android:layout_width="230dip" android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical" android:singleLine="true"
+					android:textSize="15sp" android:textColor="@color/black"
+					android:background="@drawable/input_box" android:layout_margin="5dip" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				
+				<TextView android:layout_width="70dip"
+					android:layout_height="wrap_content" android:gravity="right"
+					android:layout_gravity="center_vertical" android:text="司机人数"
+					android:textColor="@color/black" />
+				<TextView android:id="@+id/drivernumTv"
+					android:layout_width="230dip" android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical" android:singleLine="true"
+					android:textSize="15sp" android:textColor="@color/black"
+					android:background="@drawable/input_box" android:layout_margin="5dip" />
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				
+				
+				
+				<TextView android:id="@+id/save_order_btn"
+					android:layout_width="180dip" android:layout_height="wrap_content"
+					android:text="提交" android:background="@drawable/new_btn"
+					android:clickable="true" android:gravity="center"  android:layout_gravity="center_horizontal"
+					android:textColor="@color/white" android:textSize="20sp"
+					android:layout_margin="18dip" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+	<com.baidu.mapapi.map.MapView
+            android:id="@+id/map_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:apiKey="0Mg_koWoyZUiYLfZxmPfp4LKInB5LqTnagYueaw"
+            android:clickable="true"
+            android:enabled="true" />
+	</RelativeLayout>

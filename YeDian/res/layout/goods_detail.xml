@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/lv_bg">
+     
+    <ImageView
+        android:id="@+id/companyImgView"
+        android:layout_width="90dip"
+        android:layout_height="70dip"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dip"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" >
+    </ImageView>
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/companyImgView"
+        android:layout_toRightOf="@+id/companyImgView"
+        android:textColor="#000000"
+        android:textSize="16dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/nativePlacePre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/companyName"
+        android:layout_toRightOf="@+id/companyName"
+       android:textColor="@color/red"
+        android:text="籍贯:"
+        android:layout_marginLeft="5dip"                   
+        android:textSize="16dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/nativePlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/nativePlacePre"
+        android:layout_toRightOf="@+id/nativePlacePre"
+        android:textColor="#000000"
+        
+        android:layout_marginLeft="4dip"                   
+        android:textSize="16dip" >
+    </TextView>
+    
+    
+    <TextView
+        android:id="@+id/workYearPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/companyName"
+        android:layout_toRightOf="@+id/companyImgView"
+         android:textColor="@color/red"
+         android:text="驾龄:"
+        android:textSize="16dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nativePlacePre"
+        android:layout_toRightOf="@+id/workYearPre"
+         android:textColor="#000000"
+        android:textSize="16dip" >
+    </TextView>
+    
+    
+    <TextView
+        android:id="@+id/drivingLicencePre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nativePlacePre"
+        android:layout_toRightOf="@+id/big"
+         android:textColor="@color/red"
+         android:text="驾照:"
+         android:layout_marginLeft="4dip"  
+        android:textSize="16dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/drivingLicence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nativePlacePre"
+        android:layout_toRightOf="@+id/drivingLicencePre"
+         android:textColor="#000000"
+        android:textSize="16dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/statusPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/big"
+        android:layout_toRightOf="@+id/companyImgView"
+         android:textColor="@color/red"
+         android:text="状态:"
+         android:layout_marginLeft="4dip"  
+        android:textSize="16dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/statusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/big"
+        android:layout_toRightOf="@+id/statusPre"
+         
+        android:textSize="16dip" >
+    </TextView>
+
+
+</RelativeLayout>

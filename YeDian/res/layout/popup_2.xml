@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout android:id="@+id/tupian" android:clickable="true" android:layout_width="match_parent" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+        <ImageView android:layout_width="40dip" android:layout_height="40dip" android:src="@drawable/tupian"/>
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@android:color/black" android:textSize="13sp" android:text="图片"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/biaoqing" android:clickable="true" android:layout_width="match_parent" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+        <ImageView android:layout_width="40dip" android:layout_height="40dip" android:src="@drawable/biaoqing"/>
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@android:color/black" android:textSize="13sp" android:text="表情"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/weizhi" android:clickable="true" android:layout_width="match_parent" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+        <ImageView android:layout_width="40dip" android:layout_height="40dip" android:src="@drawable/weizhi"/>
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@android:color/black" android:textSize="13sp" android:text="位置"/>
+    </LinearLayout>
+</LinearLayout>

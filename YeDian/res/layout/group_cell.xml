@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="@color/white"
+    >
+     
+    <ImageView
+        android:id="@+id/avatarImg"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dip"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="20dip"
+       android:background="@drawable/nearby_u2"
+        android:scaleType="fitXY" >
+    </ImageView>
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/avatarImg"
+        android:layout_toRightOf="@+id/avatarImg"
+        android:textColor="#000000"
+        android:scrollHorizontally="true"
+        android:maxLines="1" 
+        android:text=""
+        android:layout_marginLeft="5dip"
+        android:textSize="18dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/tmp"
+        android:layout_width="20dip"
+        android:layout_height="wrap_content"
+       android:layout_alignTop="@+id/avatarImg"
+        android:layout_toRightOf="@+id/titleTv"
+        android:gravity="right"
+        android:textColor="#000000"
+      
+        android:text="     "
+        android:textSize="12dip" >
+    </TextView>
+    
+    
+     <TextView
+        android:id="@+id/cityNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_alignTop="@+id/avatarImg"
+        android:layout_toRightOf="@+id/tmp"
+        android:gravity="center_vertical|right"
+        android:textColor="#000000"
+       android:layout_alignParentRight="true" 
+        
+        android:layout_marginRight="20dip"    
+        android:textSize="12dip" >
+    </TextView>
+    
+    
+    
+    
+    <LinearLayout
+        android:id="@+id/sexAndAgaLL"
+        android:layout_width="140dip"
+        android:layout_height="18dip"
+        android:layout_below="@+id/titleTv"
+        android:layout_toRightOf="@+id/avatarImg"
+        android:gravity="left"
+      
+        android:orientation="vertical" >
+
+        <TextView
+        android:id="@+id/merchant_nameTv"
+        android:layout_width="140dip"
+        android:layout_height="16dip"
+        
+        android:gravity="left"
+        android:textColor="@color/black"
+        android:text="20"
+       
+        android:layout_marginLeft="5dip"         
+        android:textSize="12dip" >
+    </TextView>
+    </LinearLayout>
+    
+    
+    
+    
+    <TextView
+        android:id="@+id/contentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sexAndAgaLL"
+        
+        android:layout_toRightOf="@+id/avatarImg"
+        android:gravity="left"
+        android:textColor="#000000"
+       android:layout_marginLeft="5dip" 
+       android:layout_marginTop="10dip" 
+        android:text="我的动态......."
+        android:textSize="14dip" >
+    </TextView>
+    
+   
+    
+    <TextView
+        android:id="@+id/distanceAndTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_toRightOf="@+id/titleTv"
+        android:gravity="right"
+        android:textColor="#000000"
+       android:layout_marginLeft="5dip" 
+        android:text="2014-05-10"
+        android:layout_marginRight="20dip"    
+        android:layout_alignParentRight="true" 
+        android:textSize="12dip" >
+    </TextView>
+    
+    
+    
+<LinearLayout
+        android:id="@+id/hengxian"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/avatarImg"
+       
+       android:background="@drawable/hengxian"
+        android:orientation="horizontal" >
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#ffffff">
+	<!-- 顶部标题 -->
+	<include android:id="@+id/title" layout="@layout/qiandao_title" />
+	 
+	
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_above="@id/bottommenu"
+		android:layout_below="@id/title">
+		
+		<LinearLayout android:orientation="horizontal"
+			android:id="@+id/qdtitle" android:layout_width="250dip"
+			android:layout_height="30dip" android:layout_marginTop="50dip"
+			 
+			android:focusable="false"  android:focusableInTouchMode="true"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="心情签到"  android:textSize="20sp" 
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			 
+		</LinearLayout>
+		
+		
+		<LinearLayout android:orientation="horizontal"
+			android:id="@+id/cell_phone_box" android:layout_width="250dip"
+			android:layout_height="30dip" android:layout_marginTop="90dip"
+			 
+			android:focusable="false"  android:focusableInTouchMode="true"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="1、心情签到更快找到合适的TA"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			 
+		</LinearLayout>
+	 
+		<TextView android:id="@+id/login_hint" android:layout_width="250dip"
+			android:layout_height="wrap_content" android:layout_below="@id/cell_phone_box"
+			android:layout_marginTop="1dip" android:layout_centerHorizontal="true"
+			android:text=" " android:textColor="@color/home_list_color"
+			android:textSize="10sp" android:paddingLeft="20dip" />
+			 
+		
+		<LinearLayout android:orientation="horizontal"
+			android:id="@+id/password_box" android:layout_width="250dip"
+			android:layout_height="30dip" android:layout_below="@id/login_hint"
+			android:layout_marginTop="2dip" 
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="2、心情签到优先展示在夜店中国"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			 
+		</LinearLayout>
+
+
+		<TextView android:id="@+id/login" android:layout_width="250dip"
+			android:layout_below="@id/password_box" android:layout_height="wrap_content"
+			
+			android:gravity="center" android:layout_centerHorizontal="true"
+			android:layout_marginTop="40dip" android:textColor="@color/white"
+			android:textSize="20sp" />
+		
+		<TextView android:id="@+id/tiaoguo_btn"
+			android:layout_width="111dip" android:layout_height="30dip"
+			android:gravity="center"
+			android:layout_marginTop="5dip" android:layout_below="@id/login"
+			android:background="@drawable/tiaoguo" android:layout_alignLeft="@id/login"
+			android:textColor="@color/white" android:textSize="20sp" />
+		
+		<TextView android:id="@+id/qiandao_btn" android:layout_width="111dip" 
+		    android:layout_height="30dip"
+			android:gravity="center" android:layout_below="@id/login"
+			android:layout_marginTop="5dip" android:background="@drawable/qiandao_btn"
+			android:layout_alignRight="@id/login" android:textColor="@color/white"
+			android:textSize="20sp" />
+	</RelativeLayout>
+	
+	
+	
+	
+</RelativeLayout>

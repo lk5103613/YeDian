@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+  
+    android:orientation="vertical" >
+
+    <!-- 顶部标题 -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/topbg" >
+
+        <ImageView
+            android:id="@+id/about_imageview_gohome"
+            style="@style/title_right_button"
+            android:layout_width="87dip"
+            android:layout_height="50dip"
+            android:src="@drawable/newback" />
+
+        <TextView
+            android:id="@+id/textview_details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="关于"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:id="@+id/titleLL"
+    android:background="@drawable/topbg" >
+    
+     
+<LinearLayout 
+    android:layout_width="65dip"
+    android:layout_height="fill_parent"
+  
+    >
+    
+        <TextView
+            android:id="@+id/backBtn"
+            android:layout_width="65dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="0dip"
+             android:textColor="@color/white" 
+            android:clickable="true"
+            android:text=" 地图  "
+            android:gravity="center_horizontal|center_vertical"
+            
+            
+           
+           
+             />
+        </LinearLayout>
+        
+
+<LinearLayout 
+    android:layout_width="0dip"
+    android:layout_marginTop="5dip"
+    android:layout_marginBottom="5dip"
+    android:layout_height="fill_parent"
+    android:background="@drawable/search_input3"
+    android:layout_weight="2" >
+    
+      
+        <TextView
+            android:id="@+id/personBtn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+           android:layout_weight="1"
+            android:background="@drawable/ktv"
+             android:textColor="@color/grey" 
+            android:clickable="true"
+            android:text="个人"
+            android:gravity="center_vertical|center"
+           
+             />
+        
+       
+        
+          <TextView
+            android:id="@+id/groupBtn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+         android:background="@drawable/ktv_focus"
+             android:textColor="@color/white" 
+            android:clickable="true"
+            android:text="群组"
+            android:layout_weight="1"
+          android:gravity="center_vertical|center"
+             />
+        
+        
+        
+        
+        
+        </LinearLayout>
+        
+       
+        
+        
+         
+        
+     <LinearLayout 
+    android:layout_width="65dip"
+    android:layout_height="fill_parent"
+  >
+    
+        <TextView
+            android:id="@+id/publishJobBtn"
+            android:layout_width="65dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="0dip"
+             android:textColor="@color/white" 
+            android:clickable="true"
+            android:text="筛选"
+           
+            android:gravity="center_horizontal|center_vertical"
+           
+           
+             />
+        </LinearLayout>
+     
+    
+            
+   
+</LinearLayout>

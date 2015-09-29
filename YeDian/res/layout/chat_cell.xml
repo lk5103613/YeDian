@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/lv_bg">
+     
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="60dip"
+        android:layout_height="90dip"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dip"
+        android:adjustViewBounds="true"
+       android:background="@drawable/tmp_merchant"
+        android:scaleType="fitXY" >
+    </ImageView>
+    <TextView
+        android:id="@+id/nicknameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/logoImg"
+        android:layout_toRightOf="@+id/logoImg"
+        android:textColor="@color/red"
+        android:scrollHorizontally="true"
+        android:maxLines="1" 
+        android:text="二手礼服"
+        
+        android:layout_marginLeft="5dip"
+        android:textSize="14dip" >
+    </TextView>
+    
+    
+    
+     <TextView
+        android:id="@+id/addTimeTv"
+        android:layout_width="35dip"
+        android:layout_height="21dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="7dip"
+        android:layout_marginRight="20dip"
+        android:adjustViewBounds="true"
+       
+        android:scaleType="fitXY" >
+    </TextView>
+    
+   
+    
+    
+    
+    
+    <TextView
+        android:id="@+id/priceTv"
+        android:layout_width="93dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nicknameTv"
+        android:layout_toRightOf="@+id/logoImg"
+        android:gravity="left"
+        android:text="￥2000"
+        android:layout_marginTop="7dip"
+        android:textColor="#000000"
+        android:layout_marginLeft="5dip"         
+        android:textSize="12dip" >
+    </TextView>
+    
+     
+    
+     
+     
+     
+    
+    
+    
+    
+    <TextView
+        android:id="@+id/merchantNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/priceTv"
+        android:layout_toRightOf="@+id/logoImg"
+        android:gravity="left"
+        android:text="2014-06-10"
+        android:layout_marginTop="7dip"
+        android:textColor="#000000"
+        android:layout_marginLeft="5dip"         
+        android:textSize="12dip" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/addrTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/merchantNameTv"
+        android:layout_toRightOf="@+id/merchantNameTv"
+        android:gravity="left"
+        android:textColor="#000000"
+       android:layout_alignTop="@id/merchantNameTv" 
+       android:layout_marginLeft="4dip" 
+      
+      
+        android:textSize="12dip" >
+    </TextView>
+    
+    
+     <TextView
+        android:id="@+id/distanceTv"
+        android:layout_width="38.9dip"
+        android:layout_height="17.5dip"
+        android:layout_below="@+id/addrTv"
+        android:layout_toRightOf="@+id/addrTv"
+        android:gravity="left"
+        android:textColor="#000000"
+        android:layout_marginTop="3dip"
+       android:layout_marginLeft="4dip" 
+      
+        android:textSize="12dip" >
+    </TextView>
+    
+     
+    
+    
+    
+    
+    <TextView
+        android:id="@+id/msgTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addrTv"
+        android:layout_toRightOf="@+id/logoImg"
+        android:gravity="left"
+        android:textColor="@color/gray"
+        android:layout_marginTop="7dip"
+       android:layout_marginLeft="5dip" 
+        android:text="衡山路1号"
+        android:textSize="12dip" >
+    </TextView>
+    
+    
+    
+    
+    
+    
+
+
+</RelativeLayout>
