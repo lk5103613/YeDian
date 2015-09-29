@@ -585,12 +585,7 @@ public class PublishRecruitUI extends CommonActivity {
 
 		};
 	};
-	EditText linkmanEt;
-
-	EditText linkMpEt;
-	EditText emailEt;
-	EditText addrEt;
-
+	
 	TextView jiubaBtn;
 	TextView ktvBtn;
 	TextView yezonghuiBtn;
@@ -607,14 +602,6 @@ public class PublishRecruitUI extends CommonActivity {
 
 		setContentView(R.layout.publish_recruit);
 
-		linkmanEt = (EditText) this.findViewById(R.id.linkmanEt);
-		linkMpEt = (EditText) this.findViewById(R.id.linkMpEt);
-		linkMpEt.setInputType(EditorInfo.TYPE_CLASS_PHONE);
-		
-	
-
-		emailEt = (EditText) this.findViewById(R.id.emailEt);
-		addrEt = (EditText) this.findViewById(R.id.addrEt);
 
 		titleEt = (EditText) this.findViewById(R.id.titleEt);
 		addTimeTv = (TextView) this.findViewById(R.id.addTimeTv);
@@ -654,13 +641,6 @@ public class PublishRecruitUI extends CommonActivity {
 						po.setTj(tj);
 					}
 
-					String linkman = linkmanEt.getText().toString();
-					po.setLinkman(linkman);
-					String linkMp = linkMpEt.getText().toString();
-					po.setMp(linkMp);
-					String email = emailEt.getText().toString();
-					po.setEmail(email);
-
 					po.setRecruit_type(String.valueOf(recruit_type));
 
 					if (imgURL0 != null && imgURL0.length() > 5) {
@@ -685,14 +665,6 @@ public class PublishRecruitUI extends CommonActivity {
 					} else {
 						po.setPic3("");
 					}
-
-					String addr = addrEt.getText().toString();
-					if (addr != null && addr.length() > 0) {
-						po.setAddr(addr);
-					} else {
-						po.setAddr("");
-					}
-				
 
 					new Thread() {
 						public void run() {
@@ -939,23 +911,6 @@ public class PublishRecruitUI extends CommonActivity {
 		paint = tqPre.getPaint(); 
 		paint.setFakeBoldText(true);
 		
-		TextView linkmanPre = (TextView) this.findViewById(R.id.linkmanPre);
-		paint = linkmanPre.getPaint(); 
-		paint.setFakeBoldText(true);
-
-		
-		TextView linkmpPre = (TextView) this.findViewById(R.id.linkmpPre);
-		paint = linkmpPre.getPaint(); 
-		paint.setFakeBoldText(true);
-		
-		TextView emailPre = (TextView) this.findViewById(R.id.emailPre);
-		paint = emailPre.getPaint(); 
-		paint.setFakeBoldText(true);
-		
-		
-		TextView addrPreTv = (TextView) this.findViewById(R.id.addrPreTv);
-		paint = addrPreTv.getPaint(); 
-		paint.setFakeBoldText(true);
 	}
 
 }

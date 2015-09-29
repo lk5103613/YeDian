@@ -317,7 +317,7 @@
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/pic1space"
+                android:id="@+id/pic4space"
                 android:layout_width="15dip"
                 android:layout_height="60.5dip"
                 android:layout_gravity="center_vertical"

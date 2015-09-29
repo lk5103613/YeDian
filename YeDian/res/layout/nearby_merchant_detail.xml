@@ -110,7 +110,7 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                android:id="@+id/jz001"
+                                android:id="@+id/jz002"
                                 android:layout_width="226dip"
                                 android:layout_height="30dip"
                                 android:layout_marginLeft="0dip"

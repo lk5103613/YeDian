@@ -321,7 +321,6 @@ public class PublishJobUI extends Activity {
 
 	int gender = 1;
 	EditText reqJobNameEt;
-	EditText ageEt;
 	EditText descTv;
 	public static final String action = "publishjob.broadcast.action";
 	Handler loadingHandler = new Handler() {
@@ -379,7 +378,6 @@ public class PublishJobUI extends Activity {
 		}
 
 		reqJobNameEt= (EditText) this.findViewById(R.id.reqJobNameEt);
-		ageEt = (EditText) this.findViewById(R.id.ageEt);
 		descTv = (EditText) this.findViewById(R.id.descTv);
 
 		TextView qiandaoBtn = (TextView) this.findViewById(R.id.qiandaoBtn);
@@ -401,8 +399,6 @@ public class PublishJobUI extends Activity {
 
 					Log.e("reqJobName", reqJobName);
 
-					String age = ageEt.getText().toString();
-					po.setAge(age);
 					String desc = descTv.getText().toString();
 
 					if (imgURL0 != null && imgURL0.length() > 5) {
@@ -546,7 +542,6 @@ public class PublishJobUI extends Activity {
 			}
 		});
 
-		// ///////////
 		photo0 = (ImageView) this.findViewById(R.id.photo0);
 		if (photo0 != null) {
 			photo0.setOnClickListener(new View.OnClickListener() {
@@ -587,7 +582,6 @@ public class PublishJobUI extends Activity {
 					Intent intent = new Intent();
 					intent.setClass(PublishJobUI.this, CameraUI.class);
 					startActivityForResult(intent, 101);
-
 				}
 			});
 		}
@@ -604,28 +598,17 @@ public class PublishJobUI extends Activity {
 					Intent intent = new Intent();
 					intent.setClass(PublishJobUI.this, CameraUI.class);
 					startActivityForResult(intent, 101);
-
 				}
 			});
 		}
 
-		// ///////////////////////////////////////
 		TextView linkmanPreTv = (TextView) this.findViewById(R.id.linkmanPreTv);
 		TextPaint paint = linkmanPreTv.getPaint();
 		paint.setFakeBoldText(true);
 		
-		//
-		
-		
 		TextView sexPreTv = (TextView) this.findViewById(R.id.sexPreTv);
 		paint = sexPreTv.getPaint();
 		paint.setFakeBoldText(true);
-		
-		
-		TextView agePreTv = (TextView) this.findViewById(R.id.agePreTv);
-		paint = agePreTv.getPaint();
-		paint.setFakeBoldText(true);
-		
 		
 		TextView linkMpPreTv = (TextView) this.findViewById(R.id.linkMpPreTv);
 		paint = linkMpPreTv.getPaint();
@@ -639,7 +622,6 @@ public class PublishJobUI extends Activity {
 		TextView descPreTv = (TextView) this.findViewById(R.id.descPreTv);
 		paint = descPreTv.getPaint();
 		paint.setFakeBoldText(true);
-		//
 		
 		TextView reqJobNamePreTv = (TextView) this.findViewById(R.id.reqJobNamePreTv);
 		paint = reqJobNamePreTv.getPaint();
