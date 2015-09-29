@@ -339,5 +339,10 @@ public class RecruitDetailUI extends Activity {
 	private TextView detailTab, companyTab;
 
 	
+	public void call(View view){
+		Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+ linkMpTv.getText().toString()));  
+        startActivity(intent);  
+	}
+	
 
 }

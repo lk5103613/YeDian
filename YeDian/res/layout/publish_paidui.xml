@@ -341,7 +341,7 @@
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/pic2space"
+                android:id="@+id/pic5space"
                 android:layout_width="15dip"
                 android:layout_height="60.5dip"
                 android:layout_gravity="center_vertical"
@@ -365,7 +365,7 @@
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/pic3space"
+                android:id="@+id/pic6space"
                 android:layout_width="15dip"
                 android:layout_height="60.5dip"
                 android:layout_gravity="center_vertical"
