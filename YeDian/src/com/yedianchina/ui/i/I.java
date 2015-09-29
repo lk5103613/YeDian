@@ -34,6 +34,7 @@ import com.yedianchina.ui.MoreUI;
 import com.yedianchina.ui.R;
 import com.yedianchina.ui.YeDianChinaApplication;
 import com.yedianchina.ui.index.IndexUI;
+import com.yedianchina.ui.index.RecruitListActivity;
 import com.yedianchina.ui.nearby.NearbyModule;
 
 public class I extends CommonActivity {
@@ -173,6 +174,11 @@ public class I extends CommonActivity {
 
 	}
 
+	public void toMyPublish(View v) {
+		Intent intent = new Intent(this, RecruitListActivity.class);
+		startActivity(intent);
+	}
+	
 	ImageView avatar0612 = null;
 
 	@Override

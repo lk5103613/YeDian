@@ -153,7 +153,7 @@ public class RecruitListUI extends CommonActivity implements
 			}
 			String desc = "";
 			if (desc != null && desc.length() > 0) {
-				holder.descTv.setText("");
+				holder.descTv.setText(desc);
 			}
 
 			if (url != null && url.length() > 10) {
@@ -174,27 +174,24 @@ public class RecruitListUI extends CommonActivity implements
 			if (add_time != null) {
 				holder.addtimeTv.setText(add_time);
 			}
-			////
-			final Long  pk=m.getId();
+			// //
+			final Long pk = m.getId();
 			convertView.setOnClickListener(new View.OnClickListener() {
-				
+
 				@Override
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
 					intent.setClass(RecruitListUI.this, RecruitDetailUI.class);
 
-					
 					intent.putExtra("pk", pk);
 
 					Log.e("主键", "pk=" + pk);
 					startActivity(intent);
-					
+
 				}
 			});
-			
-			
-			
-			//////
+
+			// ////
 
 			return convertView;
 
@@ -360,8 +357,6 @@ public class RecruitListUI extends CommonActivity implements
 	};
 
 	public Intent intent = new Intent();
-
-	
 
 	// ////
 	public HashMap<String, Bitmap> imagesCache = new HashMap<String, Bitmap>();// 图片缓存
@@ -605,6 +600,8 @@ public class RecruitListUI extends CommonActivity implements
 			@Override
 			public void onClick(View arg0) {
 
+				if(recruit_type == 1)
+					return;
 				jiubaBtn.setBackgroundDrawable(new BitmapDrawable(readBitMap(
 						RecruitListUI.this, R.drawable.jb_focus)));
 
@@ -620,6 +617,8 @@ public class RecruitListUI extends CommonActivity implements
 
 				recruit_type = 1;
 
+				list.clear();
+				mAdapter.notifyDataSetChanged();
 				loadData();
 
 			}
@@ -630,6 +629,8 @@ public class RecruitListUI extends CommonActivity implements
 			@Override
 			public void onClick(View arg0) {
 
+				if(recruit_type == 2)
+					return;
 				jiubaBtn.setBackgroundDrawable(new BitmapDrawable(readBitMap(
 						RecruitListUI.this, R.drawable.jb)));
 
@@ -644,7 +645,8 @@ public class RecruitListUI extends CommonActivity implements
 				yezonghuiBtn.setTextColor(Color.parseColor("#ff404040"));
 
 				recruit_type = 2;
-
+				list.clear();
+				mAdapter.notifyDataSetChanged();
 				loadData();
 
 			}
@@ -654,7 +656,8 @@ public class RecruitListUI extends CommonActivity implements
 
 			@Override
 			public void onClick(View arg0) {
-
+				if(recruit_type == 3)
+					return;
 				//
 				jiubaBtn.setBackgroundDrawable(new BitmapDrawable(readBitMap(
 						RecruitListUI.this, R.drawable.jb)));
@@ -670,14 +673,15 @@ public class RecruitListUI extends CommonActivity implements
 				yezonghuiBtn.setTextColor(Color.parseColor("#FFFFFFFF"));
 
 				recruit_type = 3;
-
+				list.clear();
+				mAdapter.notifyDataSetChanged();
 				loadData();
 
 			}
 		});
 		//
 
-		//screenWidth = tool_bar.getWidth();// 屏幕宽度
+		// screenWidth = tool_bar.getWidth();// 屏幕宽度
 
 		list = new ArrayList<RecruitPO>();
 
@@ -734,7 +738,6 @@ public class RecruitListUI extends CommonActivity implements
 	}
 
 	private void initView() {
-		 
 
 		mListView = (XListView) findViewById(R.id.list_view);
 		mListView.setPullRefreshEnable(true);
@@ -742,12 +745,12 @@ public class RecruitListUI extends CommonActivity implements
 		mListView.setAutoLoadEnable(true);
 		mListView.setXListViewListener(this);
 		mListView.setRefreshTime(getTime());
-		//mListView.setOnItemClickListener(this);
+		// mListView.setOnItemClickListener(this);
 		mAdapter = new CustomAdapter(this, list);
-	 
+
 		mListView.setAdapter(mAdapter);
 		mListView.setDivider(getResources().getDrawable(R.drawable.aoxian));
-		 
+
 	}
 
 	private String getTime() {

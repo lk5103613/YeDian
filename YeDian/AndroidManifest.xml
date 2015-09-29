@@ -48,6 +48,16 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
+         <activity
+            android:name="com.yedianchina.ui.index.RecruitListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+         <activity
+            android:name="com.yedianchina.ui.activity.EditPerInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
         
         
         

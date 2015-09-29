@@ -43,6 +43,7 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tencent.mm.sdk.platformtools.Log;
 import com.yedianchina.dao.ActivityDao;
@@ -532,9 +533,9 @@ public class PublishActivityUI extends Activity {
 		if (saveBtn != null) {
 			
 			saveBtn.setOnClickListener(new View.OnClickListener() {
-
 				@Override
 				public void onClick(View arg0) {
+					Toast.makeText(PublishActivityUI.this, "发布成功", Toast.LENGTH_SHORT).show();
 					final ActivityPO po = new ActivityPO();
 					String thmeme = themeTv.getText().toString();
 					if (thmeme != null) {
@@ -571,12 +572,10 @@ public class PublishActivityUI extends Activity {
 					if(content!=null&&content.length()>0){
 						po.setContent(content);
 					}
-
 					new Thread() {
 						public void run() {
 							ActivityDao.saveActivity(po);
 							saveHandler.sendEmptyMessage(1);
-
 						}
 					}.start();
 

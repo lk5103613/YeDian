@@ -25,4 +25,5 @@ public class BaseActivity extends Activity{
 		//onresume时，取消notification显示
 		EMChatManager.getInstance().activityResumed();
 	}
+	
 }

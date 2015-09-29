@@ -34,15 +34,16 @@ import com.yedianchina.ui.R;
 
 @SuppressLint("NewApi")
 public class RecruitDetailUI extends Activity {
-	
-	private List<String> imgList;//图片轮播
+
+	private List<String> imgList;// 图片轮播
+
 	private void setLoanInfoDetailData() {
-		// 商品图片展示  调整图片大小在ImageAdapter setLayoutParams(new GalleryFlow.LayoutParams(270, 400));
+		// 商品图片展示 调整图片大小在ImageAdapter setLayoutParams(new
+		// GalleryFlow.LayoutParams(270, 400));
 		ImageAdapter adapter = new ImageAdapter(RecruitDetailUI.this, imgList);
 		adapter.createReflectedImages();
-		
 
-		final Gallery  galleryFlow = (Gallery ) findViewById(R.id.Gallery01);
+		final Gallery galleryFlow = (Gallery) findViewById(R.id.Gallery01);
 		galleryFlow.setAdapter(adapter);
 		galleryFlow.setSpacing(0); // 图片之间的间距
 		galleryFlow.setLeft(0);
@@ -58,7 +59,6 @@ public class RecruitDetailUI extends Activity {
 
 					@Override
 					public void onNothingSelected(AdapterView<?> arg0) {
-						
 
 					}
 
@@ -74,35 +74,29 @@ public class RecruitDetailUI extends Activity {
 					}
 
 				});
-		
 
 	}
-	
-	
 
- 
 	Long pk;
 	RecruitPO po = null;
-	 
-	
-	
-	 TextView titleTv;
-		TextView addTimeTv;
 
-		TextView salaryTv;
-		TextView companyNameTv;
+	TextView titleTv;
+	TextView addTimeTv;
 
-		TextView addressTv;
-		TextView tjTv;
+	TextView salaryTv;
+	TextView companyNameTv;
 
-		TextView jobDescTv;
-		//
-		TextView linkmanTv;
-		TextView linkMpTv;
+	TextView addressTv;
+	TextView tjTv;
 
-		TextView emailTv;
-		TextView companyAddressTv;
-		LinearLayout linkmpLL;
+	TextView jobDescTv;
+	//
+	TextView linkmanTv;
+	TextView linkMpTv;
+
+	TextView emailTv;
+	TextView companyAddressTv;
+	LinearLayout linkmpLL;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -112,8 +106,8 @@ public class RecruitDetailUI extends Activity {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.recruit_detail);
 		pk = this.getIntent().getExtras().getLong("pk");
-		
-		this.linkmpLL=(LinearLayout)this.findViewById(R.id.linkmpLL);
+
+		this.linkmpLL = (LinearLayout) this.findViewById(R.id.linkmpLL);
 
 		resources = getResources();
 
@@ -121,40 +115,40 @@ public class RecruitDetailUI extends Activity {
 			public void run() {
 				po = RecruitDao.loadRecruit(pk);
 				imgList = new ArrayList<String>();
-				
-				String pic0=po.getPic0();
-				if(pic0!=null&&pic0.length()>5){
-					pic0=CONSTANTS.HOST+"ios/"+pic0;
-					
+
+				String pic0 = po.getPic0();
+				if (pic0 != null && pic0.length() > 5) {
+					pic0 = CONSTANTS.HOST + "ios/" + pic0;
+
 					imgList.add(pic0);
 				}
-				
-				String pic1=po.getPic1();
-				if(pic1!=null&&pic1.length()>5){
-					pic1=CONSTANTS.HOST+"ios/"+pic1;
+
+				String pic1 = po.getPic1();
+				if (pic1 != null && pic1.length() > 5) {
+					pic1 = CONSTANTS.HOST + "ios/" + pic1;
 					imgList.add(pic1);
 				}
 				//
-				String pic2=po.getPic2();
-				if(pic2!=null&&pic2.length()>5){
-					pic2=CONSTANTS.HOST+"ios/"+pic2;
+				String pic2 = po.getPic2();
+				if (pic2 != null && pic2.length() > 5) {
+					pic2 = CONSTANTS.HOST + "ios/" + pic2;
 					imgList.add(pic2);
 				}
 				//
-				String pic3=po.getPic3();
-				if(pic3!=null&&pic3.length()>5){
-					pic3=CONSTANTS.HOST+"ios/"+pic3;
+				String pic3 = po.getPic3();
+				if (pic3 != null && pic3.length() > 5) {
+					pic3 = CONSTANTS.HOST + "ios/" + pic3;
 					imgList.add(pic3);
 				}
-				
-				Log.e("", "pic0="+pic0+" pic1="+pic1+"  pic2="+pic2+"  pic3="+pic3);
-			
+
+				Log.e("", "pic0=" + pic0 + " pic1=" + pic1 + "  pic2=" + pic2
+						+ "  pic3=" + pic3);
 
 				loadingHandler.sendEmptyMessage(1);
 
 			}
 		}.start();
-		
+
 		ImageView backBtn = (ImageView) this.findViewById(R.id.backBtn);
 		if (backBtn != null) {
 			backBtn.setOnClickListener(new View.OnClickListener() {
@@ -166,49 +160,43 @@ public class RecruitDetailUI extends Activity {
 				}
 			});
 		}
-		
-		
-		TextView  qiandaoBtn=(TextView)this.findViewById(R.id.qiandaoBtn);
-		if(qiandaoBtn!=null){
+
+		TextView qiandaoBtn = (TextView) this.findViewById(R.id.qiandaoBtn);
+		if (qiandaoBtn != null) {
 			qiandaoBtn.setVisibility(View.INVISIBLE);
 		}
-		
+
 		titleTv = (TextView) this.findViewById(R.id.titleTv);
 		TextView titleTv = (TextView) this.findViewById(R.id.titleTv);
-		TextPaint  paint = titleTv.getPaint();
+		TextPaint paint = titleTv.getPaint();
 		paint.setFakeBoldText(true);
-		
-		
-		addTimeTv = (TextView) this.findViewById(R.id.addTimeTv);
-	 
 
-	 
+		addTimeTv = (TextView) this.findViewById(R.id.addTimeTv);
+
 		tjTv = (TextView) this.findViewById(R.id.tjTv);
 
-	 
 		linkmanTv = (TextView) this.findViewById(R.id.linkmanTv);
 		linkMpTv = (TextView) this.findViewById(R.id.linkMpTv);
 
 		//
 		emailTv = (TextView) this.findViewById(R.id.emailTv);
 		companyAddressTv = (TextView) this.findViewById(R.id.companyAddressTv);
-		
-		
-		TextView NavigateTitle=(TextView)this.findViewById(R.id.NavigateTitle);
-		if(NavigateTitle!=null){
+
+		TextView NavigateTitle = (TextView) this
+				.findViewById(R.id.NavigateTitle);
+		if (NavigateTitle != null) {
 			NavigateTitle.setText("招聘详情");
 		}
 		//
 		TextView tqPre = (TextView) this.findViewById(R.id.tqPre);
 		paint = tqPre.getPaint();
 		paint.setFakeBoldText(true);
-		
-	
+
 		//
 		TextView linkmanPre = (TextView) this.findViewById(R.id.linkmanPre);
 		paint = linkmanPre.getPaint();
 		paint.setFakeBoldText(true);
-		
+
 		//
 		TextView linkmpPre = (TextView) this.findViewById(R.id.linkmpPre);
 		paint = linkmpPre.getPaint();
@@ -218,10 +206,10 @@ public class RecruitDetailUI extends Activity {
 		paint = emailPre.getPaint();
 		paint.setFakeBoldText(true);
 		//
-		TextView addressLinkPre = (TextView) this.findViewById(R.id.addressLinkPre);
+		TextView addressLinkPre = (TextView) this
+				.findViewById(R.id.addressLinkPre);
 		paint = addressLinkPre.getPaint();
 		paint.setFakeBoldText(true);
-	 
 
 	}
 
@@ -231,9 +219,6 @@ public class RecruitDetailUI extends Activity {
 
 				int what = msg.what;
 				if (what == 1) {
-					
-					
-					
 
 					// //////////////
 					String title = po.getTitle();
@@ -260,46 +245,37 @@ public class RecruitDetailUI extends Activity {
 						linkman = "";
 					}
 					linkmanTv.setText(linkman);
-					
-					
-					if(mp!=null&&mp.length()>=7){
-					linkMpTv.setText(mp);
-					
-					linkmpLL.setOnClickListener(new View.OnClickListener() {
-						
-						@Override
-						public void onClick(View arg0) {
-							telFn(mp);
-							
-						}
-					});
-					}
-					
-					String email=po.getEmail();
-					if("null".equals(email)){
-						email="";
-					}
-					if(StringUtils.isNotEmpty(email)){
-					   emailTv.setText(email);
+
+					if (mp != null && mp.length() >= 7) {
+						linkMpTv.setText(mp);
+
+						linkmpLL.setOnClickListener(new View.OnClickListener() {
+
+							@Override
+							public void onClick(View arg0) {
+								telFn(mp);
+
+							}
+						});
 					}
 
-				
+					String email = po.getEmail();
+					if ("null".equals(email)) {
+						email = "";
+					}
+					if (StringUtils.isNotEmpty(email)) {
+						emailTv.setText(email);
+					}
 
-					 
 					String tj = po.getTj();// 招聘条件
 					if (tj != null && tj.length() > 0) {
 
 						tjTv.setText(Html.fromHtml(tj));
 					}
-				 
-					
-				
-					
-					companyAddressTv.setText(po.getAddr());
-					
-					setLoanInfoDetailData();
 
-					
+					companyAddressTv.setText(po.getAddr());
+
+					setLoanInfoDetailData();
 
 				}
 			} catch (Exception e) {
@@ -307,9 +283,11 @@ public class RecruitDetailUI extends Activity {
 			}
 		}
 	};
-	public void telFn(final String  mp) {
-	 
-		AlertDialog.Builder alert = new AlertDialog.Builder(RecruitDetailUI.this);
+
+	public void telFn(final String mp) {
+
+		AlertDialog.Builder alert = new AlertDialog.Builder(
+				RecruitDetailUI.this);
 		alert.setTitle("拨打电话确认")
 				.setMessage("您确认拨打对方电话吗？")
 				.setPositiveButton("确认", new DialogInterface.OnClickListener() {
@@ -331,18 +309,14 @@ public class RecruitDetailUI extends Activity {
 		alert.create().show();
 	}
 
-	
-
-	
 	private Resources resources;
 	private int currIndex = 0;
 	private TextView detailTab, companyTab;
 
-	
-	public void call(View view){
-		Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+ linkMpTv.getText().toString()));  
-        startActivity(intent);  
+	public void call(View view) {
+		Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"
+				+ linkMpTv.getText().toString()));
+		startActivity(intent);
 	}
-	
 
 }

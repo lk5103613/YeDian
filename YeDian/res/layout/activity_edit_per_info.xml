@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/topbg" >
+
+        <LinearLayout
+            android:id="@+id/setting_title_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:onClick="back"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/backBtn"
+                style="@style/title_right_button"
+                android:layout_width="87dip"
+                android:layout_height="50dip"
+                android:src="@drawable/newback" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="修改信息"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        
+        <LinearLayout android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="保存"/>
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linkmanLL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:paddingLeft="15dip"
+            android:singleLine="true"
+            android:text="姓名"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@null"
+            android:paddingLeft="3dip"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:paddingLeft="15dip"
+            android:singleLine="true"
+            android:text="手机号"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/mp"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@null"
+            android:paddingLeft="3dip"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

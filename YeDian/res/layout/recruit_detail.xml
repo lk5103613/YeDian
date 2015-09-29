@@ -319,7 +319,7 @@
                 android:src="@drawable/tel"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/black"
-                android:onClick="@+id/call"
+                android:onClick="call"
                 android:textSize="15sp" />
             
             <TextView

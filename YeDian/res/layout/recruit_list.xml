@@ -5,128 +5,152 @@
     android:background="#FFFFFF"
     android:orientation="vertical" >
 
-   <include
+    <include
         android:id="@+id/title"
         layout="@layout/list_title" />
-   
-   <LinearLayout android:id="@+id/tool_bar1"
-		android:layout_width="fill_parent" android:layout_height="35dip"
-		android:layout_below="@id/title" android:padding="0dip"   android:orientation="horizontal"
-	>
-		<TextView android:layout_width="0dip"  android:layout_weight="1"
-			android:layout_height="fill_parent" android:gravity="center"
-			android:text="酒吧"
-			android:textColor="#FFFFFFFF"
-			android:layout_centerVertical="true" android:id="@+id/jiubaBtn"
-			android:layout_alignParentRight="true" android:clickable="true" />
-		
-		 
-	    
-		
-		<TextView android:layout_width="0dip"  android:layout_weight="1"
-			android:layout_height="fill_parent" android:gravity="center"
-			android:text="KTV"
-			android:layout_centerVertical="true" android:id="@+id/ktvBtn"
-			android:layout_alignParentRight="true" android:clickable="true" />
-		
-		
-		
-		
-		
-		
-		
-		 
-		
-		<TextView android:layout_width="0dip"  android:layout_weight="1"
-			android:layout_height="fill_parent" android:gravity="center"
-			android:text="夜总会"  
-			android:layout_centerVertical="true" android:id="@+id/yezonghuiBtn"
-			android:layout_alignParentRight="true" android:clickable="true" />
-		
-		
-		
-		
-	</LinearLayout>
-   
-   <LinearLayout android:id="@+id/tool_bar"
-		android:layout_width="fill_parent" android:layout_height="40dip"
-		android:layout_below="@id/tool_bar1" android:padding="10dip"   android:orientation="horizontal"
-		android:background="#FFFFFF">
-		
-	    
-		
-		<TextView android:layout_width="0dip"  android:layout_weight="1"
-			android:layout_height="fill_parent" android:gravity="center"
-			android:textColor="@color/black"  android:text="区域 ▼"  
-			android:layout_centerVertical="true" android:id="@+id/district_btn"
-			android:layout_alignParentRight="true" android:clickable="true" />
-		
-		<TextView android:layout_width="0dip"  android:layout_weight="1"
-			android:layout_height="fill_parent" android:gravity="center"
-			android:textColor="@color/black"  android:text="职位 ▼"
-			android:layout_centerVertical="true" android:id="@+id/job_btn"
-			android:layout_alignParentRight="true" android:clickable="true" />
-		
-		<TextView android:layout_width="0dip"  android:layout_weight="1"
-			android:layout_height="fill_parent" android:gravity="center"
-			android:textColor="@color/black"  android:text="性别 ▼"
-			android:layout_centerVertical="true" android:id="@+id/sex_btn"
-			android:layout_alignParentRight="true" android:clickable="true" />
-		
-		
-		
-		
-	</LinearLayout>
-	
-   <LinearLayout android:id="@+id/tool_bar2"
-		android:layout_width="fill_parent" android:layout_height="0dip"
-		android:layout_below="@id/tool_bar" android:padding="0dip"   android:orientation="horizontal"
-	>
-		
-       <TextView android:layout_width="0dip"  android:layout_weight="1"
-			android:layout_height="0dip" android:gravity="center"
-			android:textColor="@color/black"
-			android:layout_centerVertical="true" android:id="@+id/district_btnB"
-			android:layout_alignParentRight="true" android:clickable="true" />
-		
-		<TextView android:layout_width="0dip"  android:layout_weight="1"
-			android:layout_height="0dip" android:gravity="center"
-			android:textColor="@color/black"
-			android:layout_centerVertical="true" android:id="@+id/job_btnB"
-			android:layout_alignParentRight="true" android:clickable="true" />
-		
-		<TextView android:layout_width="0dip"  android:layout_weight="1"
-			android:layout_height="0dip" android:gravity="center"
-			android:textColor="@color/black"
-			android:layout_centerVertical="true" android:id="@+id/sex_btnB"
-			android:layout_alignParentRight="true" android:clickable="true" />
-		
-   </LinearLayout>
 
-   
-   
-   
+    <LinearLayout
+        android:id="@+id/tool_bar1"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:layout_below="@id/title"
+        android:orientation="horizontal"
+        android:padding="0dip" >
 
-   
-      <com.yedianchina.control.XListView
+        <TextView
+            android:id="@+id/jiubaBtn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="酒吧"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/ktvBtn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="KTV" />
+
+        <TextView
+            android:id="@+id/yezonghuiBtn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="夜总会" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_below="@id/tool_bar1"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/district_btn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="区域 ▼"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/job_btn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="职位 ▼"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/sex_btn"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="性别 ▼"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tool_bar2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_below="@id/tool_bar"
+        android:orientation="horizontal"
+        android:padding="0dip" >
+
+        <TextView
+            android:id="@+id/district_btnB"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/job_btnB"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/sex_btnB"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <com.yedianchina.control.XListView
         android:id="@+id/list_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@id/tool_bar2"
-    
+        android:background="#FFFFFF"
+        android:cacheColorHint="@android:color/transparent"
         android:divider="@color/gray"
         android:dividerHeight="1dp"
-        android:cacheColorHint="@android:color/transparent"
-       
         android:fadingEdge="none"
-        android:listSelector="@android:color/transparent"
-      
-        android:background="#FFFFFF" >
+        android:listSelector="@android:color/transparent" >
     </com.yedianchina.control.XListView>
-    
-    
-  
-    
-    
 
 </RelativeLayout>
