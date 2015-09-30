@@ -1,7 +1,5 @@
 package com.yedianchina.ui.index;
 
-
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -49,8 +47,8 @@ import com.yedianchina.ui.activity.NearbyActivityListUI;
 import com.yedianchina.ui.R;
 
 //管理列表 06-22
-public class ManageListUI extends Activity
-implements XListView.IXListViewListener{
+public class ManageListUI extends Activity implements
+		XListView.IXListViewListener {
 
 	int STEP = 0;
 	int areaId;
@@ -105,12 +103,11 @@ implements XListView.IXListViewListener{
 			_list = list;
 
 		}
-		
+
 		public void changeData(List list) {
 			this._list = list;
 			notifyDataSetChanged();
 		}
-
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
@@ -139,11 +136,11 @@ implements XListView.IXListViewListener{
 			}
 
 			final ErshoushebeiPO m = (ErshoushebeiPO) _list.get(position);
-			
+
 			String price = m.getPrice();
 			if (price != null && price.length() > 0) {
-				holder.priceTv.setText(price+"元");
-			}else{
+				holder.priceTv.setText(price + "元");
+			} else {
 				holder.priceTv.setText("价格面议");
 			}
 
@@ -165,39 +162,38 @@ implements XListView.IXListViewListener{
 				if (urlList != null && urlList.length > 0) {
 					String url0 = urlList[0];
 					if (url0 != null && url0.length() > 10) {
-						url0=CONSTANTS.HOST+url0;
+						url0 = CONSTANTS.HOST + url0;
 						holder.logoImg.setTag(url0);
-						 ImageLoader.getInstance().displayImage(url0,holder.logoImg);
+						ImageLoader.getInstance().displayImage(url0,
+								holder.logoImg);
 					}
 				}
 			} else {
 				holder.logoImg.setBackgroundResource(R.drawable.icon);
 			}
-			String flag=m.getFlag();
-			if("1".equals(flag)){
-				
-			}else{
+			String flag = m.getFlag();
+			if ("1".equals(flag)) {
+
+			} else {
 				holder.paiming.setVisibility(View.INVISIBLE);
 			}
-			
-			  final Long  pk=m.getId();
-				
-		      convertView.setOnClickListener(new View.OnClickListener() {
-					
-					@Override
-					public void onClick(View arg0) {
-						intent.setClass(ManageListUI.this, ErshoushebeiDetailUI.class);
 
-						 
-						intent.putExtra("pk", pk);
+			final Long pk = m.getId();
 
-						Log.e("主键", "pk=" + pk);
-						startActivity(intent);
+			convertView.setOnClickListener(new View.OnClickListener() {
 
-						
-					}
-				});
-			
+				@Override
+				public void onClick(View arg0) {
+					intent.setClass(ManageListUI.this,
+							ErshoushebeiDetailUI.class);
+
+					intent.putExtra("pk", pk);
+
+					Log.e("主键", "pk=" + pk);
+					startActivity(intent);
+
+				}
+			});
 
 			return convertView;
 
@@ -215,19 +211,18 @@ implements XListView.IXListViewListener{
 	private XListView mListView;
 	private CustomAdapter mAdapter;
 
-	 
-
 	private void loadData() {
 		new Thread(new Runnable() {
 
 			@Override
 			public void run() {
 
-				currentPage=0;
+				currentPage = 0;
 				list.clear();
 
-				Map resultMap = ErshoushebeiDao.pageList(currentPage,4);
-				List<ErshoushebeiPO> tmp = (List<ErshoushebeiPO>) resultMap.get("list");
+				Map resultMap = ErshoushebeiDao.pageList(currentPage, 4);
+				List<ErshoushebeiPO> tmp = (List<ErshoushebeiPO>) resultMap
+						.get("list");
 				if (tmp != null && tmp.size() > 0) {
 					list.addAll(tmp);
 				}
@@ -271,9 +266,10 @@ implements XListView.IXListViewListener{
 
 				currentPage++;
 
-				Map resultMap = ErshoushebeiDao.pageList(currentPage,4);
+				Map resultMap = ErshoushebeiDao.pageList(currentPage, 4);
 
-				List<ErshoushebeiPO> tmp = (List<ErshoushebeiPO>) resultMap.get("list");
+				List<ErshoushebeiPO> tmp = (List<ErshoushebeiPO>) resultMap
+						.get("list");
 				Integer allCnt = (Integer) resultMap.get("allCnt");
 				list.addAll(tmp);
 
@@ -356,8 +352,6 @@ implements XListView.IXListViewListener{
 	};
 	public Intent intent = new Intent();
 
-
-
 	// ////
 	public HashMap<String, Bitmap> imagesCache = new HashMap<String, Bitmap>();// 图片缓存
 	public List<String> urls;
@@ -371,46 +365,47 @@ implements XListView.IXListViewListener{
 		@Override
 		public void handleMessage(Message msg) {
 			if (msg.what == 1) {
-				district_btn.setOnClickListener(new View.OnClickListener() {
+				if (district_btn != null) {
+					district_btn.setOnClickListener(new View.OnClickListener() {
 
-					@Override
-					public void onClick(View arg0) {
+						@Override
+						public void onClick(View arg0) {
 
-						View contentView = getLayoutInflater().inflate(
-								R.layout.recruit_list, null, true);
-						baoxuan_popMenu = new PPCPopMenu(
-								ManageListUI.this);
-						baoxuan_popMenu.addItems(areaList);
-						baoxuan_popMenu
-								.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+							View contentView = getLayoutInflater().inflate(
+									R.layout.recruit_list, null, true);
+							baoxuan_popMenu = new PPCPopMenu(ManageListUI.this);
+							baoxuan_popMenu.addItems(areaList);
+							baoxuan_popMenu
+									.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
 
-									@Override
-									public void onItemClick(
-											AdapterView<?> arg0, View arg1,
-											int pos, long arg3) {
-										Log.e("当前位置", "pos=" + pos);
-										Area po = areaList.get(pos);
-										String areaName = po.getAreaName();
-										currentPage = 0;
-										district_btn.setText("");
-										district_btn.setText(areaName + " ▼");
-										baoxuan_popMenu.dismiss();
+										@Override
+										public void onItemClick(
+												AdapterView<?> arg0, View arg1,
+												int pos, long arg3) {
+											Log.e("当前位置", "pos=" + pos);
+											Area po = areaList.get(pos);
+											String areaName = po.getAreaName();
+											currentPage = 0;
+											district_btn.setText("");
+											district_btn.setText(areaName
+													+ " ▼");
+											baoxuan_popMenu.dismiss();
 
-										list.clear();
-										loadData();
+											list.clear();
+											loadData();
 
-									}
+										}
 
-								});
-						baoxuan_popMenu.showAsDropDown(contentView);
-					}
-				});
+									});
+							baoxuan_popMenu.showAsDropDown(contentView);
+						}
+					});
+				}
+
 			}
 
 		}
 	};
-
-	
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -418,41 +413,31 @@ implements XListView.IXListViewListener{
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.ershoushebei_list);
-		
-	 
-		TextView navigateTitle=(TextView)this.findViewById(R.id.NavigateTitle);
-		if(navigateTitle!=null){
+
+		TextView navigateTitle = (TextView) this
+				.findViewById(R.id.NavigateTitle);
+		if (navigateTitle != null) {
 			navigateTitle.setText("管理");
 		}
-		
 
 		list = new ArrayList<ErshoushebeiPO>();
 
-	
 		//
-		ImageView backBtn=(ImageView)this.findViewById(R.id.backBtn);
-		if(backBtn!=null){
+		ImageView backBtn = (ImageView) this.findViewById(R.id.backBtn);
+		if (backBtn != null) {
 			backBtn.setOnClickListener(new View.OnClickListener() {
-				
+
 				@Override
 				public void onClick(View arg0) {
 					ManageListUI.this.finish();
-					
+
 				}
 			});
-			
-		}
-		
-		
-		
-		
-		
-		
-		
-		
 
-		SharedPreferences preferences = getSharedPreferences(CONSTANTS.YEDIANCHINA_USER_INFO,
-				Activity.MODE_PRIVATE);
+		}
+
+		SharedPreferences preferences = getSharedPreferences(
+				CONSTANTS.YEDIANCHINA_USER_INFO, Activity.MODE_PRIVATE);
 		uid = preferences.getLong("uid", 0);
 
 		district_btn = (TextView) this.findViewById(R.id.district_btn);
@@ -465,17 +450,15 @@ implements XListView.IXListViewListener{
 			}
 		}.start();
 
-	
-		
 		mListView = (XListView) findViewById(R.id.list_view);
 		mListView.setPullRefreshEnable(true);
 		mListView.setPullLoadEnable(true);
 		mListView.setAutoLoadEnable(true);
 		mListView.setXListViewListener(this);
 		mListView.setRefreshTime(getTime());
-		//mListView.setOnItemClickListener(this);
+		// mListView.setOnItemClickListener(this);
 		mAdapter = new CustomAdapter(this, list);
-	 
+
 		mListView.setAdapter(mAdapter);
 		mListView.setDivider(getResources().getDrawable(R.drawable.aoxian));
 
@@ -493,7 +476,7 @@ implements XListView.IXListViewListener{
 
 		@Override
 		public void onReceive(Context context, Intent intent) {
-		
+
 			String updateErShouSheBei = intent.getExtras().getString(
 					"updateTraining");
 			if ("1".equals(updateErShouSheBei)) {
@@ -501,21 +484,18 @@ implements XListView.IXListViewListener{
 			}
 		}
 	};
-	
+
 	private String getTime() {
 		return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA)
 				.format(new Date());
 	}
 
 	int id;
-	 protected void onDestroy() {  
-		 
-	        unregisterReceiver(broadcastReceiver);  
-	        super.onDestroy();
-	    };  
 
+	protected void onDestroy() {
+
+		unregisterReceiver(broadcastReceiver);
+		super.onDestroy();
+	};
 
 }
-
-
-

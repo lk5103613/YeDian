@@ -62,10 +62,6 @@ public class TrainingDetailUI extends CommonActivity implements
 	private void setGalleryFlow(){
 
 
-
-
-
-
 		ImageAdapter adapter = new ImageAdapter(TrainingDetailUI.this, imgList);
 		adapter.createReflectedImages();
 		// ///////////
