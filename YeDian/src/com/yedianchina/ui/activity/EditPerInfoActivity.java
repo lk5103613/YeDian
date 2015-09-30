@@ -3,9 +3,6 @@ package com.yedianchina.ui.activity;
 import android.os.Bundle;
 import android.widget.EditText;
 
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.Response.Listener;
-import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.like.entity.RecruitInfo;
 import com.yedianchina.ui.R;

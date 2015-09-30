@@ -25,6 +25,7 @@ import android.text.TextPaint;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -309,15 +310,14 @@ public class PublishJobUI extends Activity {
 
 	TextView imgBtn;
 
-	LinearLayout manLL;
 	TextView manTxt;
 	TextView manImg;
 	TextView manPreImg;
 
-	LinearLayout girlLL;
 	TextView girlPreImg;
 	TextView girlTxt;
 	TextView girlImg;
+	Button saveBtn;
 
 	int gender = 1;
 	EditText reqJobNameEt;
@@ -342,9 +342,7 @@ public class PublishJobUI extends Activity {
 		};
 	};
 
-	EditText linkMpTv;
-	EditText linkEmailTv;
-	EditText linkmanTv;
+	private TextPaint paint;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -360,10 +358,6 @@ public class PublishJobUI extends Activity {
 			navigateTitle.setText("发布求职简历");
 		}
 
-		linkMpTv = (EditText) this.findViewById(R.id.linkMpTv);
-		linkEmailTv = (EditText) this.findViewById(R.id.linkEmailTv);
-		linkmanTv= (EditText) this.findViewById(R.id.linkmanTv);
-
 		ImageView backBtn = (ImageView) this.findViewById(R.id.backBtn);
 		if (backBtn != null) {
 			backBtn.setOnClickListener(new View.OnClickListener() {
@@ -377,127 +371,70 @@ public class PublishJobUI extends Activity {
 
 		}
 
-		reqJobNameEt= (EditText) this.findViewById(R.id.reqJobNameEt);
+		reqJobNameEt = (EditText) this.findViewById(R.id.reqJobNameEt);
 		descTv = (EditText) this.findViewById(R.id.descTv);
 
 		TextView qiandaoBtn = (TextView) this.findViewById(R.id.qiandaoBtn);
-		if (qiandaoBtn != null) {
-			qiandaoBtn.setText("确定发布");
-			qiandaoBtn.setOnClickListener(new View.OnClickListener() {
+		qiandaoBtn.setVisibility(View.GONE);
+		saveBtn = (Button) findViewById(R.id.save_btn);
 
-				@Override
-				public void onClick(View arg0) {
+		saveBtn.setOnClickListener(new View.OnClickListener() {
 
-					JobsPO po = new JobsPO();
-					po.setJob_type(job_type + "");
-					String reqJobName = reqJobNameEt.getText().toString();
-					if (StringUtils.isNotEmpty(reqJobName)) {
-						po.setReqJobName(reqJobName);
-					} else {
-						po.setReqJobName("");
-					}
+			@Override
+			public void onClick(View arg0) {
 
-					Log.e("reqJobName", reqJobName);
-
-					String desc = descTv.getText().toString();
-
-					if (imgURL0 != null && imgURL0.length() > 5) {
-						po.setPic0(imgURL0);
-					} else {
-						po.setPic0("");
-					}
-
-					if (imgURL1 != null && imgURL1.length() > 5) {
-						po.setPic1(imgURL1);
-					} else {
-						po.setPic1("");
-					}
-					if (imgURL2 != null && imgURL2.length() > 5) {
-						po.setPic2(imgURL2);
-					} else {
-						po.setPic2("");
-					}
-					if (imgURL3 != null && imgURL3.length() > 5) {
-						po.setPic3(imgURL3);
-					} else {
-						po.setPic3("");
-					}
-
-					System.out.println("saveRecruit=   imgURL0=" + imgURL0
-							+ imgURL1 + "=imgURL1    imgURL1=" + imgURL2 + "  "
-							+ imgURL3);
-
-					String mp = linkMpTv.getText().toString();
-					if (mp != null && mp.length() > 0) {
-						po.setMp(mp);
-					}
-
-					String email = linkEmailTv.getText().toString();
-					if (email != null) {
-						po.setEmail(email);
-					}
-					
-					String linkman=linkmanTv.getText().toString();
-					po.setLinkman(linkman);
-
-					po.setDesc(desc);
-					Long pk = JobsDao.saveJob(po);
-
-					if (pk > 0) {
-						loadingHandler.sendEmptyMessage(1);
-					} else {
-						loadingHandler.sendEmptyMessage(2);
-					}
-
+				JobsPO po = new JobsPO();
+				po.setJob_type(job_type + "");
+				String reqJobName = reqJobNameEt.getText().toString();
+				if (StringUtils.isNotEmpty(reqJobName)) {
+					po.setReqJobName(reqJobName);
+				} else {
+					po.setReqJobName("");
 				}
-			});
 
-		}
+				Log.e("reqJobName", reqJobName);
 
-		manLL = (LinearLayout) this.findViewById(R.id.manLL);
+				String desc = descTv.getText().toString();
 
-		manImg = (TextView) this.findViewById(R.id.manImg);
-		// 女
-
-		girlLL = (LinearLayout) this.findViewById(R.id.girlLL);
-
-		girlImg = (TextView) this.findViewById(R.id.girlImg);
-
-		if (manLL != null) {
-			// manLL.setClickable(true);
-			manLL.setFocusable(false);
-			// manLL.setFocusableInTouchMode(true);
-			manLL.setOnClickListener(new View.OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					manImg.setBackgroundResource(R.drawable.red_dot);
-					girlImg.setBackgroundResource(R.drawable.gray_dot);
-					gender = 1;
-
+				if (imgURL0 != null && imgURL0.length() > 5) {
+					po.setPic0(imgURL0);
+				} else {
+					po.setPic0("");
 				}
-			});
-		}
 
-		if (girlLL != null) {
-			// girlLL.setClickable(true);
-			girlLL.setFocusable(false);
-			// girlLL.setFocusableInTouchMode(true);
-			girlLL.setOnClickListener(new View.OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					manImg.setBackgroundResource(R.drawable.gray_dot);
-					girlImg.setBackgroundResource(R.drawable.red_dot);
-					gender = 2;
-
+				if (imgURL1 != null && imgURL1.length() > 5) {
+					po.setPic1(imgURL1);
+				} else {
+					po.setPic1("");
 				}
-			});
-		}
+				if (imgURL2 != null && imgURL2.length() > 5) {
+					po.setPic2(imgURL2);
+				} else {
+					po.setPic2("");
+				}
+				if (imgURL3 != null && imgURL3.length() > 5) {
+					po.setPic3(imgURL3);
+				} else {
+					po.setPic3("");
+				}
 
-		// ////////////////////////////////////////////////////////////////////////
+				System.out.println("saveRecruit=   imgURL0=" + imgURL0
+						+ imgURL1 + "=imgURL1    imgURL1=" + imgURL2 + "  "
+						+ imgURL3);
+
+				po.setDesc(desc);
+				Long pk = JobsDao.saveJob(po);
+
+				if (pk > 0) {
+					loadingHandler.sendEmptyMessage(1);
+				} else {
+					loadingHandler.sendEmptyMessage(2);
+				}
+
+			}
+		});
+
 		jiubaBtn = (TextView) this.findViewById(R.id.jiubaBtn);
-
 		ktvBtn = (TextView) this.findViewById(R.id.ktvBtn);
 		yezonghuiBtn = (TextView) this.findViewById(R.id.yezonghuiBtn);
 
@@ -556,7 +493,7 @@ public class PublishJobUI extends Activity {
 				}
 			});
 		}
-		// ////
+
 		photo1 = (ImageView) this.findViewById(R.id.photo1);
 		if (photo1 != null) {
 			photo1.setOnClickListener(new View.OnClickListener() {
@@ -602,28 +539,13 @@ public class PublishJobUI extends Activity {
 			});
 		}
 
-		TextView linkmanPreTv = (TextView) this.findViewById(R.id.linkmanPreTv);
-		TextPaint paint = linkmanPreTv.getPaint();
-		paint.setFakeBoldText(true);
-		
-		TextView sexPreTv = (TextView) this.findViewById(R.id.sexPreTv);
-		paint = sexPreTv.getPaint();
-		paint.setFakeBoldText(true);
-		
-		TextView linkMpPreTv = (TextView) this.findViewById(R.id.linkMpPreTv);
-		paint = linkMpPreTv.getPaint();
-		paint.setFakeBoldText(true);
-		//
-		TextView linkEmailPreTv = (TextView) this.findViewById(R.id.linkEmailPreTv);
-		paint = linkEmailPreTv.getPaint();
-		paint.setFakeBoldText(true);
-		
-		//descPreTv
+		// descPreTv
 		TextView descPreTv = (TextView) this.findViewById(R.id.descPreTv);
 		paint = descPreTv.getPaint();
 		paint.setFakeBoldText(true);
-		
-		TextView reqJobNamePreTv = (TextView) this.findViewById(R.id.reqJobNamePreTv);
+
+		TextView reqJobNamePreTv = (TextView) this
+				.findViewById(R.id.reqJobNamePreTv);
 		paint = reqJobNamePreTv.getPaint();
 		paint.setFakeBoldText(true);
 
