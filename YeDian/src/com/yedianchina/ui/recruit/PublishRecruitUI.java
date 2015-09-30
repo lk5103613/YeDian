@@ -13,9 +13,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
+import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.DialogInterface.OnClickListener;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Matrix;
@@ -508,6 +511,8 @@ public class PublishRecruitUI extends CommonActivity {
 					sendBroadcast(intent);
 					PublishRecruitUI.this.finish();
 
+				} else if (what == 2) {
+					
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -570,6 +575,7 @@ public class PublishRecruitUI extends CommonActivity {
 
 	int recruit_type = 1;
 	EditText ageEt;
+	private AlertDialog mSuccessDialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -651,7 +657,12 @@ public class PublishRecruitUI extends CommonActivity {
 						Long pk = RecruitDao.saveRecruit(po);
 						System.out.println("pk=======================" + pk);
 						if (pk > 0) {
-							loadingHandler.sendEmptyMessage(1);
+							runOnUiThread(new Runnable() {
+								public void run() {
+									showSuccess();
+								}
+							});
+							
 						} else {
 							loadingHandler.sendEmptyMessage(2);
 						}
@@ -888,6 +899,28 @@ public class PublishRecruitUI extends CommonActivity {
 		paint = tqPre.getPaint();
 		paint.setFakeBoldText(true);
 
+	}
+	
+	private void showSuccess(){
+		mSuccessDialog = new AlertDialog.Builder(this). 
+                setTitle(""). 
+                setMessage("发布成功,是否分享到朋友圈"). 
+                setIcon(R.drawable.ic_launcher). 
+                setPositiveButton("是", new OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						loadingHandler.sendEmptyMessage(1);
+					}
+				}).setNegativeButton("否", new OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						loadingHandler.sendEmptyMessage(1);
+//						mSuccessDialog.dismiss();
+					}
+				}).create(); 
+        mSuccessDialog.show(); 
 	}
 
 }

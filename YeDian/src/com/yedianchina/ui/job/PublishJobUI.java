@@ -11,7 +11,11 @@ import java.util.Date;
 import java.util.Random;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -105,6 +109,8 @@ public class PublishJobUI extends Activity {
 
 	private String strVideoPath = "";
 	String requestURL = CONSTANTS.IMG_HOST + "yw_uploadify.php";
+	
+	private Dialog mSuccessDialog;
 
 	public void xc() {
 		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
@@ -432,8 +438,7 @@ public class PublishJobUI extends Activity {
 				Long pk = JobsDao.saveJob(po);
 
 				if (pk > 0) {
-					loadingHandler.sendEmptyMessage(1);
-					Toast.makeText(mContext, "发布成功", Toast.LENGTH_SHORT).show();
+					showSuccess();
 				} else {
 					loadingHandler.sendEmptyMessage(2);
 					Toast.makeText(mContext, "发布失败", Toast.LENGTH_SHORT).show();
@@ -558,6 +563,28 @@ public class PublishJobUI extends Activity {
 		paint = reqJobNamePreTv.getPaint();
 		paint.setFakeBoldText(true);
 
+	}
+	
+	private void showSuccess(){
+		mSuccessDialog = new AlertDialog.Builder(this). 
+                setTitle(""). 
+                setMessage("发布成功,是否分享到朋友圈"). 
+                setIcon(R.drawable.ic_launcher). 
+                setPositiveButton("是", new OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						loadingHandler.sendEmptyMessage(1);
+					}
+				}).setNegativeButton("否", new OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						loadingHandler.sendEmptyMessage(1);
+//						mSuccessDialog.dismiss();
+					}
+				}).create(); 
+        mSuccessDialog.show(); 
 	}
 
 }
