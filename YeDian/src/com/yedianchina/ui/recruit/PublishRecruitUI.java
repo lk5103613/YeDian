@@ -14,6 +14,7 @@ import java.util.Date;
 import java.util.Random;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -25,6 +26,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.text.TextPaint;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -46,9 +48,10 @@ import com.yedianchina.ui.CommonActivity;
 import com.yedianchina.ui.R;
 
 public class PublishRecruitUI extends CommonActivity {
-	
+
 	private static final int SCALE = 5;// 照片缩小比例
-//压缩图片
+	// 压缩图片
+
 	public void yaSuo(String path) {
 		FileInputStream in;
 		byte[] mContent = null;
@@ -59,15 +62,13 @@ public class PublishRecruitUI extends CommonActivity {
 			mContent = readStream(in);
 
 		} catch (FileNotFoundException e1) {
-			 
+
 			e1.printStackTrace();
 		} catch (Exception e) {
-			 
+
 			e.printStackTrace();
 		}
 
-	 
-		 
 		myBitmap = BitmapUtils.getBitmap(mContent, 480, 800);
 		File file = new File(path);
 		System.out.println("fileLenth" + file.length());
@@ -85,14 +86,14 @@ public class PublishRecruitUI extends CommonActivity {
 		try {
 			fos = new FileOutputStream(file);
 		} catch (FileNotFoundException e) {
-			
+
 			e.printStackTrace();
 		}
 		BufferedOutputStream bos = new BufferedOutputStream(fos);
 		try {
 			bos.write(mContent);
 		} catch (IOException e) {
-		 
+
 			e.printStackTrace();
 		}
 
@@ -127,11 +128,8 @@ public class PublishRecruitUI extends CommonActivity {
 		return data;
 
 	}
-	
-	
-	
-	
-/////////////////////////////////////////////////////////
+
+	// ///////////////////////////////////////////////////////
 	ImageView photo0;
 	ImageView photo1;
 	ImageView photo2;
@@ -278,7 +276,6 @@ public class PublishRecruitUI extends CommonActivity {
 						bos.flush();
 						bos.close();
 
-						 
 						if (k == 0) {
 							photo0.setImageBitmap(photo);
 						}
@@ -316,7 +313,6 @@ public class PublishRecruitUI extends CommonActivity {
 					photo3.setImageBitmap(photo);
 				}
 
-
 				yaSuo("/sdcard/" + fileName);
 
 				final File file = new File("/sdcard/" + fileName);
@@ -338,33 +334,26 @@ public class PublishRecruitUI extends CommonActivity {
 										+ min;
 								serverImgName = day + s;
 
-								
-
 								Log.e("上传文件", "imgPath==" + imgPath);
 								if (k == 0) {
 
-									imgURL0 =  serverImgName
-											+ ".jpg";
+									imgURL0 = serverImgName + ".jpg";
 									Log.e("imgURL0", "imgURL0=" + imgURL0);
 								}
 								if (k == 1) {
-									imgURL1 =  serverImgName
-											+ ".jpg";
+									imgURL1 = serverImgName + ".jpg";
 									Log.e("imgURL1", "imgURL1=" + imgURL1);
 								}
 								if (k == 2) {
-									imgURL2 =  serverImgName
-											+ ".jpg";
+									imgURL2 = serverImgName + ".jpg";
 									Log.e("imgURL2", "imgURL2=" + imgURL2);
 								}
 								if (k == 3) {
-									imgURL3 =  serverImgName
-											+ ".jpg";
+									imgURL3 = serverImgName + ".jpg";
 									Log.e("imgURL3", "imgURL3=" + imgURL3);
 								}
 								UploadUtil
-								.post(file, requestURL, serverImgName);
-
+										.post(file, requestURL, serverImgName);
 
 							} catch (Exception e) {
 								e.printStackTrace();
@@ -398,7 +387,7 @@ public class PublishRecruitUI extends CommonActivity {
 						// 释放原始图片占用的内存，防止out of memory异常发生
 						photo.recycle();
 
-						//avatarTv.setImageBitmap(smallBitmap);
+						// avatarTv.setImageBitmap(smallBitmap);
 						if (k == 0) {
 							photo0.setImageBitmap(smallBitmap);
 						}
@@ -430,8 +419,7 @@ public class PublishRecruitUI extends CommonActivity {
 					new Thread() {
 						public void run() {
 							try {
-								
-								
+
 								DateFormat f2 = new SimpleDateFormat(
 										"yyyyMMddHHmmss");
 								String day = f2.format(new Date());
@@ -443,37 +431,27 @@ public class PublishRecruitUI extends CommonActivity {
 										+ min;
 								serverImgName = day + s;
 
-								
-
 								Log.e("上传文件", "imgPath==" + imgPath);
 								if (k == 0) {
 
-									imgURL0 =  serverImgName
-											+ ".jpg";
+									imgURL0 = serverImgName + ".jpg";
 									Log.e("imgURL0", "imgURL0=" + imgURL0);
 								}
 								if (k == 1) {
-									imgURL1 =  serverImgName
-											+ ".jpg";
+									imgURL1 = serverImgName + ".jpg";
 									Log.e("imgURL1", "imgURL1=" + imgURL1);
 								}
 								if (k == 2) {
-									imgURL2 =  serverImgName
-											+ ".jpg";
+									imgURL2 = serverImgName + ".jpg";
 									Log.e("imgURL2", "imgURL2=" + imgURL2);
 								}
 								if (k == 3) {
-									imgURL3 =  serverImgName
-											+ ".jpg";
+									imgURL3 = serverImgName + ".jpg";
 									Log.e("imgURL3", "imgURL3=" + imgURL3);
 								}
-								
+
 								UploadUtil
-								.post(file, requestURL, serverImgName);
-
-
-								
-
+										.post(file, requestURL, serverImgName);
 
 								// //////////////
 
@@ -557,6 +535,7 @@ public class PublishRecruitUI extends CommonActivity {
 
 	TextView shareBtn;
 	TextView favBtn;
+	private Context mContext;
 
 	Handler loginHandler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
@@ -584,7 +563,7 @@ public class PublishRecruitUI extends CommonActivity {
 
 		};
 	};
-	
+
 	TextView jiubaBtn;
 	TextView ktvBtn;
 	TextView yezonghuiBtn;
@@ -601,7 +580,7 @@ public class PublishRecruitUI extends CommonActivity {
 
 		setContentView(R.layout.publish_recruit);
 
-
+		mContext = this;
 		titleEt = (EditText) this.findViewById(R.id.titleEt);
 		addTimeTv = (TextView) this.findViewById(R.id.addTimeTv);
 
@@ -616,72 +595,72 @@ public class PublishRecruitUI extends CommonActivity {
 
 		TextView okBtn = (TextView) this.findViewById(R.id.okBtn);
 		okBtn.setVisibility(View.INVISIBLE);
-		
-		
+
 		TextView saveBtn = (TextView) this.findViewById(R.id.saveBtn);
-		if (saveBtn != null) {
-			saveBtn.setOnClickListener(new View.OnClickListener() {
+		saveBtn.setOnClickListener(new View.OnClickListener() {
 
-				@Override
-				public void onClick(View arg0) {
-
-					System.out.println("---------------------------------");
-
-					Log.e("saveRecruit**", "=============");
-
-					po = new RecruitPO();
-					String title = titleEt.getText().toString();
-					if (title != null) {
-						po.setTitle(title);
-					}
-
-					String tj = tjEt.getText().toString();
-					if (tj != null && tj.length() > 0) {
-						po.setTj(tj);
-					}
-
-					po.setRecruit_type(String.valueOf(recruit_type));
-
-					if (imgURL0 != null && imgURL0.length() > 5) {
-						po.setPic0(imgURL0);
-					} else {
-						po.setPic0("");
-					}
-					Log.e("saveRecruit", imgURL0 + "  " + imgURL1 + "  "
-							+ imgURL2 + "  " + imgURL3);
-					if (imgURL1 != null && imgURL1.length() > 5) {
-						po.setPic1(imgURL1);
-					} else {
-						po.setPic1("");
-					}
-					if (imgURL2 != null && imgURL2.length() > 5) {
-						po.setPic2(imgURL2);
-					} else {
-						po.setPic2("");
-					}
-					if (imgURL3 != null && imgURL3.length() > 5) {
-						po.setPic3(imgURL3);
-					} else {
-						po.setPic3("");
-					}
-
-					new Thread() {
-						public void run() {
-							Long pk = RecruitDao.saveRecruit(po);
-							System.out
-									.println("pk=======================" + pk);
-							if (pk > 0) {
-								loadingHandler.sendEmptyMessage(1);
-							} else {
-								loadingHandler.sendEmptyMessage(2);
-							}
-
-						}
-					}.start();
-
+			@Override
+			public void onClick(View arg0) {
+				po = new RecruitPO();
+				String title = titleEt.getText().toString();
+				String tj = tjEt.getText().toString();
+				
+				if (TextUtils.isEmpty(title)) {
+					Toast.makeText(mContext, "请填写职位名称", Toast.LENGTH_SHORT).show();
+					return;
 				}
-			});
-		}
+				
+				if (TextUtils.isEmpty(tj)) {
+					Toast.makeText(mContext, "请填写职位描述", Toast.LENGTH_SHORT).show();
+					return;
+				}
+				po.setTitle(title);
+
+				
+				if (tj != null && tj.length() > 0) {
+					po.setTj(tj);
+				}
+
+				po.setRecruit_type(String.valueOf(recruit_type));
+
+				if (imgURL0 != null && imgURL0.length() > 5) {
+					po.setPic0(imgURL0);
+				} else {
+					po.setPic0("");
+				}
+				Log.e("saveRecruit", imgURL0 + "  " + imgURL1 + "  " + imgURL2
+						+ "  " + imgURL3);
+				if (imgURL1 != null && imgURL1.length() > 5) {
+					po.setPic1(imgURL1);
+				} else {
+					po.setPic1("");
+				}
+				if (imgURL2 != null && imgURL2.length() > 5) {
+					po.setPic2(imgURL2);
+				} else {
+					po.setPic2("");
+				}
+				if (imgURL3 != null && imgURL3.length() > 5) {
+					po.setPic3(imgURL3);
+				} else {
+					po.setPic3("");
+				}
+
+				new Thread() {
+					public void run() {
+						Long pk = RecruitDao.saveRecruit(po);
+						System.out.println("pk=======================" + pk);
+						if (pk > 0) {
+							loadingHandler.sendEmptyMessage(1);
+						} else {
+							loadingHandler.sendEmptyMessage(2);
+						}
+
+					}
+				}.start();
+
+			}
+		});
 
 		ImageView backBtn = (ImageView) this.findViewById(R.id.backBtn);
 		if (backBtn != null) {
@@ -899,17 +878,16 @@ public class PublishRecruitUI extends CommonActivity {
 				}
 			});
 		}
-		
-		
-		////
+
+		// //
 		TextView zwPre = (TextView) this.findViewById(R.id.zwPre);
-		TextPaint paint = zwPre.getPaint(); 
+		TextPaint paint = zwPre.getPaint();
 		paint.setFakeBoldText(true);
 		//
 		TextView tqPre = (TextView) this.findViewById(R.id.tqPre);
-		paint = tqPre.getPaint(); 
+		paint = tqPre.getPaint();
 		paint.setFakeBoldText(true);
-		
+
 	}
 
 }

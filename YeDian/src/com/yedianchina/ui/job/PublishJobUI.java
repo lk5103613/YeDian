@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.Random;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -22,6 +23,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.text.TextPaint;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -53,6 +55,8 @@ public class PublishJobUI extends Activity {
 	ImageView photo1;
 	ImageView photo2;
 	ImageView photo3;
+	
+	private Context mContext;
 
 	/***
 	 * 图片的缩放方法
@@ -264,8 +268,7 @@ public class PublishJobUI extends Activity {
 									imgURL3 = serverImgName + ".jpg";
 								}
 
-								UploadUtil
-										.post(file, requestURL, serverImgName);
+								UploadUtil.post(file, requestURL, serverImgName);
 
 								// //////////////
 
@@ -352,6 +355,7 @@ public class PublishJobUI extends Activity {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.publish_job);
 
+		mContext = this;
 		TextView navigateTitle = (TextView) this
 				.findViewById(R.id.NavigateTitle);
 		if (navigateTitle != null) {
@@ -382,20 +386,22 @@ public class PublishJobUI extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-
+				String reqJobName = reqJobNameEt.getText().toString();
+				String desc = descTv.getText().toString();
+				
+				if(StringUtils.isEmpty(reqJobName)){
+					Toast.makeText(mContext, "请填写应聘职位", Toast.LENGTH_SHORT).show();
+					return;
+				}
+				
+				if (TextUtils.isEmpty(desc)) {
+					Toast.makeText(mContext, "请填写自我描述", Toast.LENGTH_SHORT).show();
+					return;
+				}
+				
 				JobsPO po = new JobsPO();
 				po.setJob_type(job_type + "");
-				String reqJobName = reqJobNameEt.getText().toString();
-				if (StringUtils.isNotEmpty(reqJobName)) {
-					po.setReqJobName(reqJobName);
-				} else {
-					po.setReqJobName("");
-				}
-
-				Log.e("reqJobName", reqJobName);
-
-				String desc = descTv.getText().toString();
-
+				po.setReqJobName(reqJobName);
 				if (imgURL0 != null && imgURL0.length() > 5) {
 					po.setPic0(imgURL0);
 				} else {
@@ -427,10 +433,11 @@ public class PublishJobUI extends Activity {
 
 				if (pk > 0) {
 					loadingHandler.sendEmptyMessage(1);
+					Toast.makeText(mContext, "发布成功", Toast.LENGTH_SHORT).show();
 				} else {
 					loadingHandler.sendEmptyMessage(2);
+					Toast.makeText(mContext, "发布失败", Toast.LENGTH_SHORT).show();
 				}
-
 			}
 		});
 		
