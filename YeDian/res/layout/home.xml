@@ -10,15 +10,11 @@
         android:layout_width="fill_parent"
         android:layout_height="50dip"
         layout="@layout/home_title" />
-    
-   
-    
 
     <ScrollView
         android:id="@+id/sc"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-       
         android:layout_below="@id/title" >
 
         <LinearLayout
@@ -43,16 +39,11 @@
                 android:gravity="center"
                 android:orientation="horizontal" >
             </LinearLayout>
-            
-            
-            
-            
 
             <LinearLayout
                 android:id="@+id/mainLL"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-               
                 android:layout_marginBottom="0dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
@@ -65,8 +56,6 @@
                     android:gravity="center"
                     android:orientation="horizontal" >
 
-                   
-
                     <LinearLayout
                         android:layout_width="0dip"
                         android:layout_height="fill_parent"
@@ -76,25 +65,18 @@
                         <TextView
                             android:id="@+id/recruitID"
                             android:layout_width="65.824dip"
-                           android:layout_height="78.98dip"
+                            android:layout_height="78.98dip"
                             android:layout_gravity="center_horizontal"
-                            
-                            
-                            
                             android:clickable="true"
                             android:gravity="center" />
                     </LinearLayout>
-                    
+
                     <LinearLayout
                         android:layout_width="0dip"
                         android:layout_height="fill_parent"
                         android:layout_weight="0"
                         android:orientation="vertical" >
-
-                        
                     </LinearLayout>
-                    
-                  
 
                     <LinearLayout
                         android:layout_width="0dip"
@@ -104,24 +86,19 @@
 
                         <TextView
                             android:id="@+id/jobsTv"
-                          android:layout_width="65.824dip"
-                           android:layout_height="78.98dip"
+                            android:layout_width="65.824dip"
+                            android:layout_height="78.98dip"
                             android:layout_gravity="center_horizontal"
-                            
                             android:clickable="true"
                             android:gravity="center" />
                     </LinearLayout>
-                    
+
                     <LinearLayout
                         android:layout_width="0dip"
                         android:layout_height="fill_parent"
                         android:layout_weight="0"
                         android:orientation="vertical" >
-
-                        
                     </LinearLayout>
-                    
-                 
 
                     <LinearLayout
                         android:layout_width="0dip"
@@ -131,15 +108,12 @@
 
                         <TextView
                             android:id="@+id/merchantRankTv"
-                   android:layout_width="65.824dip"
-                           android:layout_height="78.98dip"
+                            android:layout_width="65.824dip"
+                            android:layout_height="78.98dip"
                             android:layout_gravity="center_horizontal"
-                          
                             android:clickable="true"
                             android:gravity="center" />
                     </LinearLayout>
-
-                 
                 </LinearLayout>
             </LinearLayout>
 
@@ -151,9 +125,6 @@
                 android:layout_marginTop="0dp"
                 android:orientation="horizontal" >
             </LinearLayout>
-            
-            
-            
 
             <LinearLayout
                 android:id="@+id/mainLL2"
@@ -167,14 +138,12 @@
 
                 <LinearLayout
                     android:layout_width="fill_parent"
-                       android:layout_height="132dip"
+                    android:layout_height="132dip"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="0dp"
                     android:layout_marginRight="0dip"
                     android:gravity="center"
                     android:orientation="horizontal" >
-
-                
 
                     <LinearLayout
                         android:layout_width="0dip"
@@ -184,10 +153,9 @@
 
                         <TextView
                             android:id="@+id/nearByActivityTv"
-                          android:layout_width="82.28dip"
-                           android:layout_height="98.7366dip"
+                            android:layout_width="82.28dip"
+                            android:layout_height="98.7366dip"
                             android:layout_gravity="center_horizontal"
-                         
                             android:clickable="true"
                             android:gravity="center" />
                     </LinearLayout>
@@ -200,10 +168,9 @@
 
                         <TextView
                             android:id="@+id/nearByMerchantTv"
-                          android:layout_width="82.28dip"
-                           android:layout_height="98.7366dip"
+                            android:layout_width="82.28dip"
+                            android:layout_height="98.7366dip"
                             android:layout_gravity="center_horizontal"
-                        
                             android:clickable="true"
                             android:gravity="center" />
                     </LinearLayout>
@@ -217,16 +184,12 @@
                         <TextView
                             android:id="@+id/paiduiTv"
                             android:layout_width="82.28dip"
-                           android:layout_height="98.7366dip"
+                            android:layout_height="98.7366dip"
                             android:layout_gravity="center_horizontal"
                             android:clickable="true"
                             android:gravity="center"
-                       
                             android:textColor="@color/yellow" />
                     </LinearLayout>
-
-               
-                    
                 </LinearLayout>
             </LinearLayout>
 
@@ -238,15 +201,6 @@
                 android:layout_marginTop="0dp"
                 android:orientation="horizontal" >
             </LinearLayout>
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             <LinearLayout
                 android:id="@+id/tmp"
@@ -257,23 +211,20 @@
                 android:layout_marginRight="0dp"
                 android:layout_marginTop="2dp"
                 android:orientation="horizontal" >
-                
+
                 <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="0dip"
-                        android:layout_weight="1"
-                        android:orientation="vertical" >
-                    
+                    android:layout_width="0dip"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
                     <TextView
-                       
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                       
                         android:layout_gravity="center_horizontal"
                         android:clickable="true"
                         android:gravity="center" />
-                    
-                    </LinearLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dip"
@@ -285,7 +236,6 @@
                         android:id="@+id/ershoushebei"
                         android:layout_width="55dip"
                         android:layout_height="62.6dip"
-                     
                         android:layout_gravity="center_horizontal"
                         android:clickable="true"
                         android:gravity="center" />
@@ -302,7 +252,6 @@
                         android:layout_width="55dip"
                         android:layout_height="64.6dip"
                         android:layout_gravity="center_horizontal"
-                    
                         android:clickable="true"
                         android:gravity="center"
                         android:textColor="@color/yellow"
@@ -317,10 +266,9 @@
 
                     <TextView
                         android:id="@+id/module3"
-                       android:layout_width="55dip"
+                        android:layout_width="55dip"
                         android:layout_height="64.6dip"
                         android:layout_gravity="center_horizontal"
-                  
                         android:clickable="true"
                         android:gravity="center"
                         android:textColor="@color/yellow"
@@ -335,35 +283,31 @@
 
                     <TextView
                         android:id="@+id/module4"
-                       android:layout_width="55dip"
+                        android:layout_width="55dip"
                         android:layout_height="64.6dip"
                         android:layout_gravity="center_horizontal"
-                
                         android:clickable="true"
                         android:gravity="center"
                         android:textColor="@color/yellow"
                         android:textSize="18.0sp" />
                 </LinearLayout>
-                
+
                 <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="0dip"
-                        android:layout_weight="1"
-                        android:orientation="vertical" >
-                    
+                    android:layout_width="0dip"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
                     <TextView
-                       
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                       
                         android:layout_gravity="center_horizontal"
                         android:clickable="true"
                         android:gravity="center" />
-                    
-                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
-             <LinearLayout
+            <LinearLayout
                 android:id="@+id/tmp2014"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -373,9 +317,6 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-    
-   
-
 
     <com.baidu.mapapi.map.MapView
         android:id="@+id/map_view"
@@ -384,19 +325,9 @@
         android:apiKey="2485C7D8A0A8B1A04FD6619A9C105D913AD18A66"
         android:clickable="true"
         android:enabled="true" />
-         
-      
-      
-         
-          <include
-        android:id="@+id/bottommenu"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/sc"
-        android:layout_marginTop="150dip"
-        layout="@layout/menu1" />
-      
-      
 
-    
+    <include
+        android:id="@+id/bottommenu"
+        layout="@layout/menu1" />
 
 </RelativeLayout>

@@ -11,6 +11,11 @@ import java.util.Date;
 import java.util.Random;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -22,9 +27,11 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.text.TextPaint;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -52,6 +59,8 @@ public class PublishJobUI extends Activity {
 	ImageView photo1;
 	ImageView photo2;
 	ImageView photo3;
+	
+	private Context mContext;
 
 	/***
 	 * 图片的缩放方法
@@ -100,6 +109,8 @@ public class PublishJobUI extends Activity {
 
 	private String strVideoPath = "";
 	String requestURL = CONSTANTS.IMG_HOST + "yw_uploadify.php";
+	
+	private Dialog mSuccessDialog;
 
 	public void xc() {
 		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
@@ -263,8 +274,7 @@ public class PublishJobUI extends Activity {
 									imgURL3 = serverImgName + ".jpg";
 								}
 
-								UploadUtil
-										.post(file, requestURL, serverImgName);
+								UploadUtil.post(file, requestURL, serverImgName);
 
 								// //////////////
 
@@ -309,15 +319,14 @@ public class PublishJobUI extends Activity {
 
 	TextView imgBtn;
 
-	LinearLayout manLL;
 	TextView manTxt;
 	TextView manImg;
 	TextView manPreImg;
 
-	LinearLayout girlLL;
 	TextView girlPreImg;
 	TextView girlTxt;
 	TextView girlImg;
+	TextView saveBtn;
 
 	int gender = 1;
 	EditText reqJobNameEt;
@@ -342,9 +351,7 @@ public class PublishJobUI extends Activity {
 		};
 	};
 
-	EditText linkMpTv;
-	EditText linkEmailTv;
-	EditText linkmanTv;
+	private TextPaint paint;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -354,15 +361,12 @@ public class PublishJobUI extends Activity {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.publish_job);
 
+		mContext = this;
 		TextView navigateTitle = (TextView) this
 				.findViewById(R.id.NavigateTitle);
 		if (navigateTitle != null) {
 			navigateTitle.setText("发布求职简历");
 		}
-
-		linkMpTv = (EditText) this.findViewById(R.id.linkMpTv);
-		linkEmailTv = (EditText) this.findViewById(R.id.linkEmailTv);
-		linkmanTv= (EditText) this.findViewById(R.id.linkmanTv);
 
 		ImageView backBtn = (ImageView) this.findViewById(R.id.backBtn);
 		if (backBtn != null) {
@@ -377,127 +381,72 @@ public class PublishJobUI extends Activity {
 
 		}
 
-		reqJobNameEt= (EditText) this.findViewById(R.id.reqJobNameEt);
+		reqJobNameEt = (EditText) this.findViewById(R.id.reqJobNameEt);
 		descTv = (EditText) this.findViewById(R.id.descTv);
 
 		TextView qiandaoBtn = (TextView) this.findViewById(R.id.qiandaoBtn);
-		if (qiandaoBtn != null) {
-			qiandaoBtn.setText("确定发布");
-			qiandaoBtn.setOnClickListener(new View.OnClickListener() {
+		qiandaoBtn.setVisibility(View.GONE);
+		saveBtn = (TextView) findViewById(R.id.save_btn);
 
-				@Override
-				public void onClick(View arg0) {
+		saveBtn.setOnClickListener(new View.OnClickListener() {
 
-					JobsPO po = new JobsPO();
-					po.setJob_type(job_type + "");
-					String reqJobName = reqJobNameEt.getText().toString();
-					if (StringUtils.isNotEmpty(reqJobName)) {
-						po.setReqJobName(reqJobName);
-					} else {
-						po.setReqJobName("");
-					}
-
-					Log.e("reqJobName", reqJobName);
-
-					String desc = descTv.getText().toString();
-
-					if (imgURL0 != null && imgURL0.length() > 5) {
-						po.setPic0(imgURL0);
-					} else {
-						po.setPic0("");
-					}
-
-					if (imgURL1 != null && imgURL1.length() > 5) {
-						po.setPic1(imgURL1);
-					} else {
-						po.setPic1("");
-					}
-					if (imgURL2 != null && imgURL2.length() > 5) {
-						po.setPic2(imgURL2);
-					} else {
-						po.setPic2("");
-					}
-					if (imgURL3 != null && imgURL3.length() > 5) {
-						po.setPic3(imgURL3);
-					} else {
-						po.setPic3("");
-					}
-
-					System.out.println("saveRecruit=   imgURL0=" + imgURL0
-							+ imgURL1 + "=imgURL1    imgURL1=" + imgURL2 + "  "
-							+ imgURL3);
-
-					String mp = linkMpTv.getText().toString();
-					if (mp != null && mp.length() > 0) {
-						po.setMp(mp);
-					}
-
-					String email = linkEmailTv.getText().toString();
-					if (email != null) {
-						po.setEmail(email);
-					}
-					
-					String linkman=linkmanTv.getText().toString();
-					po.setLinkman(linkman);
-
-					po.setDesc(desc);
-					Long pk = JobsDao.saveJob(po);
-
-					if (pk > 0) {
-						loadingHandler.sendEmptyMessage(1);
-					} else {
-						loadingHandler.sendEmptyMessage(2);
-					}
-
+			@Override
+			public void onClick(View arg0) {
+				String reqJobName = reqJobNameEt.getText().toString();
+				String desc = descTv.getText().toString();
+				
+				if(StringUtils.isEmpty(reqJobName)){
+					Toast.makeText(mContext, "请填写应聘职位", Toast.LENGTH_SHORT).show();
+					return;
 				}
-			});
-
-		}
-
-		manLL = (LinearLayout) this.findViewById(R.id.manLL);
-
-		manImg = (TextView) this.findViewById(R.id.manImg);
-		// 女
-
-		girlLL = (LinearLayout) this.findViewById(R.id.girlLL);
-
-		girlImg = (TextView) this.findViewById(R.id.girlImg);
-
-		if (manLL != null) {
-			// manLL.setClickable(true);
-			manLL.setFocusable(false);
-			// manLL.setFocusableInTouchMode(true);
-			manLL.setOnClickListener(new View.OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					manImg.setBackgroundResource(R.drawable.red_dot);
-					girlImg.setBackgroundResource(R.drawable.gray_dot);
-					gender = 1;
-
+				
+				if (TextUtils.isEmpty(desc)) {
+					Toast.makeText(mContext, "请填写自我描述", Toast.LENGTH_SHORT).show();
+					return;
 				}
-			});
-		}
-
-		if (girlLL != null) {
-			// girlLL.setClickable(true);
-			girlLL.setFocusable(false);
-			// girlLL.setFocusableInTouchMode(true);
-			girlLL.setOnClickListener(new View.OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					manImg.setBackgroundResource(R.drawable.gray_dot);
-					girlImg.setBackgroundResource(R.drawable.red_dot);
-					gender = 2;
-
+				
+				JobsPO po = new JobsPO();
+				po.setJob_type(job_type + "");
+				po.setReqJobName(reqJobName);
+				if (imgURL0 != null && imgURL0.length() > 5) {
+					po.setPic0(imgURL0);
+				} else {
+					po.setPic0("");
 				}
-			});
-		}
 
-		// ////////////////////////////////////////////////////////////////////////
+				if (imgURL1 != null && imgURL1.length() > 5) {
+					po.setPic1(imgURL1);
+				} else {
+					po.setPic1("");
+				}
+				if (imgURL2 != null && imgURL2.length() > 5) {
+					po.setPic2(imgURL2);
+				} else {
+					po.setPic2("");
+				}
+				if (imgURL3 != null && imgURL3.length() > 5) {
+					po.setPic3(imgURL3);
+				} else {
+					po.setPic3("");
+				}
+
+				System.out.println("saveRecruit=   imgURL0=" + imgURL0
+						+ imgURL1 + "=imgURL1    imgURL1=" + imgURL2 + "  "
+						+ imgURL3);
+
+				po.setDesc(desc);
+				Long pk = JobsDao.saveJob(po);
+
+				if (pk > 0) {
+					showSuccess();
+				} else {
+					loadingHandler.sendEmptyMessage(2);
+					Toast.makeText(mContext, "发布失败", Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+		
 		jiubaBtn = (TextView) this.findViewById(R.id.jiubaBtn);
-
 		ktvBtn = (TextView) this.findViewById(R.id.ktvBtn);
 		yezonghuiBtn = (TextView) this.findViewById(R.id.yezonghuiBtn);
 
@@ -541,6 +490,8 @@ public class PublishJobUI extends Activity {
 
 			}
 		});
+		
+		jiubaBtn.performClick();
 
 		photo0 = (ImageView) this.findViewById(R.id.photo0);
 		if (photo0 != null) {
@@ -556,7 +507,7 @@ public class PublishJobUI extends Activity {
 				}
 			});
 		}
-		// ////
+
 		photo1 = (ImageView) this.findViewById(R.id.photo1);
 		if (photo1 != null) {
 			photo1.setOnClickListener(new View.OnClickListener() {
@@ -602,31 +553,38 @@ public class PublishJobUI extends Activity {
 			});
 		}
 
-		TextView linkmanPreTv = (TextView) this.findViewById(R.id.linkmanPreTv);
-		TextPaint paint = linkmanPreTv.getPaint();
-		paint.setFakeBoldText(true);
-		
-		TextView sexPreTv = (TextView) this.findViewById(R.id.sexPreTv);
-		paint = sexPreTv.getPaint();
-		paint.setFakeBoldText(true);
-		
-		TextView linkMpPreTv = (TextView) this.findViewById(R.id.linkMpPreTv);
-		paint = linkMpPreTv.getPaint();
-		paint.setFakeBoldText(true);
-		//
-		TextView linkEmailPreTv = (TextView) this.findViewById(R.id.linkEmailPreTv);
-		paint = linkEmailPreTv.getPaint();
-		paint.setFakeBoldText(true);
-		
-		//descPreTv
+		// descPreTv
 		TextView descPreTv = (TextView) this.findViewById(R.id.descPreTv);
 		paint = descPreTv.getPaint();
 		paint.setFakeBoldText(true);
-		
-		TextView reqJobNamePreTv = (TextView) this.findViewById(R.id.reqJobNamePreTv);
+
+		TextView reqJobNamePreTv = (TextView) this
+				.findViewById(R.id.reqJobNamePreTv);
 		paint = reqJobNamePreTv.getPaint();
 		paint.setFakeBoldText(true);
 
+	}
+	
+	private void showSuccess(){
+		mSuccessDialog = new AlertDialog.Builder(this). 
+                setTitle(""). 
+                setMessage("发布成功,是否分享到朋友圈"). 
+                setIcon(R.drawable.ic_launcher). 
+                setPositiveButton("是", new OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						loadingHandler.sendEmptyMessage(1);
+					}
+				}).setNegativeButton("否", new OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						loadingHandler.sendEmptyMessage(1);
+//						mSuccessDialog.dismiss();
+					}
+				}).create(); 
+        mSuccessDialog.show(); 
 	}
 
 }

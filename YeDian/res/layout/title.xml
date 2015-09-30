@@ -63,13 +63,9 @@
             android:layout_width="80dip"
             android:layout_height="50dip"
             android:text="签到"
-           
             android:clickable="true"
             android:textColor="#ffffff"
-            android:gravity="center|center_vertical"
-           
-           
-             />
+            android:gravity="center|center_vertical"/>
 
         
     </LinearLayout>

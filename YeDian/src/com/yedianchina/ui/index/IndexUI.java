@@ -279,12 +279,6 @@ public class IndexUI extends CommonActivity implements IWXAPIEventHandler{
 		////
 		api = WXAPIFactory.createWXAPI(this, Constants.APP_ID);
 		
-		
-		
-		
-		
-		
-		
 		paiduiTv = (TextView) this.findViewById(R.id.paiduiTv);
 		if (paiduiTv != null) {
 			paiduiTv.setBackgroundResource(R.drawable.paidui);
@@ -324,11 +318,8 @@ public class IndexUI extends CommonActivity implements IWXAPIEventHandler{
 
 				@Override
 				public void onClick(View arg0) {
-					Intent intent = new Intent();
-					intent.setClass(IndexUI.this, TrouseListUI.class);
-
-					IndexUI.this.startActivity(intent);
-
+					Intent intent = new Intent(IndexUI.this, TrouseListUI.class);
+					startActivity(intent);
 				}
 			});
 		}

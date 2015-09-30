@@ -327,6 +327,7 @@ public class TrouseListUI extends Activity implements XListView.IXListViewListen
 				if (list != null && list.size() > 0) {
 					mAdapter.changeData(list);
 				}
+				mListView.stopRefresh();
 
 				// 告诉它更新完�?
 				// mPullDownView.notifyDidRefresh();
@@ -366,39 +367,43 @@ public class TrouseListUI extends Activity implements XListView.IXListViewListen
 		@Override
 		public void handleMessage(Message msg) {
 			if (msg.what == 1) {
-				district_btn.setOnClickListener(new View.OnClickListener() {
+				
+				if (district_btn != null) {
+					district_btn.setOnClickListener(new View.OnClickListener() {
 
-					@Override
-					public void onClick(View arg0) {
+						@Override
+						public void onClick(View arg0) {
 
-						View contentView = getLayoutInflater().inflate(
-								R.layout.recruit_list, null, true);
-						baoxuan_popMenu = new PPCPopMenu(TrouseListUI.this);
-						baoxuan_popMenu.addItems(areaList);
-						baoxuan_popMenu
-								.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+							View contentView = getLayoutInflater().inflate(
+									R.layout.recruit_list, null, true);
+							baoxuan_popMenu = new PPCPopMenu(TrouseListUI.this);
+							baoxuan_popMenu.addItems(areaList);
+							baoxuan_popMenu
+									.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
 
-									@Override
-									public void onItemClick(
-											AdapterView<?> arg0, View arg1,
-											int pos, long arg3) {
-										Log.e("当前位置", "pos=" + pos);
-										Area po = areaList.get(pos);
-										String areaName = po.getAreaName();
-										currentPage = 0;
-										district_btn.setText("");
-										district_btn.setText(areaName + " ▼");
-										baoxuan_popMenu.dismiss();
+										@Override
+										public void onItemClick(
+												AdapterView<?> arg0, View arg1,
+												int pos, long arg3) {
+											Log.e("当前位置", "pos=" + pos);
+											Area po = areaList.get(pos);
+											String areaName = po.getAreaName();
+											currentPage = 0;
+											district_btn.setText("");
+											district_btn.setText(areaName + " ▼");
+											baoxuan_popMenu.dismiss();
 
-										list.clear();
-										loadData();
+											list.clear();
+											loadData();
 
-									}
+										}
 
-								});
-						baoxuan_popMenu.showAsDropDown(contentView);
-					}
-				});
+									});
+							baoxuan_popMenu.showAsDropDown(contentView);
+						}
+					});
+				}
+				
 			}
 
 		}
@@ -447,7 +452,6 @@ public class TrouseListUI extends Activity implements XListView.IXListViewListen
 				AreaService dao = new AreaService();
 				areaList = dao.listArea("1");
 				loadAreaHandler.sendEmptyMessage(1);
-
 			}
 		}.start();
 

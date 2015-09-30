@@ -50,10 +50,6 @@ public class JobsDao {
 		params.add(new BasicNameValuePair("email", po.getEmail()));
 		
 	
-		
-		
-	
-		
 		params.add(new BasicNameValuePair("YD_APPID", CONSTANTS.YD_APPID));
 		HttpClient client = new DefaultHttpClient();
 

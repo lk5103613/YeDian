@@ -30,5 +30,5 @@ public class DataFetcher extends DataFetcherBase {
 	public void fetchRecruitDetail(String id, Listener<String> listener, ErrorListener errorListener) {
 		fetchData(APIS.GET_RECRUIT_DETAIL, listener, errorListener, id);
 	}
-
+	
 }

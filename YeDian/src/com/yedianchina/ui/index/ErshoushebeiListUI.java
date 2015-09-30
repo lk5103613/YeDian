@@ -353,6 +353,7 @@ public class ErshoushebeiListUI extends Activity implements XListView.IXListView
 
 				// 告诉它更新完�?
 				// mPullDownView.notifyDidRefresh();
+				mListView.stopRefresh();
 				break;
 			}
 
