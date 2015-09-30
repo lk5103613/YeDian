@@ -256,13 +256,18 @@ public class GroupListUI extends CommonActivity implements XListView.IXListViewL
 
 				Map<String, Object> resultMap = GroupDao.pageList(currentPage,
 						longitude, latitude);
+				Message msg = mUIHandler.obtainMessage(WHAT_DID_LOAD_DATA);
+				if(resultMap == null) {
+					msg.what = 7;
+					msg.sendToTarget();
+					return;
+				}
 				List<GroupPO> tmp = (List<GroupPO>) resultMap.get("list");
 				if (tmp != null && tmp.size() > 0) {
 					list.addAll(tmp);
 				}
 				Integer allCnt = (Integer) resultMap.get("allCnt");
 
-				Message msg = mUIHandler.obtainMessage(WHAT_DID_LOAD_DATA);
 				msg.what = WHAT_DID_LOAD_DATA;
 				if (tmp == null || tmp.size() == 0 || allCnt == list.size()) {
 					msg.what = 7;
