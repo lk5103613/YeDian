@@ -10,6 +10,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
+import net.sourceforge.simcpux.Constants;
+import net.sourceforge.simcpux.Util;
+
+import org.apache.commons.lang3.StringUtils;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -20,6 +25,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
@@ -31,13 +37,16 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.SendMessageToWX;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.tencent.mm.sdk.openapi.WXMediaMessage;
+import com.tencent.mm.sdk.openapi.WXTextObject;
 import com.tencent.mm.sdk.platformtools.Log;
 import com.yedianchina.dao.JobsDao;
 import com.yedianchina.po.JobsPO;
@@ -45,8 +54,7 @@ import com.yedianchina.tools.CONSTANTS;
 import com.yedianchina.tools.UploadUtil;
 import com.yedianchina.ui.CameraUI;
 import com.yedianchina.ui.R;
-
-import org.apache.commons.lang3.StringUtils;
+import com.yedianchina.ui.recruit.PublishRecruitUI;
 
 public class PublishJobUI extends Activity {
 
@@ -341,6 +349,33 @@ public class PublishJobUI extends Activity {
 					Intent intent = new Intent(action);
 					intent.putExtra("publishjob", "1");
 					sendBroadcast(intent);
+					Bitmap bm = BitmapFactory.decodeResource(getResources(),
+							R.drawable.logo200);
+					String text = "哈我最新使用来夜店中国，里面信息量大 招聘 求职 交友什么都有，有空你也来玩～";
+					// if (text == null || text.length() == 0) {
+					// return;
+					// }
+
+					WXTextObject textObj = new WXTextObject();
+					textObj.text = "哈我最新使用来夜店中国，里面信息量大 招聘 求职 交友什么都有，有空你也来玩～";
+
+					Bitmap thumbBmp = Bitmap.createScaledBitmap(bm, 150,
+							150, true);
+
+					WXMediaMessage msg2 = new WXMediaMessage();
+					msg2.mediaObject = textObj;
+					msg2.thumbData = Util.bmpToByteArray(thumbBmp, true); // 设置缩略图
+
+					msg2.title = "夜店中国";
+					msg2.description = text;
+
+					SendMessageToWX.Req req = new SendMessageToWX.Req();
+
+					req.transaction = "夜店中国";
+					req.message = msg2;
+					req.scene = SendMessageToWX.Req.WXSceneTimeline;
+					IWXAPI api =  WXAPIFactory.createWXAPI(PublishJobUI.this, Constants.APP_ID);
+					api.sendReq(req);
 					PublishJobUI.this.finish();
 
 				}

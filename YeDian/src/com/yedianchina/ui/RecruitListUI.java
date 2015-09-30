@@ -423,12 +423,16 @@ public class RecruitListUI extends CommonActivity implements
 						jobsList = new ArrayList<JobsPO>();
 						// 1.
 						JobsPO po = new JobsPO();
-						po.setName("DJ");
+						po.setName("DJ公主");
+						jobsList.add(po);
+						
+						po = new JobsPO();
+						po.setName("DJ少爷");
 						jobsList.add(po);
 
-						po = new JobsPO();
-						po.setName("DANCER");
-						jobsList.add(po);
+//						po = new JobsPO();
+//						po.setName("DANCER");
+//						jobsList.add(po);
 
 						po = new JobsPO();
 						po.setName("服务员");

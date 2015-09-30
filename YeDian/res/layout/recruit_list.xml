@@ -145,9 +145,11 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tool_bar2"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:padding="1dip" >
 
-        <TextView
+        <EditText
             android:id="@+id/search_tv"
             android:layout_width="fill_parent"
             android:layout_height="45dip"

@@ -318,13 +318,13 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.baidu.mapapi.map.MapView
+    <!-- <com.baidu.mapapi.map.MapView
         android:id="@+id/map_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:apiKey="2485C7D8A0A8B1A04FD6619A9C105D913AD18A66"
         android:clickable="true"
-        android:enabled="true" />
+        android:enabled="true" /> -->
 
     <include
         android:id="@+id/bottommenu"

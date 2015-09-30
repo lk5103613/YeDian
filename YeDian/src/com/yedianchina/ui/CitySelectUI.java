@@ -176,8 +176,8 @@ public class CitySelectUI extends Activity {
 		allCity_lists.add(city);
 		city = new City("重庆", "");
 		allCity_lists.add(city);
-		city_lists = getCityList();
-		allCity_lists.addAll(city_lists);
+//		city_lists = getCityList();
+//		allCity_lists.addAll(city_lists);
 	}
 
 	private ArrayList<City> getCityList() {

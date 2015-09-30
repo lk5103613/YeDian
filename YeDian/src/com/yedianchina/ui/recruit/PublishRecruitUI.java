@@ -13,6 +13,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
+import net.sourceforge.simcpux.Constants;
+import net.sourceforge.simcpux.Util;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -20,6 +22,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
@@ -39,6 +42,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.SendMessageToWX;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.tencent.mm.sdk.openapi.WXMediaMessage;
+import com.tencent.mm.sdk.openapi.WXTextObject;
 import com.tencent.mm.sdk.platformtools.Log;
 import com.yedianchina.dao.RecruitDao;
 import com.yedianchina.po.RecruitPO;
@@ -53,6 +61,7 @@ import com.yedianchina.ui.R;
 public class PublishRecruitUI extends CommonActivity {
 
 	private static final int SCALE = 5;// 照片缩小比例
+
 	// 压缩图片
 
 	public void yaSuo(String path) {
@@ -509,10 +518,39 @@ public class PublishRecruitUI extends CommonActivity {
 					Intent intent = new Intent(action);
 					intent.putExtra("publishrecruit", "1");
 					sendBroadcast(intent);
+
+					Bitmap bm = BitmapFactory.decodeResource(getResources(),
+							R.drawable.logo200);
+					String text = "哈我最新使用来夜店中国，里面信息量大 招聘 求职 交友什么都有，有空你也来玩～";
+					// if (text == null || text.length() == 0) {
+					// return;
+					// }
+
+					WXTextObject textObj = new WXTextObject();
+					textObj.text = "哈我最新使用来夜店中国，里面信息量大 招聘 求职 交友什么都有，有空你也来玩～";
+
+					Bitmap thumbBmp = Bitmap.createScaledBitmap(bm, 150,
+							150, true);
+
+					WXMediaMessage msg2 = new WXMediaMessage();
+					msg2.mediaObject = textObj;
+					msg2.thumbData = Util.bmpToByteArray(thumbBmp, true); // 设置缩略图
+
+					msg2.title = "夜店中国";
+					msg2.description = text;
+
+					SendMessageToWX.Req req = new SendMessageToWX.Req();
+
+					req.transaction = "夜店中国";
+					req.message = msg2;
+					req.scene = SendMessageToWX.Req.WXSceneTimeline;
+					IWXAPI api =  WXAPIFactory.createWXAPI(PublishRecruitUI.this, Constants.APP_ID);
+					api.sendReq(req);
+
 					PublishRecruitUI.this.finish();
 
 				} else if (what == 2) {
-					
+
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -610,19 +648,20 @@ public class PublishRecruitUI extends CommonActivity {
 				po = new RecruitPO();
 				String title = titleEt.getText().toString();
 				String tj = tjEt.getText().toString();
-				
+
 				if (TextUtils.isEmpty(title)) {
-					Toast.makeText(mContext, "请填写职位名称", Toast.LENGTH_SHORT).show();
+					Toast.makeText(mContext, "请填写职位名称", Toast.LENGTH_SHORT)
+							.show();
 					return;
 				}
-				
+
 				if (TextUtils.isEmpty(tj)) {
-					Toast.makeText(mContext, "请填写职位描述", Toast.LENGTH_SHORT).show();
+					Toast.makeText(mContext, "请填写职位描述", Toast.LENGTH_SHORT)
+							.show();
 					return;
 				}
 				po.setTitle(title);
 
-				
 				if (tj != null && tj.length() > 0) {
 					po.setTj(tj);
 				}
@@ -662,7 +701,7 @@ public class PublishRecruitUI extends CommonActivity {
 									showSuccess();
 								}
 							});
-							
+
 						} else {
 							loadingHandler.sendEmptyMessage(2);
 						}
@@ -900,27 +939,25 @@ public class PublishRecruitUI extends CommonActivity {
 		paint.setFakeBoldText(true);
 
 	}
-	
-	private void showSuccess(){
-		mSuccessDialog = new AlertDialog.Builder(this). 
-                setTitle(""). 
-                setMessage("发布成功,是否分享到朋友圈"). 
-                setIcon(R.drawable.ic_launcher). 
-                setPositiveButton("是", new OnClickListener() {
-					
+
+	private void showSuccess() {
+		mSuccessDialog = new AlertDialog.Builder(this).setTitle("")
+				.setMessage("发布成功,是否分享到朋友圈").setIcon(R.drawable.ic_launcher)
+				.setPositiveButton("是", new OnClickListener() {
+
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						loadingHandler.sendEmptyMessage(1);
 					}
 				}).setNegativeButton("否", new OnClickListener() {
-					
+
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						loadingHandler.sendEmptyMessage(1);
-//						mSuccessDialog.dismiss();
+						// mSuccessDialog.dismiss();
 					}
-				}).create(); 
-        mSuccessDialog.show(); 
+				}).create();
+		mSuccessDialog.show();
 	}
 
 }

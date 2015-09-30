@@ -5,6 +5,7 @@ import java.util.List;
 
 import net.sourceforge.simcpux.Constants;
 import net.sourceforge.simcpux.GetFromWXActivity;
+import net.sourceforge.simcpux.SendToWXActivity;
 import net.sourceforge.simcpux.ShowFromWXActivity;
 import net.sourceforge.simcpux.Util;
 import net.sourceforge.simcpux.uikit.CameraUtil;
@@ -85,6 +86,7 @@ import com.yedianchina.ui.CommonActivity;
 import com.yedianchina.ui.LoginUI;
 import com.yedianchina.ui.MoreUI;
 import com.yedianchina.ui.NearByMerchantDetailUI;
+import com.yedianchina.ui.QianDaoUI;
 import com.yedianchina.ui.R;
 import com.yedianchina.ui.RecruitListUI;
 import com.yedianchina.ui.SearchUI;
@@ -283,7 +285,6 @@ public class IndexUI extends CommonActivity implements IWXAPIEventHandler{
 		if (paiduiTv != null) {
 			paiduiTv.setBackgroundResource(R.drawable.paidui);
 			paiduiTv.setOnClickListener(new View.OnClickListener() {
-
 				@Override
 				public void onClick(View arg0) {
 					Intent intent = new Intent();
@@ -462,13 +463,13 @@ public class IndexUI extends CommonActivity implements IWXAPIEventHandler{
 					}.start();
 					
 					
-////					Intent intent = new Intent();
-////					intent.setClass(IndexUI.this, QianDaoUI.class);
-////
-////					IndexUI.this.startActivity(intent);
-//					
-//					
-//					
+					Intent intent = new Intent();
+					intent.setClass(IndexUI.this, QianDaoUI.class);
+
+					IndexUI.this.startActivity(intent);
+					
+					
+					
 //					
 //					Intent bintent = new Intent(IndexUI.this, SendToWXActivity.class);
 //					startActivityForResult(bintent,1);  
