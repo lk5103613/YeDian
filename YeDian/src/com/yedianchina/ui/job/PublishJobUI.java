@@ -317,7 +317,7 @@ public class PublishJobUI extends Activity {
 	TextView girlPreImg;
 	TextView girlTxt;
 	TextView girlImg;
-	Button saveBtn;
+	TextView saveBtn;
 
 	int gender = 1;
 	EditText reqJobNameEt;
@@ -376,7 +376,7 @@ public class PublishJobUI extends Activity {
 
 		TextView qiandaoBtn = (TextView) this.findViewById(R.id.qiandaoBtn);
 		qiandaoBtn.setVisibility(View.GONE);
-		saveBtn = (Button) findViewById(R.id.save_btn);
+		saveBtn = (TextView) findViewById(R.id.save_btn);
 
 		saveBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -433,7 +433,7 @@ public class PublishJobUI extends Activity {
 
 			}
 		});
-
+		
 		jiubaBtn = (TextView) this.findViewById(R.id.jiubaBtn);
 		ktvBtn = (TextView) this.findViewById(R.id.ktvBtn);
 		yezonghuiBtn = (TextView) this.findViewById(R.id.yezonghuiBtn);
@@ -478,6 +478,8 @@ public class PublishJobUI extends Activity {
 
 			}
 		});
+		
+		jiubaBtn.performClick();
 
 		photo0 = (ImageView) this.findViewById(R.id.photo0);
 		if (photo0 != null) {
