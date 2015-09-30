@@ -251,6 +251,7 @@ public class TrainingListUI extends Activity implements
 				Message msg = mUIHandler.obtainMessage(WHAT_DID_REFRESH);
 				msg.what = WHAT_DID_REFRESH;
 				msg.sendToTarget();
+				
 			}
 		}).start();
 	}
@@ -285,6 +286,7 @@ public class TrainingListUI extends Activity implements
 
 		@Override
 		public void handleMessage(Message msg) {
+			
 			switch (msg.what) {
 			case 7:
 				/*
@@ -330,6 +332,7 @@ public class TrainingListUI extends Activity implements
 
 				// 告诉它更新完�?
 				// mPullDownView.notifyDidRefresh();
+				mListView.stopRefresh();
 				break;
 			}
 

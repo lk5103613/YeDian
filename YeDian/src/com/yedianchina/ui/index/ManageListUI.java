@@ -321,6 +321,7 @@ public class ManageListUI extends Activity implements
 
 				// 诉它数据加载完毕;
 				// mListView.setPullLoadEnable(false);
+				
 				break;
 			}
 			case WHAT_DID_REFRESH: {
@@ -330,6 +331,7 @@ public class ManageListUI extends Activity implements
 					mAdapter.changeData(list);
 				}
 
+				mListView.stopRefresh();
 				// 告诉它更新完�?
 				// mPullDownView.notifyDidRefresh();
 				break;

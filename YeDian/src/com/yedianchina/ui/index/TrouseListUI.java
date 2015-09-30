@@ -327,6 +327,7 @@ public class TrouseListUI extends Activity implements XListView.IXListViewListen
 				if (list != null && list.size() > 0) {
 					mAdapter.changeData(list);
 				}
+				mListView.stopRefresh();
 
 				// 告诉它更新完�?
 				// mPullDownView.notifyDidRefresh();
