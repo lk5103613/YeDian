@@ -8,9 +8,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 import net.sourceforge.simcpux.Constants;
@@ -19,8 +22,8 @@ import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -37,11 +40,19 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.Response.Listener;
+import com.android.volley.VolleyError;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.like.entity.Area;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.SendMessageToWX;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
@@ -61,6 +72,7 @@ import com.yedianchina.ui.R;
 public class PublishRecruitUI extends CommonActivity {
 
 	private static final int SCALE = 5;// 照片缩小比例
+	private Spinner mAreaSelect;
 
 	// 压缩图片
 
@@ -210,6 +222,27 @@ public class PublishRecruitUI extends CommonActivity {
 	}
 
 	String serverImgName;
+	
+	private void getArea() {
+		mDataFetcher.fetchArea("22", new Listener<String>() {
+			@Override
+			public void onResponse(String response) {
+				List<String> areasStr = new ArrayList<String>();
+				Type type = new TypeToken<List<Area>>(){}.getType();
+				List<Area> areas = new Gson().fromJson(response, type);
+				for(Area a : areas) {
+					areasStr.add(a.areaName);
+				}
+				ArrayAdapter<String> adapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, areasStr);
+				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+				mAreaSelect.setAdapter(adapter);
+			}
+		}, new ErrorListener() {
+			@Override
+			public void onErrorResponse(VolleyError error) {
+			}
+		});
+	}
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
@@ -623,10 +656,13 @@ public class PublishRecruitUI extends CommonActivity {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		setContentView(R.layout.publish_recruit);
+		
+		getArea();
 
 		mContext = this;
 		titleEt = (EditText) this.findViewById(R.id.titleEt);
 		addTimeTv = (TextView) this.findViewById(R.id.addTimeTv);
+		mAreaSelect = (Spinner) findViewById(R.id.local_select);
 
 		tjEt = (EditText) this.findViewById(R.id.tjEt);
 

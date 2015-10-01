@@ -5,9 +5,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 import net.sourceforge.simcpux.Constants;
@@ -37,11 +40,20 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.Response.Listener;
+import com.android.volley.VolleyError;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.like.entity.Area;
+import com.like.network.DataFetcher;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.SendMessageToWX;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
@@ -54,9 +66,11 @@ import com.yedianchina.tools.CONSTANTS;
 import com.yedianchina.tools.UploadUtil;
 import com.yedianchina.ui.CameraUI;
 import com.yedianchina.ui.R;
-import com.yedianchina.ui.recruit.PublishRecruitUI;
 
 public class PublishJobUI extends Activity {
+	
+	private DataFetcher mDataFetcher;
+	private Spinner mAreaSelect;
 
 	TextView jiubaBtn;
 	TextView ktvBtn;
@@ -133,6 +147,26 @@ public class PublishJobUI extends Activity {
 
 		startActivityForResult(intent, 889);
 
+	}
+	private void getArea() {
+		mDataFetcher.fetchArea("22", new Listener<String>() {
+			@Override
+			public void onResponse(String response) {
+				List<String> areasStr = new ArrayList<String>();
+				Type type = new TypeToken<List<Area>>(){}.getType();
+				List<Area> areas = new Gson().fromJson(response, type);
+				for(Area a : areas) {
+					areasStr.add(a.areaName);
+				}
+				ArrayAdapter<String> adapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, areasStr);
+				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+				mAreaSelect.setAdapter(adapter);
+			}
+		}, new ErrorListener() {
+			@Override
+			public void onErrorResponse(VolleyError error) {
+			}
+		});
 	}
 
 	@Override
@@ -397,6 +431,9 @@ public class PublishJobUI extends Activity {
 		setContentView(R.layout.publish_job);
 
 		mContext = this;
+		mDataFetcher = DataFetcher.getInstance(mContext);
+		mAreaSelect = (Spinner) findViewById(R.id.local_select);
+		getArea();
 		TextView navigateTitle = (TextView) this
 				.findViewById(R.id.NavigateTitle);
 		if (navigateTitle != null) {

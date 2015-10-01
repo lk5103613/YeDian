@@ -31,4 +31,8 @@ public class DataFetcher extends DataFetcherBase {
 		fetchData(APIS.GET_RECRUIT_DETAIL, listener, errorListener, id);
 	}
 	
+	public void fetchArea(String cityId, Listener<String> listener, ErrorListener errorListener) {
+		fetchData(APIS.GET_AREA, listener, errorListener, cityId);
+	}
+	
 }

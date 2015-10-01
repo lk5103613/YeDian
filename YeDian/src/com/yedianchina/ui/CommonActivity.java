@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.os.Handler;
 import android.util.LruCache;
 import android.view.Menu;
@@ -23,6 +24,7 @@ import android.widget.Toast;
 
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.activity.MainActivity;
+import com.like.network.DataFetcher;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.sina.weibo.sdk.log.Log;
 import com.yedianchina.tools.CONSTANTS;
@@ -39,6 +41,16 @@ import com.yedianchina.ui.nearby.NearbyModule;
  * @Time 2013年3月25日
  */
 public class CommonActivity extends Activity implements Runnable {
+	protected Context mContext;
+	protected DataFetcher mDataFetcher;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		mContext = this;
+		mDataFetcher = DataFetcher.getInstance(mContext);
+	}
 	@Override
 	protected void onResume() {
 		super.onResume();
