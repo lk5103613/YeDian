@@ -26,6 +26,8 @@ public class RecruitListActivity extends BaseActivity {
 	private XListView mList;
 	private int mCurrentPage = 0;
 	private String mCurrentType = "1";
+	private String mKey = "";
+	private String mCatName = "";
 	private RecruitListAdapter mAdapter;
 	
 	@Override
@@ -66,7 +68,7 @@ public class RecruitListActivity extends BaseActivity {
 	}
 	
 	private void updateList() {
-		mDataFetcher.fetchRecruitList(mCurrentPage+"", mCurrentType, new Listener<String>() {
+		mDataFetcher.fetchRecruitList(mCurrentPage+"", mCurrentType, mCatName, mKey, new Listener<String>() {
 			@Override
 			public void onResponse(String response) {
 				Type type = new TypeToken<ListResult<RecruitInfo>>(){}.getType();

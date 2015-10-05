@@ -72,10 +72,12 @@ import com.yedianchina.ui.R;
 public class PublishRecruitUI extends CommonActivity {
 
 	private static final int SCALE = 5;// 照片缩小比例
-	private Spinner mAreaSelect;
+//	private Spinner mAreaSelect;
 
 	// 压缩图片
 
+	private ArrayAdapter<String> mAdapter1;
+	private ArrayAdapter<String> mAdapter2;
 	public void yaSuo(String path) {
 		FileInputStream in;
 		byte[] mContent = null;
@@ -235,7 +237,7 @@ public class PublishRecruitUI extends CommonActivity {
 				}
 				ArrayAdapter<String> adapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, areasStr);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				mAreaSelect.setAdapter(adapter);
+//				mAreaSelect.setAdapter(adapter);
 			}
 		}, new ErrorListener() {
 			@Override
@@ -592,7 +594,7 @@ public class PublishRecruitUI extends CommonActivity {
 		};
 	};
 
-	EditText titleEt;
+	Spinner titleEt;
 	TextView addTimeTv;
 
 	EditText salaryEt;
@@ -655,14 +657,25 @@ public class PublishRecruitUI extends CommonActivity {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+		mContext = this;
 		setContentView(R.layout.publish_recruit);
 		
 		getArea();
+		
+		mAdapter1 = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, new String[]{
+				"DJ", "灯光", "mc", "舞台总监", "舞编", "A组dancers", "B组dancers", "服务员", "咨客", "营销", "服务员领班", "总经理", "副总经理", "楼面经理", "企划", "收银员", "收银员", "保安", "其他"
+		});
+		mAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mAdapter2 = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, new String[]{
+				"DJ公主", "少爷", "楼面经理", "保安", "总经理", "副总经理", "收银员", "佳丽", "男模", "包房服务员", "其他"
+		});
+		mAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-		mContext = this;
-		titleEt = (EditText) this.findViewById(R.id.titleEt);
+		titleEt = (Spinner) this.findViewById(R.id.titleEt);
+		titleEt.setAdapter(mAdapter1);
+		
 		addTimeTv = (TextView) this.findViewById(R.id.addTimeTv);
-		mAreaSelect = (Spinner) findViewById(R.id.local_select);
+//		mAreaSelect = (Spinner) findViewById(R.id.local_select);
 
 		tjEt = (EditText) this.findViewById(R.id.tjEt);
 
@@ -682,7 +695,7 @@ public class PublishRecruitUI extends CommonActivity {
 			@Override
 			public void onClick(View arg0) {
 				po = new RecruitPO();
-				String title = titleEt.getText().toString();
+				String title = titleEt.getSelectedItem().toString();
 				String tj = tjEt.getText().toString();
 
 				if (TextUtils.isEmpty(title)) {
@@ -852,6 +865,8 @@ public class PublishRecruitUI extends CommonActivity {
 				yezonghuiBtn.setTextColor(Color.parseColor("#ff404040"));
 
 				recruit_type = 1;
+				titleEt.setAdapter(mAdapter1);
+				
 
 			}
 		});
@@ -875,6 +890,7 @@ public class PublishRecruitUI extends CommonActivity {
 				yezonghuiBtn.setTextColor(Color.parseColor("#ff404040"));
 
 				recruit_type = 2;
+				titleEt.setAdapter(mAdapter2);
 
 			}
 		});

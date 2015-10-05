@@ -1,10 +1,13 @@
 package com.like.network;
 
+import java.util.Map;
+
 import android.content.Context;
 
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.like.likeutils.network.DataFetcherBase;
+import com.like.likeutils.network.NetParamGenerator;
 
 public class DataFetcher extends DataFetcherBase {
 	
@@ -23,8 +26,9 @@ public class DataFetcher extends DataFetcherBase {
 		return mDataFetcher;
 	}
 	
-	public void fetchRecruitList(String currentPage, String type, Listener<String> listener, ErrorListener errorListener) {
-		fetchData(APIS.GET_RECRUIT_LIST, listener, errorListener, currentPage, type);
+	public void fetchRecruitList(String currentPage, String type, String catName, String key, Listener<String> listener, ErrorListener errorListener) {
+		Map<String, String> params = NetParamGenerator.getMapParams(APIS.GET_RECRUIT_LIST, currentPage, type, catName, key);
+		fetchData(APIS.GET_RECRUIT_LIST, params, listener, errorListener);
 	}
 	
 	public void fetchRecruitDetail(String id, Listener<String> listener, ErrorListener errorListener) {

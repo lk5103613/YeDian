@@ -57,6 +57,8 @@ import com.yedianchina.ui.recruit.RecruitDetailUI;
 //夜店招聘
 public class JobsListUI extends CommonActivity implements XListView.IXListViewListener{
 	int job_type;
+	private String mCatName = "";
+	private String mKey = "";
 
 	ImageView nearbyID;
 	ImageView cityID;
@@ -240,7 +242,7 @@ public class JobsListUI extends CommonActivity implements XListView.IXListViewLi
 				list.clear();
 				
 
-				Map resultMap = JobsDao.pageList(currentPage,job_type);
+				Map resultMap = JobsDao.pageList(currentPage,job_type, mCatName, mKey);
 				List<JobsPO> tmp = (List<JobsPO>) resultMap.get("list");
 				if (tmp != null && tmp.size() > 0) {
 					list.addAll(tmp);
@@ -266,7 +268,7 @@ public class JobsListUI extends CommonActivity implements XListView.IXListViewLi
 			public void run() {
 				currentPage=0;
 				list.clear();
-				Map resultMap = JobsDao.pageList(currentPage,job_type);
+				Map resultMap = JobsDao.pageList(currentPage,job_type, mCatName, mKey);
 				List<JobsPO> tmp = (List<JobsPO>) resultMap.get("list");
 				if (tmp != null && tmp.size() > 0) {
 					list.addAll(tmp);
@@ -294,7 +296,7 @@ public class JobsListUI extends CommonActivity implements XListView.IXListViewLi
 
 				currentPage++;
 
-				Map resultMap = JobsDao.pageList(currentPage,job_type);
+				Map resultMap = JobsDao.pageList(currentPage,job_type, mCatName, mKey);
 
 				List<JobsPO> tmp = (List<JobsPO>) resultMap.get("list");
 				Integer allCnt = (Integer) resultMap.get("allCnt");
@@ -433,6 +435,7 @@ public class JobsListUI extends CommonActivity implements XListView.IXListViewLi
 										baoxuan_popMenu.dismiss();
 
 										list.clear();
+										mAdapter.notifyDataSetChanged();
 										loadData();
 
 									}
@@ -447,26 +450,96 @@ public class JobsListUI extends CommonActivity implements XListView.IXListViewLi
 					@Override
 					public void onClick(View v) {
 						jobsList = new ArrayList<JobsPO>();
-						// 1.
-						JobsPO po = new JobsPO();
-						po.setName("DJ");
-						jobsList.add(po);
-
-						po = new JobsPO();
-						po.setName("DANCER");
-						jobsList.add(po);
-
-						po = new JobsPO();
-						po.setName("服务员");
-						jobsList.add(po);
-
-						po = new JobsPO();
-						po.setName("男模");
-						jobsList.add(po);
-
-						po = new JobsPO();
-						po.setName("女模");
-						jobsList.add(po);
+						if(job_type == 1) {
+							JobsPO po = new JobsPO();
+							po.setName("DJ");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("灯光");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("mc");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("舞台总监");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("舞编");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("A组dancers");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("B组dancers");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("服务员");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("咨客");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("营销");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("服务员领班");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("总经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("副总经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("楼面经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("企划");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("收银员");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("保安");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("其他");
+							jobsList.add(po);
+						} else if(job_type == 2) {
+							JobsPO po = new JobsPO();
+							po.setName("DJ公主");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("少爷");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("楼面经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("保安");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("总经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("副总经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("收银员");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("佳丽");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("男模");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("包房服务员");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("其他");
+							jobsList.add(po);
+						}
 
 						int offset = (int)(screenWidth*0.33);
 						
@@ -493,6 +566,7 @@ public class JobsListUI extends CommonActivity implements XListView.IXListViewLi
 										jobsPopMenu.dismiss();
 
 										list.clear();
+										mAdapter.notifyDataSetChanged();
 										loadData();
 
 									}

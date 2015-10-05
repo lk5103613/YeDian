@@ -255,9 +255,9 @@ public class RecruitDao {
 		return null;
 	}
 
-	public static Map pageList(int currentPage, int recruit_type) {
+	public static Map pageList(int currentPage, int recruit_type, String catName, String key) {
 		String url = CONSTANTS.RECRUIT_PAGE + currentPage + "&recruit_type="
-				+ recruit_type;
+				+ recruit_type + "&catname=" + catName + "&key=" + key;
 
 		List<RecruitPO> list = new ArrayList<RecruitPO>();
 		HttpClient client = new DefaultHttpClient();

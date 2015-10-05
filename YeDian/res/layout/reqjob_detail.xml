@@ -108,7 +108,7 @@
           
         </LinearLayout>
 
-        <LinearLayout
+        <!-- <LinearLayout
             android:id="@+id/henxian2"
             android:layout_width="fill_parent"
             android:layout_height="3.5dip"
@@ -157,20 +157,20 @@
             
            
          
-        </LinearLayout>
+        </LinearLayout> -->
 
         <LinearLayout
             android:id="@+id/henxian3"
             android:layout_width="fill_parent"
             android:layout_height="3.5dip"
-            android:layout_below="@id/pwdLL1"
+            android:layout_below="@id/nameLL"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dip"
             android:background="@drawable/aoxian"
             android:orientation="horizontal" >
         </LinearLayout>
 
-        <LinearLayout
+        <!-- <LinearLayout
             android:id="@+id/hhhLL"
             android:layout_width="277dip"
             android:layout_height="30.5dip"
@@ -201,11 +201,11 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
-        </LinearLayout>
+        </LinearLayout> -->
         
         
         
-         <LinearLayout
+         <!-- <LinearLayout
             android:id="@+id/linkMpLL"
             android:layout_width="277dip"
             android:layout_height="39dip"
@@ -368,7 +368,7 @@
             android:layout_marginTop="10dip"
             android:background="@drawable/aoxian"
             android:orientation="horizontal" >
-        </LinearLayout>
+        </LinearLayout> -->
 
       
 
@@ -376,7 +376,7 @@
             android:id="@+id/descLL"
             android:layout_width="277dip"
             android:layout_height="120.5dip"
-            android:layout_below="@id/henxian5"
+            android:layout_below="@id/henxian3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dip"
             android:orientation="horizontal" >

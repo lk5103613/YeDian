@@ -150,7 +150,7 @@ public class JobReqDetailUI extends CommonActivity implements
 	}
 
 	String mp;
-	TextView callMpTv;
+//	TextView callMpTv;
 	TextView linkNumber;
 
 	TextView jiubaBtn;
@@ -226,14 +226,14 @@ public class JobReqDetailUI extends CommonActivity implements
 					linkMpTv.setText(_linknumber);
 				}
 
-				callMpTv.setOnClickListener(new View.OnClickListener() {
-
-					@Override
-					public void onClick(View arg0) {
-						telFn();
-
-					}
-				});
+//				callMpTv.setOnClickListener(new View.OnClickListener() {
+//
+//					@Override
+//					public void onClick(View arg0) {
+//						telFn();
+//
+//					}
+//				});
 
 				// /////////////////////
 
@@ -303,8 +303,8 @@ public class JobReqDetailUI extends CommonActivity implements
 
 	ImageView avatarId;
 	TextView titleTv;
-	TextView genderTv;
-	TextView ageEt;
+//	TextView genderTv;
+//	TextView ageEt;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -318,11 +318,11 @@ public class JobReqDetailUI extends CommonActivity implements
 		// 手机界面标题设置
 		super.textViewTitle = (TextView) findViewById(R.id.tvHeaderTitle);
 
-		ageEt = (TextView) this.findViewById(R.id.ageEt);
-		genderTv = (TextView) this.findViewById(R.id.genderTv);
+//		ageEt = (TextView) this.findViewById(R.id.ageEt);
+//		genderTv = (TextView) this.findViewById(R.id.genderTv);
 
 		linkMpTv = (TextView) this.findViewById(R.id.linkMpTv);
-		callMpTv = (TextView) findViewById(R.id.linkMpTv);
+//		callMpTv = (TextView) findViewById(R.id.linkMpTv);
 		favBtn = (TextView) this.findViewById(R.id.favBtn);
 		if (favBtn != null) {
 			favBtn.setOnClickListener(new View.OnClickListener() {
@@ -401,22 +401,22 @@ public class JobReqDetailUI extends CommonActivity implements
 
 		//
 
-		TextView sexPreTv = (TextView) this.findViewById(R.id.sexPreTv);
-		paint = sexPreTv.getPaint();
-		paint.setFakeBoldText(true);
+//		TextView sexPreTv = (TextView) this.findViewById(R.id.sexPreTv);
+//		paint = sexPreTv.getPaint();
+//		paint.setFakeBoldText(true);
 
-		TextView agePreTv = (TextView) this.findViewById(R.id.agePreTv);
-		paint = agePreTv.getPaint();
-		paint.setFakeBoldText(true);
+//		TextView agePreTv = (TextView) this.findViewById(R.id.agePreTv);
+//		paint = agePreTv.getPaint();
+//		paint.setFakeBoldText(true);
 
-		TextView linkMpPreTv = (TextView) this.findViewById(R.id.linkMpPreTv);
-		paint = linkMpPreTv.getPaint();
-		paint.setFakeBoldText(true);
+//		TextView linkMpPreTv = (TextView) this.findViewById(R.id.linkMpPreTv);
+//		paint = linkMpPreTv.getPaint();
+//		paint.setFakeBoldText(true);
 		//
-		TextView linkEmailPreTv = (TextView) this
-				.findViewById(R.id.linkEmailPreTv);
-		paint = linkEmailPreTv.getPaint();
-		paint.setFakeBoldText(true);
+//		TextView linkEmailPreTv = (TextView) this
+//				.findViewById(R.id.linkEmailPreTv);
+//		paint = linkEmailPreTv.getPaint();
+//		paint.setFakeBoldText(true);
 
 		// descPreTv
 		TextView descPreTv = (TextView) this.findViewById(R.id.descPreTv);
@@ -424,10 +424,10 @@ public class JobReqDetailUI extends CommonActivity implements
 		paint.setFakeBoldText(true);
 		//
 
-		TextView reqJobNamePreTv = (TextView) this
-				.findViewById(R.id.reqJobNamePreTv);
-		paint = reqJobNamePreTv.getPaint();
-		paint.setFakeBoldText(true);
+//		TextView reqJobNamePreTv = (TextView) this
+//				.findViewById(R.id.reqJobNamePreTv);
+//		paint = reqJobNamePreTv.getPaint();
+//		paint.setFakeBoldText(true);
 
 		//
 
@@ -556,7 +556,7 @@ public class JobReqDetailUI extends CommonActivity implements
 			if("null".equals(age)){
 				age="";
 			}
-			ageEt.setText(age);
+//			ageEt.setText(age);
 		}
 
 		String gender = po.getGender();
@@ -564,9 +564,9 @@ public class JobReqDetailUI extends CommonActivity implements
 //			genderTv.setText("男");
 //		}
 		if ("1".equals(gender)) {
-			genderTv.setText("女");
+//			genderTv.setText("女");
 		}else{
-			genderTv.setText("男");
+//			genderTv.setText("男");
 		}
 
 		cityNameTv = (TextView) findViewById(R.id.cityNameTv);
@@ -585,7 +585,7 @@ public class JobReqDetailUI extends CommonActivity implements
 		String job = po.getReqJobName();
 
 		if (job != null && job.length() > 0) {
-			jobTv.setText(job);
+//			jobTv.setText(job);
 		}
 
 		TextView salaryTv = (TextView) findViewById(R.id.salaryTv);

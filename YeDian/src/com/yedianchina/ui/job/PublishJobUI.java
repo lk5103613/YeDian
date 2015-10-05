@@ -70,7 +70,9 @@ import com.yedianchina.ui.R;
 public class PublishJobUI extends Activity {
 	
 	private DataFetcher mDataFetcher;
-	private Spinner mAreaSelect;
+	private ArrayAdapter<String> mAdapter1;
+	private ArrayAdapter<String> mAdapter2;
+//	private Spinner mAreaSelect;
 
 	TextView jiubaBtn;
 	TextView ktvBtn;
@@ -160,7 +162,7 @@ public class PublishJobUI extends Activity {
 				}
 				ArrayAdapter<String> adapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, areasStr);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				mAreaSelect.setAdapter(adapter);
+//				mAreaSelect.setAdapter(adapter);
 			}
 		}, new ErrorListener() {
 			@Override
@@ -371,7 +373,7 @@ public class PublishJobUI extends Activity {
 	TextView saveBtn;
 
 	int gender = 1;
-	EditText reqJobNameEt;
+	Spinner reqJobNameEt;
 	EditText descTv;
 	public static final String action = "publishjob.broadcast.action";
 	Handler loadingHandler = new Handler() {
@@ -431,8 +433,16 @@ public class PublishJobUI extends Activity {
 		setContentView(R.layout.publish_job);
 
 		mContext = this;
+		mAdapter1 = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, new String[]{
+				"DJ", "灯光", "mc", "舞台总监", "舞编", "A组dancers", "B组dancers", "服务员", "咨客", "营销", "服务员领班", "总经理", "副总经理", "楼面经理", "企划", "收银员", "收银员", "保安", "其他"
+		});
+		mAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mAdapter2 = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, new String[]{
+				"DJ公主", "少爷", "楼面经理", "保安", "总经理", "副总经理", "收银员", "佳丽", "男模", "包房服务员", "其他"
+		});
+		mAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mDataFetcher = DataFetcher.getInstance(mContext);
-		mAreaSelect = (Spinner) findViewById(R.id.local_select);
+//		mAreaSelect = (Spinner) findViewById(R.id.local_select);
 		getArea();
 		TextView navigateTitle = (TextView) this
 				.findViewById(R.id.NavigateTitle);
@@ -453,7 +463,8 @@ public class PublishJobUI extends Activity {
 
 		}
 
-		reqJobNameEt = (EditText) this.findViewById(R.id.reqJobNameEt);
+		reqJobNameEt = (Spinner) this.findViewById(R.id.reqJobNameEt);
+		reqJobNameEt.setAdapter(mAdapter1);
 		descTv = (EditText) this.findViewById(R.id.descTv);
 
 		TextView qiandaoBtn = (TextView) this.findViewById(R.id.qiandaoBtn);
@@ -464,7 +475,7 @@ public class PublishJobUI extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-				String reqJobName = reqJobNameEt.getText().toString();
+				String reqJobName = reqJobNameEt.getSelectedItem().toString();
 				String desc = descTv.getText().toString();
 				
 				if(StringUtils.isEmpty(reqJobName)){
@@ -531,6 +542,7 @@ public class PublishJobUI extends Activity {
 				ktvBtn.setBackgroundResource(R.drawable.ktv);
 				yezonghuiBtn.setBackgroundResource(R.drawable.yzh);
 				job_type = 1;
+				reqJobNameEt.setAdapter(mAdapter1);
 
 			}
 		});
@@ -545,6 +557,7 @@ public class PublishJobUI extends Activity {
 				yezonghuiBtn.setBackgroundResource(R.drawable.yzh);
 
 				job_type = 2;
+				reqJobNameEt.setAdapter(mAdapter2);
 
 			}
 		});

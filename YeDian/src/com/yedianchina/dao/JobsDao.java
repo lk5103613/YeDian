@@ -182,8 +182,8 @@ public class JobsDao {
 
 	}
 
-	public static Map pageList(int currentPage,int job_type) {
-		String url = CONSTANTS.JOBS_PAGE + currentPage+"&job_type="+job_type;
+	public static Map pageList(int currentPage,int job_type, String catName, String key) {
+		String url = CONSTANTS.JOBS_PAGE + currentPage+"&job_type="+job_type + "&catname=" + catName + "&key=" + key;
 
 		List<JobsPO> list = new ArrayList<JobsPO>();
 		HttpClient client = new DefaultHttpClient();

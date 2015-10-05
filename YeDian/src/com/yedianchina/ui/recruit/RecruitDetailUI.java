@@ -92,10 +92,10 @@ public class RecruitDetailUI extends Activity {
 	TextView jobDescTv;
 	//
 	TextView linkmanTv;
-	TextView linkMpTv;
+//	TextView linkMpTv;
 
-	TextView emailTv;
-	TextView companyAddressTv;
+//	TextView emailTv;
+//	TextView companyAddressTv;
 	LinearLayout linkmpLL;
 
 	@Override
@@ -176,11 +176,11 @@ public class RecruitDetailUI extends Activity {
 		tjTv = (TextView) this.findViewById(R.id.tjTv);
 
 		linkmanTv = (TextView) this.findViewById(R.id.linkmanTv);
-		linkMpTv = (TextView) this.findViewById(R.id.linkMpTv);
+//		linkMpTv = (TextView) this.findViewById(R.id.linkMpTv);
 
 		//
-		emailTv = (TextView) this.findViewById(R.id.emailTv);
-		companyAddressTv = (TextView) this.findViewById(R.id.companyAddressTv);
+//		emailTv = (TextView) this.findViewById(R.id.emailTv);
+//		companyAddressTv = (TextView) this.findViewById(R.id.companyAddressTv);
 
 		TextView NavigateTitle = (TextView) this
 				.findViewById(R.id.NavigateTitle);
@@ -198,18 +198,18 @@ public class RecruitDetailUI extends Activity {
 		paint.setFakeBoldText(true);
 
 		//
-		TextView linkmpPre = (TextView) this.findViewById(R.id.linkmpPre);
-		paint = linkmpPre.getPaint();
-		paint.setFakeBoldText(true);
+//		TextView linkmpPre = (TextView) this.findViewById(R.id.linkmpPre);
+//		paint = linkmpPre.getPaint();
+//		paint.setFakeBoldText(true);
 		//
-		TextView emailPre = (TextView) this.findViewById(R.id.emailPre);
-		paint = emailPre.getPaint();
-		paint.setFakeBoldText(true);
+//		TextView emailPre = (TextView) this.findViewById(R.id.emailPre);
+//		paint = emailPre.getPaint();
+//		paint.setFakeBoldText(true);
 		//
-		TextView addressLinkPre = (TextView) this
-				.findViewById(R.id.addressLinkPre);
-		paint = addressLinkPre.getPaint();
-		paint.setFakeBoldText(true);
+//		TextView addressLinkPre = (TextView) this
+//				.findViewById(R.id.addressLinkPre);
+//		paint = addressLinkPre.getPaint();
+//		paint.setFakeBoldText(true);
 
 	}
 
@@ -247,7 +247,7 @@ public class RecruitDetailUI extends Activity {
 					linkmanTv.setText(linkman);
 
 					if (mp != null && mp.length() >= 7) {
-						linkMpTv.setText(mp);
+//						linkMpTv.setText(mp);
 
 						linkmpLL.setOnClickListener(new View.OnClickListener() {
 
@@ -264,7 +264,7 @@ public class RecruitDetailUI extends Activity {
 						email = "";
 					}
 					if (StringUtils.isNotEmpty(email)) {
-						emailTv.setText(email);
+//						emailTv.setText(email);
 					}
 
 					String tj = po.getTj();// 招聘条件
@@ -273,7 +273,7 @@ public class RecruitDetailUI extends Activity {
 						tjTv.setText(Html.fromHtml(tj));
 					}
 
-					companyAddressTv.setText(po.getAddr());
+//					companyAddressTv.setText(po.getAddr());
 
 					setLoanInfoDetailData();
 
@@ -314,9 +314,9 @@ public class RecruitDetailUI extends Activity {
 	private TextView detailTab, companyTab;
 
 	public void call(View view) {
-		Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"
-				+ linkMpTv.getText().toString()));
-		startActivity(intent);
+//		Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"
+//				+ linkMpTv.getText().toString()));
+//		startActivity(intent);
 	}
 
 }

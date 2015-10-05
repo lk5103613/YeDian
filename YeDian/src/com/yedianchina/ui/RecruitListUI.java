@@ -18,6 +18,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +29,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -49,7 +52,10 @@ import com.yedianchina.ui.recruit.RecruitDetailUI;
 //夜店招聘
 public class RecruitListUI extends CommonActivity implements
 		XListView.IXListViewListener {
+	private TextView mTxtSearch;
 	int recruit_type = 1;
+	private String mKey = "";
+	private String mCatName = "";
 
 	ImageView nearbyID;
 	ImageView cityID;
@@ -219,15 +225,21 @@ public class RecruitListUI extends CommonActivity implements
 				currentPage = 1;
 				list.clear();
 
-				Map resultMap = RecruitDao.pageList(currentPage, recruit_type);
-				List<RecruitPO> tmp = (List<RecruitPO>) resultMap.get("list");
-				if (tmp != null && tmp.size() > 0) {
-					list.addAll(tmp);
-				}
-				Integer allCnt = (Integer) resultMap.get("allCnt");
-
+				Map resultMap = RecruitDao.pageList(currentPage, recruit_type, mCatName, mKey);
 				Message msg = mUIHandler.obtainMessage(WHAT_DID_LOAD_DATA);
 				msg.what = WHAT_DID_LOAD_DATA;
+				List<RecruitPO> tmp;
+				int allCnt = 0;
+				if(resultMap == null) {
+					tmp = null;
+				} else {
+					tmp = (List<RecruitPO>) resultMap.get("list");
+					if (tmp != null && tmp.size() > 0) {
+						list.addAll(tmp);
+					}
+					allCnt = (Integer) resultMap.get("allCnt");
+	
+				}
 				if (tmp == null || tmp.size() == 0 || allCnt == list.size()) {
 					msg.what = 7;
 				}
@@ -245,7 +257,7 @@ public class RecruitListUI extends CommonActivity implements
 			public void run() {
 				currentPage = 1;
 				list.clear();
-				Map resultMap = RecruitDao.pageList(currentPage, recruit_type);
+				Map resultMap = RecruitDao.pageList(currentPage, recruit_type, mCatName, mKey);
 				List<RecruitPO> tmp = (List<RecruitPO>) resultMap.get("list");
 				if (tmp != null && tmp.size() > 0) {
 					list.addAll(tmp);
@@ -272,7 +284,7 @@ public class RecruitListUI extends CommonActivity implements
 
 				currentPage++;
 
-				Map resultMap = RecruitDao.pageList(currentPage, recruit_type);
+				Map resultMap = RecruitDao.pageList(currentPage, recruit_type, mCatName, mKey);
 
 				List<RecruitPO> tmp = (List<RecruitPO>) resultMap.get("list");
 				Integer allCnt = (Integer) resultMap.get("allCnt");
@@ -421,30 +433,96 @@ public class RecruitListUI extends CommonActivity implements
 					@Override
 					public void onClick(View v) {
 						jobsList = new ArrayList<JobsPO>();
-						// 1.
-						JobsPO po = new JobsPO();
-						po.setName("DJ公主");
-						jobsList.add(po);
-						
-						po = new JobsPO();
-						po.setName("DJ少爷");
-						jobsList.add(po);
-
-//						po = new JobsPO();
-//						po.setName("DANCER");
-//						jobsList.add(po);
-
-						po = new JobsPO();
-						po.setName("服务员");
-						jobsList.add(po);
-
-						po = new JobsPO();
-						po.setName("男模");
-						jobsList.add(po);
-
-						po = new JobsPO();
-						po.setName("女模");
-						jobsList.add(po);
+						if(recruit_type == 1) {
+							JobsPO po = new JobsPO();
+							po.setName("DJ");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("灯光");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("mc");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("舞台总监");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("舞编");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("A组dancers");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("B组dancers");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("服务员");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("咨客");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("营销");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("服务员领班");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("总经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("副总经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("楼面经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("企划");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("收银员");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("保安");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("其他");
+							jobsList.add(po);
+						} else if(recruit_type == 2) {
+							JobsPO po = new JobsPO();
+							po.setName("DJ公主");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("少爷");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("楼面经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("保安");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("总经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("副总经理");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("收银员");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("佳丽");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("男模");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("包房服务员");
+							jobsList.add(po);
+							po = new JobsPO();
+							po.setName("其他");
+							jobsList.add(po);
+						}
 
 						int offset = (int) (screenWidth * 0.33);
 
@@ -463,6 +541,7 @@ public class RecruitListUI extends CommonActivity implements
 										Log.e("当前位置", "pos=" + pos);
 										JobsPO po = jobsList.get(pos);
 										String name = po.getName();
+										mCatName = name;
 										currentPage = 0;
 										job_btn.setText("");
 
@@ -470,6 +549,7 @@ public class RecruitListUI extends CommonActivity implements
 										jobsPopMenu.dismiss();
 
 										list.clear();
+										mAdapter.notifyDataSetChanged();
 										loadData();
 
 									}
@@ -559,6 +639,27 @@ public class RecruitListUI extends CommonActivity implements
 		RelativeLayout titleRL = (RelativeLayout) this.findViewById(R.id.title);
 		titleRL.getLocationOnScreen(location);
 		int y1 = titleRL.getHeight();
+		
+		mTxtSearch = (EditText) findViewById(R.id.search_tv);
+		mTxtSearch.addTextChangedListener(new TextWatcher() {
+			
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				mKey = s.toString();
+				list.clear();
+				mAdapter.notifyDataSetChanged();
+				loadData();
+			}
+			
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+			
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+		});
 
 		LinearLayout tool_bar1 = (LinearLayout) this
 				.findViewById(R.id.tool_bar1);
