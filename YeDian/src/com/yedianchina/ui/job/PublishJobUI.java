@@ -434,7 +434,7 @@ public class PublishJobUI extends Activity {
 
 		mContext = this;
 		mAdapter1 = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, new String[]{
-				"DJ", "灯光", "mc", "舞台总监", "舞编", "A组dancers", "B组dancers", "服务员", "咨客", "营销", "服务员领班", "总经理", "副总经理", "楼面经理", "企划", "收银员", "收银员", "保安", "其他"
+				"DJ", "灯光", "mc", "舞台总监", "舞编", "A组ds", "B组ds", "服务员", "咨客", "营销", "服务员领班", "总经理", "副总经理", "楼面经理", "企划", "收银员", "收银员", "保安", "其他"
 		});
 		mAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mAdapter2 = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, new String[]{

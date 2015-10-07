@@ -450,10 +450,10 @@ public class RecruitListUI extends CommonActivity implements
 							po.setName("舞编");
 							jobsList.add(po);
 							po = new JobsPO();
-							po.setName("A组dancers");
+							po.setName("A组ds");
 							jobsList.add(po);
 							po = new JobsPO();
-							po.setName("B组dancers");
+							po.setName("B组ds");
 							jobsList.add(po);
 							po = new JobsPO();
 							po.setName("服务员");
